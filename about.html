@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ignis Spindler | Class2Career</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #0A1628;
+            --rich-navy: #1A365D;
+            --gold: #C9A227;
+            --soft-gold: #E8D5A3;
+            --coral: #FF6B6B;
+            --slate: #64748B;
+            --off-white: #F8FAFC;
+            --white: #FFFFFF;
+            --dark-gray: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+
+        nav {
+            background: var(--deep-navy);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            color: var(--gold);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        p { margin-bottom: 1.5rem; }
+
+        blockquote {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--rich-navy);
+            border-left: 4px solid var(--gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .journey {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold);
+        }
+
+        .journey h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+        }
+
+        .journey ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .journey li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .journey li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .transformation {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .transformation .from-to {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .transformation .from {
+            color: var(--coral);
+        }
+
+        .transformation .arrow {
+            color: var(--gold);
+        }
+
+        .transformation .to {
+            color: var(--emerald);
+        }
+
+        .transformation em {
+            color: var(--soft-gold);
+            font-style: italic;
+        }
+
+        .emerald { color: #10B981; }
+
+        .cta-box {
+            background: var(--off-white);
+            border: 2px solid var(--gold);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box h3 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--deep-navy);
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--soft-gold);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--off-white);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--slate);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">← Back to Class2Career</a>
+    </nav>
+
+    <div class="container">
+        <h1>Ignis Spindler, PhD</h1>
+        <p class="title">Two PhDs. First-Generation College Grad. Blue Collar Roots. Real Results.</p>
+
+        <p>You want to know who created this course and why? That's a good question. Here's the honest answer.</p>
+
+        <p>I didn't come from money. I didn't come from connections. I dug ditches in college to pay tuition. I taught public school. I've been a scientific consultant, worked in risk management for insurance, done financial marketing segmentation and analytics, and even spent time in bioinformatics.</p>
+
+        <p>And somewhere along the way, I collected <strong>more than 250 graduate credits</strong> in physics and statistics — eventually earning two PhDs.</p>
+
+        <blockquote>
+            "None of these achievements required the PhD. Most of my bosses have been paid more, they knew less, and they weren't exceptional. They just knew how to talk about business in the language of their executives."
+        </blockquote>
+
+        <div class="journey">
+            <h2>The Career Arc</h2>
+            <ul>
+                <li>Dug ditches to pay for college</li>
+                <li>Taught public school</li>
+                <li>Scientific consulting</li>
+                <li>Risk management in insurance</li>
+                <li>Financial marketing segmentation and analytics</li>
+                <li>Bioinformatics</li>
+                <li>Data Science and AI/ML leadership</li>
+                <li>Graduate credits: 250+ in physics and statistics</li>
+            </ul>
+        </div>
+
+        <div class="transformation">
+            <div class="from-to">
+                <span class="from">$40K/year</span>
+                <span class="arrow"> → </span>
+                <span class="to">$200K+ management</span>
+            </div>
+            <p>Teaching salary to management position. <em>And now negotiating for equity in interviews, building passive income, and selling digital products.</em></p>
+        </div>
+
+        <p>Here's what I learned: <strong>the PhD wasn't the key to those opportunities.</strong> What mattered was learning to speak the language of business. Learning to translate academic rigor into business value. Learning to communicate in terms that executives actually understand.</p>
+
+        <p>I watched people with less expertise, less education, and fewer credentials get promoted over me — not because they were smarter, but because they knew how to talk about business.</p>
+
+        <p><strong>That's the gap this course fills.</strong></p>
+
+        <h1 style="font-size: 1.75rem; margin-top: 2rem;">Why I Created This Course</h1>
+
+        <p>I've spent years devoted to advancing the professional development of students, employees, and colleagues — all while advancing my own Data/AI/ML and leadership career.</p>
+
+        <p>I know what it's like to transition from academia to industry. I know what it's like to have sophisticated skills that nobody in the business world seems to understand. I know what it's like to feel like your expertise is invisible — even when it's valuable.</p>
+
+        <p>This course is my answer to that problem.</p>
+
+        <p>It's not an MBA. It's not a credential. It's the practical knowledge you need to bridge the gap between rigorous academic training and the real demands of corporate life.</p>
+
+        <h1 style="font-size: 1.75rem; margin-top: 2rem;">Who This Course Is For</h1>
+
+        <p>You.</p>
+
+        <p>If you're an undergrad or graduate student preparing to enter the workforce. If you're transitioning from academia to the private sector. If you're leaving public service for a new opportunity. If you've ever sat in a business meeting and felt like everyone was speaking a language you didn't understand.</p>
+
+        <p>This course is for you.</p>
+
+        <p>My approach is simple: <strong>simplify the translation of sophisticated skills into practical demonstrations of business value.</strong> I'm not here to teach you theory. I'm here to give you the language, strategies, and confidence to thrive beyond the walls of academia and public sector institutions.</p>
+
+        <div class="cta-box">
+            <h3>Ready to Learn the Language of Business?</h3>
+            <p>Get the complete Class2Career toolkit for $27 — the course I wish I'd had.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Class2Career © 2026 | <a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>

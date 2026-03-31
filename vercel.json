@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "email-server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/subscribe", "dest": "/email-server.py" },
+    { "src": "/webhook/stripe", "dest": "/email-server.py" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" }
+  ],
+  " regions": ["iad1"]
+}
