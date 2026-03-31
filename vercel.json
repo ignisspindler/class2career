@@ -15,5 +15,5 @@
     { "src": "/webhook/stripe", "dest": "/email-server.py" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" }
   ],
-  " regions": ["iad1"]
+  "regions": ["iad1"]
 }
