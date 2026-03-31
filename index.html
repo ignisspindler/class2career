@@ -227,7 +227,9 @@
             headline: 'Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span>',
             subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
             logo: 'Class2Career',
-            logoText: 'Class2Career'
+            logoText: 'Class2Career',
+            footerBrand: 'Class2Career',
+            footerLink: 'https://class2careers.com'
         }
     };
 
@@ -263,6 +265,12 @@
         // Set nav logo
         var logoEl = document.getElementById('nav-logo');
         if (logoEl) logoEl.innerHTML = cfg.logo;
+        
+        // Set footer
+        var footerBrandEl = document.getElementById('footer-brand');
+        var footerLinkEl = document.getElementById('footer-link');
+        if (footerBrandEl) footerBrandEl.textContent = cfg.footerBrand || cfg.logoText;
+        if (footerLinkEl && cfg.footerLink) footerLinkEl.href = cfg.footerLink;
         
         // Track source
         var utm = new URLSearchParams(window.location.search);
