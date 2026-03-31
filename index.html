@@ -181,6 +181,7 @@
             badge: 'For Public Sector Professionals',
             headline: 'Stop Government Speak.<br><span class="gold">Start Talking Value.</span>',
             subtitle: 'Five workbooks that teach public sector professionals to communicate in terms business leaders understand.',
+            description: 'Used by former teachers, utility professionals, and government employees who are exceptional at what they do but never learned to translate the VALUE in it.',
             logo: 'Transition2Corporate',
             logoText: 'Transition2Corporate'
         },
@@ -203,6 +204,7 @@
             badge: 'For Public Sector Professionals',
             headline: 'Stop Government Speak.<br><span class="gold">Start Talking Value.</span>',
             subtitle: 'Five workbooks that teach public sector professionals to communicate in terms business leaders understand.',
+            description: 'Used by former teachers, utility professionals, and government employees who are exceptional at what they do but never learned to translate the VALUE in it.',
             logo: 'Transition2Corporate',
             logoText: 'Transition2Corporate'
         },
@@ -250,7 +252,13 @@
         
         // Set subtitle
         var subEl = document.getElementById('hero-subtitle');
-        if (subEl) subEl.textContent = cfg.subtitle;
+        if (subEl) {
+            subEl.textContent = cfg.subtitle;
+        }
+        
+        // Set description (the "Used by..." line)
+        var descEl = document.getElementById('hero-description');
+        if (descEl && cfg.description) descEl.textContent = cfg.description;
         
         // Set nav logo
         var logoEl = document.getElementById('nav-logo');
@@ -317,7 +325,7 @@
                     <div class="badge" id="hero-badge">Loading...</div>
                     <h1 id="hero-headline">Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span></h1>
                     <p class="hero-quote">"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."</p>
-                    <p class="hero-desc"><span id="hero-subtitle">Five workbooks that teach you to speak the language of business — without the $125,000 MBA price tag.</span> Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</p>
+                    <p class="hero-desc"><span id="hero-subtitle">Five workbooks that teach you to speak the language of business — without the $125,000 MBA price tag.</span> <span id="hero-description">Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</span></p>
                     <div class="hero-cta-group">
                         <a href="#pricing" class="btn btn-primary btn-lg" id="cta-primary">Get the Toolkit — $27</a>
                         <a href="#workbooks" class="btn btn-outline btn-lg">See What's Inside</a>
