@@ -1,0 +1,9 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "src": "/subscribe", "dest": "/email-server.py" },
+    { "src": "/webhook/stripe", "dest": "/email-server.py" }
+  ]
+}
