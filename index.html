@@ -196,11 +196,20 @@
     // ─── Init ─────────────────────────────────────────────────────────────
     (function() {
         var host = window.location.hostname.replace(/^www\./, '').toLowerCase();
-        var cfg = window.audienceConfig[host] || window.audienceConfig['default'];
+        console.log('DEBUG | hostname:', window.location.hostname, '| stripped:', host);
+        var cfg = window.audienceConfig[host];
+        console.log('DEBUG | matched config:', cfg ? cfg.logoText : 'NOT FOUND - using default', '| keys:', Object.keys(window.audienceConfig).join(', '));
+        cfg = cfg || window.audienceConfig['default'];
+        
+        // Dynamic document title
+        document.title = cfg.logoText + ' | The Business Communication Toolkit';
         
         // Set badge
         var badgeEl = document.getElementById('hero-badge');
-        if (badgeEl) badgeEl.textContent = cfg.badge;
+        if (badgeEl) {
+            badgeEl.textContent = cfg.badge;
+            badgeEl.dataset.debugHost = host;
+        }
         
         // Set headline (split on \n)
         var headlineEl = document.getElementById('hero-headline');
@@ -259,7 +268,7 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="badge" id="hero-badge">For PhDs, Academics & Career Changers</div>
+                    <div class="badge" id="hero-badge" data-debug-host="">For PhDs, Academics & Career Changers</div>
                     <h1>Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span></h1>
                     <p class="hero-quote">"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."</p>
                     <p class="hero-desc"><span id="hero-subtitle">Five workbooks that teach you to speak the language of business — without the $125,000 MBA price tag.</span> Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</p>
