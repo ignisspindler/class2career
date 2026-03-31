@@ -1,4 +1,8 @@
 {
+  "buildCommand": "npm run build 2>/dev/null || node -e \"const fs=require('fs');fs.cpSync('public','.',{recursive:true});fs.cpSync('assets','.',{recursive:true});\"",
+  "outputDirectory": ".",
+  "installCommand": "echo 'no deps'",
+  "framework": null,
   "rewrites": [
     { "src": "/subscribe", "dest": "/email-server.py" },
     { "src": "/webhook/stripe", "dest": "/email-server.py" }
