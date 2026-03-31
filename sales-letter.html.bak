@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why PhDs and Scientists Need This Course | Class2Career</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-navy: #0A1628;
+            --rich-navy: #1A365D;
+            --gold: #C9A227;
+            --soft-gold: #E8D5A3;
+            --coral: #FF6B6B;
+            --emerald: #10B981;
+            --slate: #64748B;
+            --off-white: #F8FAFC;
+            --white: #FFFFFF;
+            --light-gray: #E2E8F0;
+            --dark-gray: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--dark-gray);
+            background: var(--white);
+        }
+
+        nav {
+            background: var(--deep-navy);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin: 3rem 0 1.5rem;
+        }
+
+        .subtitle {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            color: var(--slate);
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        blockquote {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--rich-navy);
+            border-left: 4px solid var(--gold);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .story-box {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--gold);
+        }
+
+        .story-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--deep-navy);
+            border-radius: 8px;
+        }
+
+        .stat .number {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .stat .label {
+            color: var(--soft-gold);
+            font-size: 0.875rem;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        .workbook-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .workbook-list li {
+            background: var(--off-white);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .workbook-list strong {
+            color: var(--deep-navy);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .cta-box {
+            background: var(--deep-navy);
+            color: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-box .price {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-box p {
+            color: var(--soft-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--deep-navy);
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--soft-gold);
+            transform: translateY(-2px);
+        }
+
+        .signature {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .signature strong {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            font-style: normal;
+            display: block;
+            color: var(--deep-navy);
+        }
+
+        footer {
+            background: var(--off-white);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--slate);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">← Back to Class2Career</a>
+    </nav>
+
+    <div class="container">
+        <h1>I Dug Ditches in College. Then I Earned Two PhDs. Here's What I Learned About Business.</h1>
+        
+        <p class="subtitle">A message from Ignis Spindler, PhD</p>
+
+        <p>Let me tell you something nobody told me.</p>
+
+        <p>I dug ditches to pay for college. I taught public school. I've worked in scientific consulting, risk management, financial analytics, and bioinformatics. Somewhere along the way, I picked up more than 250 graduate credits in physics and statistics — and earned two PhDs.</p>
+
+        <p>And here's the thing: <strong>none of those achievements required the PhD.</strong></p>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="number">$40K</div>
+                <div class="label">Starting salary (teaching)</div>
+            </div>
+            <div class="stat">
+                <div class="number">$200K+</div>
+                <div class="label">Current management position</div>
+            </div>
+            <div class="stat">
+                <div class="number">2 PhDs</div>
+                <div class="label">250+ graduate credits</div>
+            </div>
+        </div>
+
+        <blockquote>
+            "Most of my bosses have been paid more, they knew less, and they weren't exceptional. They just knew how to talk about business in the language of their executives."
+        </blockquote>
+
+        <h2>Here's What Business School Doesn't Teach You</h2>
+
+        <div class="story-box">
+            <p>I got my first managerial role with two PhDs and <em>no idea</em> how business actually worked.</p>
+
+            <p>Not because I lacked intelligence. Not because I lacked work ethic. But because nobody had ever taught me the language of business.</p>
+
+            <p>I didn't know what a P&L was. I couldn't explain my technical skills in terms that mattered to executives. I spent my first year fumbling through meetings while people with less expertise got promoted over me — not because they were smarter, but because they knew how to talk the talk.</p>
+        </div>
+
+        <p><strong>Traditional business education gets it wrong:</strong></p>
+
+        <ul>
+            <li><strong>It charges $200,000 for common sense.</strong> The principles in these workbooks can be explained in an afternoon.</li>
+            <li><strong>It trains people for jobs that are disappearing.</strong> Middle management is shrinking. You need to be a change maker, not a manager.</li>
+            <li><strong>It skips the practical stuff.</strong> Nobody teaches you how to talk about value. How to prove your worth. How to actually get things done.</li>
+        </ul>
+
+        <h2>What You Get</h2>
+
+        <ul class="workbook-list">
+            <li>
+                <strong>Workbook 1: Business Foundation</strong>
+                Understand how businesses actually work — not the textbook version, but the reality.
+            </li>
+            <li>
+                <strong>Workbook 2: Sales Dimension</strong>
+                Learn the metrics that matter and how to prove your value in dollars.
+            </li>
+            <li>
+                <strong>Workbook 3: Value Dimension</strong>
+                Create impact, not just activity. Learn to measure what matters.
+            </li>
+            <li>
+                <strong>Workbook 4: Product Dimension</strong>
+                The missing piece in every business education. How products are built and scaled.
+            </li>
+            <li>
+                <strong>Workbook 5: Personal Growth</strong>
+                Define your vision, understand your tolerances, and build the career you want.
+            </li>
+        </ul>
+
+        <p>Plus: The <strong>Reflection Journal</strong> — hands-on exercises for every concept, turning knowledge into action.</p>
+
+        <h2>Who This Is For</h2>
+
+        <ul>
+            <li><strong>PhDs transitioning to industry</strong> — Learn to speak the language without losing your expertise.</li>
+            <li><strong>Scientists and researchers</strong> — Your skills are valuable. Learn to communicate them.</li>
+            <li><strong>Career changers from academia or public sector</strong> — Get the business foundation you need.</li>
+            <li><strong>First-generation professionals</strong> — Navigate corporate culture without a family playbook.</li>
+        </ul>
+
+        <h2>The Price of Staying Silent</h2>
+
+        <p>You can keep fumbling through business meetings, wondering why nobody understands your value.</p>
+
+        <p>You can spend years learning things the hard way — like I did.</p>
+
+        <p>Or you can spend <strong>$27</strong> and get the crash course I wish I'd had.</p>
+
+        <div class="cta-box">
+            <div class="price">$27</div>
+            <p>One-time payment. Lifetime access.</p>
+            <a href="#" class="btn">Get the Complete Toolkit</a>
+            <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--soft-gold);">All 5 workbooks + Reflection Journal + Book recommendations</p>
+        </div>
+
+        <p class="signature">
+            <strong>Ignis Spindler, PhD</strong>
+            Two PhDs. First-generation college grad. Blue collar roots. Real results.
+        </p>
+    </div>
+
+    <footer>
+        <p>Class2Career © 2026 | <a href="index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>
