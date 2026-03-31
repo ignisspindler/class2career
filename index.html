@@ -234,7 +234,7 @@
         tracker.source = source;
         tracker.medium = medium;
         tracker.campaign = campaign;
-        tracker.first touch = tracker['first touch'] || source;
+        tracker.first_touch = tracker['first_touch'] || source;
         tracker.timestamp = Date.now();
         localStorage.setItem('c2c_tracker', JSON.stringify(tracker));
         
