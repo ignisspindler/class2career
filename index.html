@@ -165,28 +165,35 @@
     window.audienceConfig = {
         'phd2pro.com': {
             badge: 'For PhDs & Academics',
-            headline: 'Stop Explaining Your Research.\nStart Communicating Your Impact.',
+            headline: 'Stop Explaining Your Research.<br><span class="gold">Start Communicating Your Impact.</span>',
             subtitle: 'Five workbooks that teach PhDs and academics to speak the language of industry — without the $125K MBA price tag.',
             logo: 'PhD<span>2</span>Pro',
             logoText: 'PhD2Pro'
         },
         'class2careers.com': {
             badge: 'For Career Changers',
-            headline: 'Stop Learning Business.\nStart Doing Business.',
+            headline: 'Stop Learning Business.<br><span class="gold">Start Doing Business.</span>',
             subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
-            logo: 'Class<span>2</span>Career',
-            logoText: 'Class2Career'
+            logo: 'Class<span>2</span>Careers',
+            logoText: 'Class2Careers'
         },
         'transition2corporate.com': {
             badge: 'For Public Sector Professionals',
-            headline: 'Stop Government Speak.\nStart Talking Value.',
+            headline: 'Stop Government Speak.<br><span class="gold">Start Talking Value.</span>',
             subtitle: 'Five workbooks that teach public sector professionals to communicate in terms business leaders understand.',
             logo: 'Transition<span>2</span>Corporate',
             logoText: 'Transition2Corporate'
         },
+        'biztranslation.com': {
+            badge: 'For PhDs, Academics & Career Changers',
+            headline: 'Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span>',
+            subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
+            logo: 'Biz<span>Translation</span>',
+            logoText: 'BizTranslation'
+        },
         'default': {
             badge: 'For PhDs, Academics & Career Changers',
-            headline: 'Stop Explaining What You Do.\nStart Communicating What You Deliver.',
+            headline: 'Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span>',
             subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
             logo: 'Class<span>2</span>Career',
             logoText: 'Class2Career'
@@ -196,9 +203,7 @@
     // ─── Init ─────────────────────────────────────────────────────────────
     (function() {
         var host = window.location.hostname.replace(/^www\./, '').toLowerCase();
-        console.log('DEBUG | hostname:', window.location.hostname, '| stripped:', host);
         var cfg = window.audienceConfig[host];
-        console.log('DEBUG | matched config:', cfg ? cfg.logoText : 'NOT FOUND - using default', '| keys:', Object.keys(window.audienceConfig).join(', '));
         cfg = cfg || window.audienceConfig['default'];
         
         // Dynamic document title
@@ -211,9 +216,9 @@
             badgeEl.dataset.debugHost = host;
         }
         
-        // Set headline (split on \n)
+        // Set headline
         var headlineEl = document.getElementById('hero-headline');
-        if (headlineEl) headlineEl.innerHTML = cfg.headline.replace(/\n/g, '<br>');
+        if (headlineEl) headlineEl.innerHTML = cfg.headline;
         
         // Set subtitle
         var subEl = document.getElementById('hero-subtitle');
@@ -268,7 +273,7 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="badge" id="hero-badge" data-debug-host="">For PhDs, Academics & Career Changers</div>
+                    <div class="badge" id="hero-badge">Loading...</div>
                     <h1>Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span></h1>
                     <p class="hero-quote">"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."</p>
                     <p class="hero-desc"><span id="hero-subtitle">Five workbooks that teach you to speak the language of business — without the $125,000 MBA price tag.</span> Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</p>
