@@ -201,7 +201,7 @@
     };
 
     // ─── Init ─────────────────────────────────────────────────────────────
-    (function() {
+    document.addEventListener('DOMContentLoaded', function() {
         var host = window.location.hostname.replace(/^www\./, '').toLowerCase();
         var cfg = window.audienceConfig[host];
         cfg = cfg || window.audienceConfig['default'];
@@ -213,7 +213,6 @@
         var badgeEl = document.getElementById('hero-badge');
         if (badgeEl) {
             badgeEl.textContent = cfg.badge;
-            badgeEl.dataset.debugHost = host;
         }
         
         // Set headline
@@ -227,6 +226,7 @@
         // Set nav logo
         var logoEl = document.getElementById('nav-logo');
         if (logoEl) logoEl.innerHTML = cfg.logo;
+    });
         
         // Track source
         var utm = new URLSearchParams(window.location.search);
@@ -493,8 +493,7 @@
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Track CTA clicks
+    // Track CTA clicks
         var ctaBtn = document.getElementById('cta-primary');
         if (ctaBtn) {
             ctaBtn.addEventListener('click', function() {
