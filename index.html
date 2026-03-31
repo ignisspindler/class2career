@@ -226,7 +226,6 @@
         // Set nav logo
         var logoEl = document.getElementById('nav-logo');
         if (logoEl) logoEl.innerHTML = cfg.logo;
-    });
         
         // Track source
         var utm = new URLSearchParams(window.location.search);
@@ -234,7 +233,6 @@
         var medium = utm.get('utm_medium') || 'organic';
         var campaign = utm.get('utm_campaign') || '';
         
-        // Store in localStorage for conversion tracking
         var tracker = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
         tracker.source = source;
         tracker.medium = medium;
@@ -243,17 +241,31 @@
         tracker.timestamp = Date.now();
         localStorage.setItem('c2c_tracker', JSON.stringify(tracker));
         
-        // Google Analytics event
         if (typeof gtag !== 'undefined') {
-            gtag('event', 'page_view', {
-                event_category: 'engagement',
-                event_label: source + ' / ' + medium
+            gtag('event', 'page_view', { event_category: 'engagement', event_label: source + ' / ' + medium });
+        }
+        
+        // CTA click tracking
+        var ctaBtn = document.getElementById('cta-primary');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', function() {
+                var t = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
+                t.conversion_clicked = Date.now();
+                localStorage.setItem('c2c_tracker', JSON.stringify(t));
+                if (typeof gtag !== 'undefined') gtag('event', 'cta_click', { event_category: 'conversion', event_label: source });
             });
         }
         
-        // Log for debug
-        console.log('Class2Career | Source:', source, '| Badge:', cfg.badge);
-    })();
+        // Email signup tracking
+        var emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+            emailForm.addEventListener('submit', function() {
+                var t = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
+                t.email_captured = Date.now();
+                localStorage.setItem('c2c_tracker', JSON.stringify(t));
+            });
+        }
+    });
     </script>
 </head>
 <body>
