@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class2Career | The Business Communication Toolkit</title>
-    <meta name="description" content="Stop explaining what you do. Start communicating what you deliver. 5 workbooks that teach you to speak the language of business — without the $200K MBA.">
+    <meta name="description" content="Stop explaining what you do. Start communicating what you deliver. 5 workbooks that teach you to speak the language of business — without the $125K MBA.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0E1A'/><text y='.9em' x='50%' text-anchor='middle' font-size='70' fill='%23E8B84B'>C2</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -159,11 +159,93 @@
             .guarantee-box, .pricing-card { padding: 2.5rem 1.5rem; }
         }
     </style>
+
+    <script>
+    // ─── Audience Config ───────────────────────────────────────────────────
+    window.audienceConfig = {
+        'phd2pro.com': {
+            badge: 'For PhDs & Academics',
+            headline: 'Stop Explaining Your Research.\nStart Communicating Your Impact.',
+            subtitle: 'Five workbooks that teach PhDs and academics to speak the language of industry — without the $125K MBA price tag.',
+            logo: 'PhD<span>2</span>Pro',
+            logoText: 'PhD2Pro'
+        },
+        'class2careers.com': {
+            badge: 'For Career Changers',
+            headline: 'Stop Learning Business.\nStart Doing Business.',
+            subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
+            logo: 'Class<span>2</span>Career',
+            logoText: 'Class2Career'
+        },
+        'transition2corporate.com': {
+            badge: 'For Public Sector Professionals',
+            headline: 'Stop Government Speak.\nStart Talking Value.',
+            subtitle: 'Five workbooks that teach public sector professionals to communicate in terms business leaders understand.',
+            logo: 'Transition<span>2</span>Corporate',
+            logoText: 'Transition2Corporate'
+        },
+        'default': {
+            badge: 'For PhDs, Academics & Career Changers',
+            headline: 'Stop Explaining What You Do.\nStart Communicating What You Deliver.',
+            subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
+            logo: 'Class<span>2</span>Career',
+            logoText: 'Class2Career'
+        }
+    };
+
+    // ─── Init ─────────────────────────────────────────────────────────────
+    (function() {
+        var host = window.location.hostname.replace(/^www\./, '').toLowerCase();
+        var cfg = window.audienceConfig[host] || window.audienceConfig['default'];
+        
+        // Set badge
+        var badgeEl = document.getElementById('hero-badge');
+        if (badgeEl) badgeEl.textContent = cfg.badge;
+        
+        // Set headline (split on \n)
+        var headlineEl = document.getElementById('hero-headline');
+        if (headlineEl) headlineEl.innerHTML = cfg.headline.replace(/\n/g, '<br>');
+        
+        // Set subtitle
+        var subEl = document.getElementById('hero-subtitle');
+        if (subEl) subEl.textContent = cfg.subtitle;
+        
+        // Set nav logo
+        var logoEl = document.getElementById('nav-logo');
+        if (logoEl) logoEl.innerHTML = cfg.logo;
+        
+        // Track source
+        var utm = new URLSearchParams(window.location.search);
+        var source = utm.get('utm_source') || host || 'direct';
+        var medium = utm.get('utm_medium') || 'organic';
+        var campaign = utm.get('utm_campaign') || '';
+        
+        // Store in localStorage for conversion tracking
+        var tracker = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
+        tracker.source = source;
+        tracker.medium = medium;
+        tracker.campaign = campaign;
+        tracker.first touch = tracker['first touch'] || source;
+        tracker.timestamp = Date.now();
+        localStorage.setItem('c2c_tracker', JSON.stringify(tracker));
+        
+        // Google Analytics event
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                event_category: 'engagement',
+                event_label: source + ' / ' + medium
+            });
+        }
+        
+        // Log for debug
+        console.log('Class2Career | Source:', source, '| Badge:', cfg.badge);
+    })();
+    </script>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="nav-logo">Class<span>2</span>Career</a>
+            <a href="#" class="nav-logo" id="nav-logo">Class<span>2</span>Career</a>
             <div class="nav-links">
                 <a href="#problem">The Problem</a>
                 <a href="#workbooks">Workbooks</a>
@@ -177,12 +259,12 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <div class="badge">For PhDs, Academics & Career Changers</div>
+                    <div class="badge" id="hero-badge">For PhDs, Academics & Career Changers</div>
                     <h1>Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span></h1>
                     <p class="hero-quote">"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."</p>
-                    <p class="hero-desc">Five workbooks that teach you to speak the language of business — without the $200,000 MBA price tag. Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</p>
+                    <p class="hero-desc"><span id="hero-subtitle">Five workbooks that teach you to speak the language of business — without the $125,000 MBA price tag.</span> Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</p>
                     <div class="hero-cta-group">
-                        <a href="#pricing" class="btn btn-primary btn-lg">Get the Toolkit — $27</a>
+                        <a href="#pricing" class="btn btn-primary btn-lg" id="cta-primary">Get the Toolkit — $27</a>
                         <a href="#workbooks" class="btn btn-outline btn-lg">See What's Inside</a>
                     </div>
                     <div class="hero-meta">
@@ -196,7 +278,7 @@
                         <img src="/assets/covers/cover-01-business-foundation.png" alt="Business Foundation Workbook">
                         <div class="float-card top-right">
                             <div class="card-label">Salary Increase</div>
-                            <div class="card-value">$200K+</div>
+                            <div class="card-value">+$50K</div>
                         </div>
                         <div class="float-card bottom-left">
                             <div class="card-label">Rating</div>
@@ -230,7 +312,7 @@
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">&#128176;</div>
-                    <h3>The $200K Tax</h3>
+                    <h3>The $125K Tax</h3>
                     <p>Business schools charge a fortune for principles that can be explained in an afternoon. Most of what they teach is theory dressed up as practice. You pay for the credential, not the knowledge.</p>
                 </div>
                 <div class="problem-card">
@@ -254,7 +336,7 @@
             <div class="gold-line"></div>
             <div class="results-grid">
                 <div class="result-item">
-                    <div class="result-number">$200K+</div>
+                    <div class="result-number">+$50K</div>
                     <div class="result-label">Salary Increase</div>
                 </div>
                 <div class="result-item">
@@ -395,5 +477,36 @@
             <p>&#169; 2026 Class2Career | By <a href="#">Ignis Spindler, PhD</a></p>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Track CTA clicks
+        var ctaBtn = document.getElementById('cta-primary');
+        if (ctaBtn) {
+            ctaBtn.addEventListener('click', function() {
+                var tracker = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
+                tracker.conversion_clicked = Date.now();
+                tracker.conversion_clicked_at = window.location.href;
+                localStorage.setItem('c2c_tracker', JSON.stringify(tracker));
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'cta_click', {
+                        event_category: 'conversion',
+                        event_label: tracker.source + ' / ' + tracker.medium
+                    });
+                }
+            });
+        }
+        
+        // Track email signup
+        var emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+            emailForm.addEventListener('submit', function() {
+                var tracker = JSON.parse(localStorage.getItem('c2c_tracker') || '{}');
+                tracker.email_captured = Date.now();
+                localStorage.setItem('c2c_tracker', JSON.stringify(tracker));
+            });
+        }
+    });
+    </script>
 </body>
 </html>
