@@ -30,58 +30,14 @@
   margin: 0.75in;
 }
 
-/* ─── Image sizing — screen ──────────────────────────────────────────────── */
-img {
-  max-width: 100% !important;
-  width: 100% !important;
-  height: auto !important;
-  display: block;
+/* ─── Body — constrained to letter width ───────────────────────────────── */
+body {
+  max-width: 8.5in;
+  margin: 0 auto;
+  padding: 0.75in;
 }
 
-figure {
-  margin: 0.5in 0;
-  page-break-inside: avoid;
-}
-
-/* ─── Print image constraints ───────────────────────────────────────────── */
-@media print {
-  img {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-    display: block;
-    margin: 0.5in auto;
-  }
-
-  figure {
-    page-break-inside: avoid;
-    break-inside: avoid;
-    margin: 0.5in 0;
-  }
-
-  figure img {
-    max-width: 100% !important;
-    margin: 0 auto;
-  }
-
-  /* Force cover image to fit page */
-  .cover img,
-  .cover-page img {
-    max-width: 100% !important;
-    width: 100% !important;
-    page-break-after: avoid;
-  }
-
-  /* Allow diagrams to span full content width */
-  .content img,
-  .content figure img {
-    max-width: 100% !important;
-  }
-}
-
-/* ─── Screen image defaults (prevents bleed-off) ─────────────────────────── */
+/* ─── Screen images ─────────────────────────────────────────────────────── */
 img {
   max-width: 100%;
   width: 100%;
@@ -90,8 +46,79 @@ img {
 }
 
 figure {
-  margin: 0.5in 0;
+  margin: 0.4in 0;
   page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* ─── Print: constrained, paginated ────────────────────────────────────── */
+@media print {
+  html, body {
+    width: 8.5in;
+    max-width: 8.5in;
+    margin: 0 !important;
+    padding: 0.75in !important;
+    background: white !important;
+    color: black !important;
+    font-size: 11pt !important;
+  }
+
+  /* Page size */
+  @page {
+    size: letter;
+    margin: 0.75in;
+  }
+
+  /* Sections start on a new page */
+  h1 {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  h2 {
+    page-break-before: avoid;
+    break-before: auto;
+    margin-top: 0.5in;
+  }
+
+  h3, h4 {
+    page-break-after: avoid;
+    break-after: auto;
+  }
+
+  /* Don't break inside figures/tables */
+  figure, table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Cover page — don't put content after it on same page */
+  .cover, .cover-page {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Images constrained to text column width */
+  img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Show URLs after links */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* No backgrounds for printing */
+  .callout, .track, .book-rec, .key-takeaways {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+  }
 }
 
 body {
