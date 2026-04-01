@@ -173,6 +173,8 @@ def save_lead(email, lead_magnet='', source_url='', utm_source='', utm_medium=''
 # ─── Email Sending ──────────────────────────────────────────────────────────
 def send_guide_email(to_email):
     sg = get_sg_client()
+    api_key = os.environ.get('SENDGRID_API_KEY', '')
+    print(f"[DEBUG] SENDGRID_API_KEY present: {bool(api_key)}, starts with: {api_key[:8] if api_key else 'EMPTY'}")
     mail = Mail(
         Email("ignis@biztranslation.com"),
         To(to_email),
@@ -183,9 +185,10 @@ def send_guide_email(to_email):
     mail.add_content(Content("text/html", INTERVIEW_GUIDE_HTML))
     try:
         r = sg.send(mail)
+        print(f"[DEBUG] SendGrid response: status={r.status_code}, body={r.body}")
         return r.status_code in [200, 201, 202]
     except Exception as e:
-        print(f"SendGrid error: {e}")
+        print(f"[DEBUG] SendGrid exception: {type(e).__name__}: {e}")
         return False
 
 # ─── Routes ────────────────────────────────────────────────────────────────
@@ -203,27 +206,15 @@ def subscribe():
 
     init_db()
     new_subscriber = save_lead(email, lead_magnet, source_url, utm_source, utm_medium, utm_campaign)
-
-    # Always try to send the guide
     email_sent = send_guide_email(email)
 
-    return """
-    <!DOCTYPE html>
-    <html>
-    <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Check Your Inbox</title></head>
-    <body style="margin:0;padding:0;background:#0A0E1A;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;">
-        <div style="max-width:500px;margin:40px 20px;padding:40px;background:#111827;border-radius:12px;border:1px solid rgba(232,184,75,0.3);text-align:center;">
-            <h1 style="font-family:Georgia,serif;font-size:26px;color:#E8B84B;margin:0 0 15px;">Check your inbox!</h1>
-            <p style="font-size:16px;color:#9CA3AF;line-height:1.7;margin:0 0 20px;">
-              Your Interview Mastery Guide is on its way to <strong style="color:#FAF7F0;">{email}</strong>.
-              Also expect weekly career tips from Class2Career.
-            </p>
-            <p style="font-size:13px;color:#6B7280;margin:0;">Didn't get it? Check your spam folder.</p>
-        </div>
-    </body>
-    </html>
-    """.format(email=email)
+    print(f"[DEBUG] Subscribe: email={email}, email_sent={email_sent}")
+
+    return jsonify({
+        "success": True,
+        "message": "Check your inbox for the Interview Mastery Guide!",
+        "email_sent": email_sent
+    })
 
 @app.route("/webhook/stripe", methods=["POST"])
 def webhook_stripe():
