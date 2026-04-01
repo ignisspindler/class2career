@@ -78,7 +78,7 @@
         .float-card .card-value { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--gold); }
         
         .logos-bar { padding: 2.5rem 0; background: var(--bg-secondary); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
-        .logos-bar p { text-align: center; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 1.25rem; }
+        .logos-bar p, .logos-bar-label { text-align: center; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 1.25rem; }
         .logos-row { display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; }
         .logo-item { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--text-muted); opacity: 0.4; }
         
@@ -226,6 +226,8 @@
             badge: 'For PhDs, Academics & Career Changers',
             headline: 'Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span>',
             subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
+            socialProofLabel: 'Used by professionals transitioning from',
+            socialProofItems: ['Academia', 'Government', 'Healthcare', 'Non-Profits'],
             logo: 'Class2Career',
             logoText: 'Class2Career',
             footerBrand: 'Class2Career',
@@ -271,6 +273,16 @@
         var footerLinkEl = document.getElementById('footer-link');
         if (footerBrandEl) footerBrandEl.textContent = cfg.footerBrand || cfg.logoText;
         if (footerLinkEl && cfg.footerLink) footerLinkEl.href = cfg.footerLink;
+        
+        // Set social proof
+        var proofLabelEl = document.getElementById('social-proof-label');
+        var proofItemsEl = document.getElementById('social-proof-items');
+        if (cfg.socialProofLabel && proofLabelEl) proofLabelEl.textContent = cfg.socialProofLabel;
+        if (cfg.socialProofItems && proofItemsEl) {
+            proofItemsEl.innerHTML = cfg.socialProofItems.map(function(item) {
+                return '<span class="logo-item">' + item + '</span>';
+            }).join('');
+        }
         
         // Track source
         var utm = new URLSearchParams(window.location.search);
@@ -363,8 +375,8 @@
 
     <div class="logos-bar">
         <div class="container">
-            <p>Used by professionals transitioning from</p>
-            <div class="logos-row">
+            <p id="social-proof-label" class="logos-bar-label">Used by professionals transitioning from</p>
+            <div id="social-proof-items" class="logos-row">
                 <span class="logo-item">MIT</span>
                 <span class="logo-item">Harvard</span>
                 <span class="logo-item">NASA</span>
