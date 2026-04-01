@@ -228,6 +228,7 @@
             subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA price tag.',
             socialProofLabel: 'Used by professionals transitioning from',
             socialProofItems: ['Academia', 'Government', 'Healthcare', 'Non-Profits'],
+            heroDescription: 'Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.',
             logo: 'Class2Career',
             logoText: 'Class2Career',
             footerBrand: 'Class2Career',
@@ -273,6 +274,10 @@
         var footerLinkEl = document.getElementById('footer-link');
         if (footerBrandEl) footerBrandEl.textContent = cfg.footerBrand || cfg.logoText;
         if (footerLinkEl && cfg.footerLink) footerLinkEl.href = cfg.footerLink;
+        
+        // Set hero description
+        var heroDescEl = document.getElementById('hero-description');
+        if (cfg.heroDescription && heroDescEl) heroDescEl.textContent = cfg.heroDescription;
         
         // Set social proof
         var proofLabelEl = document.getElementById('social-proof-label');
