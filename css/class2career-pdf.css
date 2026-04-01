@@ -1,0 +1,523 @@
+/* Class2Career PDF Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Playfair+Display:ital@1&display=swap');
+
+:root {
+  --deep-navy: #0A1628;
+  --rich-navy: #1A365D;
+  --gold: #C9A227;
+  --soft-gold: #E8D5A3;
+  --coral: #FF6B6B;
+  --emerald: #10B981;
+  --purple: #8B5CF6;
+  --amber: #F59E0B;
+  --slate: #64748B;
+  --off-white: #F8FAFC;
+  --white: #FFFFFF;
+  --light-gray: #E2E8F0;
+  --medium-gray: #94A3B8;
+  --dark-gray: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@page {
+  size: letter;
+  margin: 0.75in;
+}
+
+/* ─── Image sizing — screen ──────────────────────────────────────────────── */
+img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+figure {
+  margin: 0.5in 0;
+  page-break-inside: avoid;
+}
+
+/* ─── Print image constraints ───────────────────────────────────────────── */
+@media print {
+  img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: block;
+    margin: 0.5in auto;
+  }
+
+  figure {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin: 0.5in 0;
+  }
+
+  figure img {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  /* Force cover image to fit page */
+  .cover img,
+  .cover-page img {
+    max-width: 100% !important;
+    width: 100% !important;
+    page-break-after: avoid;
+  }
+
+  /* Allow diagrams to span full content width */
+  .content img,
+  .content figure img {
+    max-width: 100% !important;
+  }
+}
+
+/* ─── Screen image defaults (prevents bleed-off) ─────────────────────────── */
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure {
+  margin: 0.5in 0;
+  page-break-inside: avoid;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 11pt;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  background: var(--white);
+  padding: 0.75in;
+  max-width: 7in;
+  margin: 0 auto;
+}
+
+.cover {
+  margin-bottom: 0.5in;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5in;
+}
+
+.content {
+  margin-top: 0.5in;
+}
+
+/* Cover Page */
+.cover-page {
+  background: var(--deep-navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2in;
+  page-break-after: always;
+}
+
+.cover-page .workbook-number {
+  position: absolute;
+  top: 1in;
+  left: 1in;
+  width: 40px;
+  height: 40px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
+  color: var(--deep-navy);
+}
+
+.cover-page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36pt;
+  margin-bottom: 0.5in;
+  line-height: 1.2;
+}
+
+.cover-page .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16pt;
+  color: var(--gold);
+  margin-bottom: 0.5in;
+}
+
+.cover-page .author {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12pt;
+  color: var(--soft-gold);
+  margin-top: auto;
+}
+
+.cover-page .series {
+  position: absolute;
+  bottom: 1in;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 10pt;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24pt;
+  color: var(--deep-navy);
+  margin-top: 1in;
+  margin-bottom: 0.5in;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18pt;
+  color: var(--deep-navy);
+  margin-top: 0.75in;
+  margin-bottom: 0.375in;
+  border-left: 4px solid var(--gold);
+  padding-left: 12px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14pt;
+  color: var(--rich-navy);
+  margin-top: 0.5in;
+  margin-bottom: 0.25in;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  color: var(--slate);
+  margin-top: 0.375in;
+  margin-bottom: 0.125in;
+}
+
+p {
+  margin-bottom: 0.25in;
+  text-align: justify;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--deep-navy);
+}
+
+em {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 0.5in;
+  margin-bottom: 0.25in;
+}
+
+li {
+  margin-bottom: 0.125in;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5in 0;
+  font-size: 10pt;
+}
+
+th {
+  background: var(--deep-navy);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid var(--light-gray);
+  padding: 8px 12px;
+}
+
+tr:nth-child(even) {
+  background: var(--off-white);
+}
+
+/* Blockquotes */
+blockquote {
+  background: var(--off-white);
+  border-left: 4px solid var(--rich-navy);
+  padding: 0.375in 0.5in;
+  margin: 0.5in 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 12pt;
+  color: var(--rich-navy);
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* Callout Boxes */
+.callout {
+  padding: 0.375in 0.5in;
+  margin: 0.5in 0;
+  border-radius: 4px;
+}
+
+.callout-tip {
+  background: rgba(201, 162, 39, 0.1);
+  border-left: 4px solid var(--gold);
+}
+
+.callout-exercise {
+  background: rgba(10, 22, 40, 0.05);
+  border-left: 4px solid var(--deep-navy);
+}
+
+.callout-reflection {
+  background: var(--off-white);
+  border: 1px dashed var(--medium-gray);
+  border-left: 4px solid var(--medium-gray);
+}
+
+.callout-icon {
+  font-size: 14pt;
+  margin-right: 8px;
+}
+
+.callout-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  margin-bottom: 0.125in;
+  display: flex;
+  align-items: center;
+}
+
+/* Code */
+code {
+  font-family: 'Courier New', monospace;
+  font-size: 10pt;
+  background: var(--light-gray);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--deep-navy);
+  color: var(--off-white);
+  padding: 0.375in;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0.5in 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--light-gray);
+  margin: 0.75in 0;
+}
+
+/* Page Numbers */
+.page-number {
+  position: absolute;
+  bottom: 0.5in;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 9pt;
+  color: var(--medium-gray);
+}
+
+/* Links */
+a {
+  color: var(--rich-navy);
+  text-decoration: underline;
+}
+
+/* Track Boxes */
+.track {
+  background: var(--off-white);
+  border: 1px solid var(--light-gray);
+  padding: 0.375in;
+  margin: 0.375in 0;
+  border-radius: 4px;
+}
+
+.track-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 10pt;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.125in;
+}
+
+.track h4 {
+  margin-top: 0;
+}
+
+/* Exercise Items */
+.exercise-item {
+  margin-bottom: 0.375in;
+  padding-left: 0.25in;
+  border-left: 2px solid var(--gold);
+}
+
+.exercise-number {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--gold);
+  margin-right: 8px;
+}
+
+/* Book Recommendations */
+.book-rec {
+  background: var(--deep-navy);
+  color: var(--white);
+  padding: 0.375in 0.5in;
+  margin: 0.375in 0;
+  border-radius: 4px;
+}
+
+.book-rec h4 {
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.book-rec p {
+  font-size: 10pt;
+  margin-bottom: 0.125in;
+}
+
+/* Section Header */
+.section-header {
+  background: var(--deep-navy);
+  color: var(--white);
+  padding: 0.25in 0.5in;
+  margin: 0.75in 0 0.5in 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 1px;
+}
+
+.section-header .part-num {
+  color: var(--gold);
+  margin-right: 12px;
+}
+
+/* Two Column */
+.two-col {
+  columns: 2;
+  column-gap: 0.5in;
+}
+
+/* Three Column */
+.three-col {
+  columns: 3;
+  column-gap: 0.375in;
+}
+
+/* Reflection Box */
+.reflection-box {
+  border: 2px dashed var(--medium-gray);
+  padding: 0.5in;
+  margin: 0.5in 0;
+  min-height: 100px;
+}
+
+.reflection-box .prompt {
+  font-style: italic;
+  color: var(--slate);
+  margin-bottom: 0.25in;
+}
+
+/* Key Takeaways */
+.key-takeaways {
+  background: linear-gradient(135deg, var(--deep-navy) 0%, var(--rich-navy) 100%);
+  color: var(--white);
+  padding: 0.5in;
+  margin: 0.75in 0;
+  border-radius: 8px;
+}
+
+.key-takeaways h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+/* Action Plan */
+.action-plan {
+  border: 2px solid var(--gold);
+  padding: 0.5in;
+  margin: 0.5in 0;
+}
+
+.action-plan h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+/* Final Page */
+.final-page {
+  background: var(--deep-navy);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2in;
+  page-break-after: always;
+}
+
+.final-page h2 {
+  color: var(--gold);
+  border: none;
+  margin-top: 0;
+}
+
+.final-page p {
+  font-size: 12pt;
+  max-width: 4in;
+}
