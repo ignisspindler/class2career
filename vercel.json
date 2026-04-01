@@ -1,9 +1,10 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/subscribe", "dest": "/api/index" },
-    { "src": "/webhook/stripe", "dest": "/api/index" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/subscribe",       "dest": "/api/index" },
+    { "src": "/webhook/stripe",  "dest": "/api/index" },
+    { "src": "/access",          "dest": "/api/index" },
+    { "src": "/(.*)",            "dest": "/$1" }
   ],
   "buildCommand": null,
   "outputDirectory": "."
