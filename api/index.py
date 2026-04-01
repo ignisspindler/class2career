@@ -9,7 +9,8 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Email, To, Content
 
 app = Flask(__name__)
-DB_PATH = os.path.join(os.path.dirname(__file__), 'leads.db')
+# Use /tmp for SQLite (Vercel serverless can only write to /tmp)
+DB_PATH = '/tmp/leads.db'
 
 # ─── SendGrid Client ─────────────────────────────────────────────────────────
 def get_sg_client():
@@ -229,6 +230,9 @@ def webhook_stripe():
     # Minimal Stripe webhook handler — extend as needed
     return jsonify({"received": True}), 200
 
-# Vercel WSGI adapter
-from vercel.wsgi import Vercel
-app = Vercel(app)
+# Vercel WSGI adapter (for local dev only; Vercel auto-detects Flask)
+try:
+    from vercel.wsgi import Vercel
+    app = Vercel(app)
+except ImportError:
+    pass
