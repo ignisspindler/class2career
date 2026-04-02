@@ -4,6 +4,7 @@
     { "src": "/subscribe",       "dest": "/api/index" },
     { "src": "/webhook/stripe",  "dest": "/api/index" },
     { "src": "/access",          "dest": "/api/index" },
+    { "src": "/stats",           "dest": "/api/index" },
     { "src": "/(.*)",            "dest": "/$1" }
   ],
   "buildCommand": null,

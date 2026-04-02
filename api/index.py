@@ -60,20 +60,33 @@ def r_get(key):
 def r_sadd(key, member):
     return _redis('SADD', key, member)
 
+def r_scard(key):
+    result = _redis('SCARD', key)
+    return int(result) if result is not None else 0
+
 # ─── Lead & Purchase Storage ───────────────────────────────────────────────────
-def save_lead(email, **meta):
+# Cohort keys: 'class2careers.com', 'phd2pro.com', 'transition2corporate.com'
+
+def save_lead(email, cohort='', **meta):
     """Store lead; returns True if new, False if already captured."""
     key = f'lead:{email}'
     if r_get(key):
         return False
-    r_set(key, {'email': email, **meta})
+    r_set(key, {'email': email, 'cohort': cohort, **meta})
     r_sadd('leads:all', email)
+    if cohort:
+        r_sadd(f'leads:cohort:{cohort}', email)
     return True
 
-def save_purchase(email, session_id, token):
-    r_set(f'purchase:{email}', {'email': email, 'session_id': session_id, 'token': token})
+def save_purchase(email, session_id, token, cohort=''):
+    r_set(f'purchase:{email}', {
+        'email': email, 'session_id': session_id,
+        'token': token, 'cohort': cohort,
+    })
     r_set(f'token:{token}', {'email': email, 'valid': True})
     r_sadd('purchases:all', email)
+    if cohort:
+        r_sadd(f'purchases:cohort:{cohort}', email)
 
 # ─── Email Helpers ─────────────────────────────────────────────────────────────
 def _send(to_email, subject, html, text):
@@ -431,8 +444,10 @@ def subscribe():
     if not email or "@" not in email:
         return jsonify({"error": "Valid email required"}), 400
 
+    cohort = request.form.get("cohort", "") or request.form.get("utm_source", "")
     save_lead(
         email,
+        cohort=cohort,
         lead_magnet=request.form.get("lead_magnet", ""),
         source_url=request.referrer or "",
         utm_source=request.form.get("utm_source", ""),
@@ -469,14 +484,34 @@ def webhook_stripe():
             session.get("customer_details", {}).get("email")
             or session.get("customer_email", "")
         )
+        cohort = session.get("client_reference_id", "") or ""
         if email:
             token = secrets.token_urlsafe(32)
-            save_purchase(email, session["id"], token)
-            save_lead(email, utm_source="stripe_purchase", lead_magnet="purchase")
+            save_purchase(email, session["id"], token, cohort=cohort)
+            save_lead(email, cohort=cohort, utm_source="stripe_purchase", lead_magnet="purchase")
             sent = send_delivery_email(email, token)
-            print(f"[Purchase] {email} -> delivery_sent={sent}")
+            print(f"[Purchase] {email} cohort={cohort!r} -> delivery_sent={sent}")
 
     return jsonify({"received": True}), 200
+
+
+@app.route("/stats", methods=["GET"])
+def stats():
+    cohorts = ['class2careers.com', 'phd2pro.com', 'transition2corporate.com']
+    data = {
+        'leads_total': r_scard('leads:all'),
+        'purchases_total': r_scard('purchases:all'),
+        'by_cohort': {},
+    }
+    for c in cohorts:
+        leads = r_scard(f'leads:cohort:{c}')
+        purchases = r_scard(f'purchases:cohort:{c}')
+        data['by_cohort'][c] = {
+            'leads': leads,
+            'purchases': purchases,
+            'conversion_rate': round(purchases / leads * 100, 1) if leads else 0,
+        }
+    return jsonify(data)
 
 
 @app.route("/access", methods=["GET"])

@@ -317,6 +317,24 @@
             gtag('event', 'page_view', { event_category: 'engagement', event_label: source + ' / ' + medium });
         }
         
+        // Inject cohort into email form hidden fields
+        var formSource   = document.getElementById('form-utm-source');
+        var formMedium   = document.getElementById('form-utm-medium');
+        var formCampaign = document.getElementById('form-utm-campaign');
+        var formCohort   = document.getElementById('form-cohort');
+        if (formSource)   formSource.value   = source;
+        if (formMedium)   formMedium.value   = medium;
+        if (formCampaign) formCampaign.value = campaign;
+        if (formCohort)   formCohort.value   = host || source;
+
+        // Append client_reference_id to all Stripe buy links so purchases are cohort-attributed
+        document.querySelectorAll('a.pricing-cta, a#cta-primary').forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (!href || href === '#' || href.charAt(0) === '#') return;
+            var sep = href.indexOf('?') === -1 ? '?' : '&';
+            link.setAttribute('href', href + sep + 'client_reference_id=' + encodeURIComponent(host || source));
+        });
+
         // CTA click tracking
         var ctaBtn = document.getElementById('cta-primary');
         if (ctaBtn) {
@@ -327,7 +345,7 @@
                 if (typeof gtag !== 'undefined') gtag('event', 'cta_click', { event_category: 'conversion', event_label: source });
             });
         }
-        
+
         // Email signup tracking
         var emailForm = document.querySelector('.email-form');
         if (emailForm) {
@@ -556,7 +574,7 @@
                     <li><span class="check">&#10003;</span> Lifetime Updates</li>
                     <li><span class="check">&#10003;</span> 30-Day Money-Back</li>
                 </ul>
-                <a href="STRIPE_PAYMENT_LINK" class="pricing-cta" target="_blank" rel="noopener">Get Instant Access</a>
+                <a href="https://buy.stripe.com/test_eVq14m4NN22NbMafCg5kk00" class="pricing-cta" target="_blank" rel="noopener">Get Instant Access</a>
                 <div class="pricing-bonus">
                     <div class="pricing-bonus-title">&#127873; Bonus: Free 30-Day Email Coaching</div>
                     <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem;">Sign up today and get a free 30-day email coaching series with practical tips for your transition.</p>
@@ -573,6 +591,10 @@
                 <form class="email-form" action="/subscribe" method="POST">
                     <input type="email" name="email" placeholder="Your email address" required>
                     <input type="hidden" name="lead_magnet" value="interview-mastery-guide">
+                    <input type="hidden" name="utm_source"   id="form-utm-source"   value="">
+                    <input type="hidden" name="utm_medium"   id="form-utm-medium"   value="">
+                    <input type="hidden" name="utm_campaign" id="form-utm-campaign" value="">
+                    <input type="hidden" name="cohort"       id="form-cohort"       value="">
                     <button type="submit">Send Me the Guide</button>
                 </form>
             </div>
