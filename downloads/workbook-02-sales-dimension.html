@@ -1,428 +1,612 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>workbook-02-sales-dimension</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  
-  <style>
-  /* ── Print overrides (injected, highest specificity) ── */
-  @page { size: letter; margin: 0.75in; }
-  @media print {
-    html, body { width: 8.5in !important; max-width: 8.5in !important; margin: 0 auto !important; padding: 0.75in !important; background: white !important; }
-    h1 { page-break-before: always !important; break-before: page !important; }
-    h2 { page-break-before: avoid !important; break-before: auto !important; }
-    figure, table { page-break-inside: avoid !important; break-inside: avoid !important; }
-    .cover, .cover-page { page-break-after: always !important; break-after: page !important; }
-    img { max-width: 100% !important; width: 100% !important; height: auto !important; page-break-inside: avoid !important; break-inside: avoid !important; display: block !important; }
-  }
-  </style>
-
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workbook 2: The Sales Dimension — Class2Career</title>
   <link rel="stylesheet" href="class2career-pdf.css" />
 </head>
-<body><div class="cover"><img src="/assets/covers/cover-02-sales-dimension.png" style="width:100%;max-width:100%;display:block;margin:0 auto;"></div><div class="content">
-<h1 id="workbook-2-the-sales-dimension">Workbook 2: The Sales
-Dimension</h1>
-<p><strong>Class2Career: Mastering the Revenue Engine</strong><br />
-<em>By Ignis Spindler</em></p>
-<hr />
-<h2 id="introduction-why-sales-matters">Introduction: Why Sales
-Matters</h2>
-<p>If you came from academia, you might think of “sales” as something
-sleazy — the used car salesman, the pushy telemarketer.</p>
-<p>Forget that image.</p>
-<p>Sales is the <strong>lifeblood</strong> of every business. Without
-revenue, nothing else matters. No salaries get paid. No products get
-built. No missions get accomplished.</p>
-<p>In this workbook, you’ll learn: 1. <strong>What sales actually
-is</strong> — beyond the stereotypes 2. <strong>The metrics that
-matter</strong> — how businesses measure success 3. <strong>Your role in
-the revenue engine</strong> — regardless of your job title</p>
-<p>By the end, you’ll understand why every business obsesses over
-revenue — and how you can contribute to it, even if you’re not in a
-“sales role.”</p>
-<hr />
-<h2 id="part-1-the-truth-about-sales">Part 1: The Truth About Sales</h2>
-<h3 id="its-not-what-you-think">It’s Not What You Think</h3>
-<p>In business, <strong>sales is the art of creating and capturing
-value</strong>. That’s it. It’s not manipulation. It’s not deception.
-It’s helping people solve problems they’re willing to pay to solve.</p>
-<p>Dale Carnegie wrote in <strong>How to Win Friends and Influence
-People</strong>:</p>
-<blockquote>
-<p>“The royal road to a person’s heart is to talk about the things they
-treasure most.”</p>
-</blockquote>
-<p>Sales is about understanding what people need and showing them how
-your solution meets that need. It’s that simple — and that hard.</p>
-<h3 id="the-sales-funnel">The Sales Funnel</h3>
-<p>Every business has a pipeline (also called a funnel). It looks like
-this:</p>
-<ol type="1">
-<li><strong>Lead Generation</strong> — Attracting potential customers
-(marketing, referrals, cold outreach)</li>
-<li><strong>Qualification</strong> — Determining if they’re a good
-fit</li>
-<li><strong>Proposal</strong> — Presenting your solution</li>
-<li><strong>Negotiation</strong> — Working out the details</li>
-<li><strong>Close</strong> — Getting the deal signed</li>
-<li><strong>Retention</strong> — Keeping them happy so they buy
-again</li>
-</ol>
-<p>Your instructor notes: “Sales is the highest priority thing in an
-entire business. Every person in a company — whether they realize it or
-not — is either contributing to revenue or supporting someone who
-does.”</p>
-<h3 id="sales-vs.-marketing">Sales vs. Marketing</h3>
-<p>Here’s the distinction:</p>
-<ul>
-<li><strong>Marketing</strong> — Broadcasting your message to attract
-interest (ads, content, events)</li>
-<li><strong>Sales</strong> — Converting that interest into revenue
-(conversations, proposals, closes)</li>
-</ul>
-<p>In practice, they overlap. But think of it this way: Marketing is
-casting a wide net. Sales is catching the fish.</p>
-<h3 id="anyone-can-sell">Anyone Can Sell</h3>
-<p>One of the biggest myths: “I’m not a salesperson.”</p>
-<p>Wrong. If you’ve ever: - Convinced a professor to extend a deadline -
-Persuaded a colleague to help you - Negotiated a rent price - Gotten a
-friend to try a restaurant you love</p>
-<p><strong>You’ve already done sales.</strong></p>
-<p>Your instructor’s advice: “In an interview, say: ‘I’ve always been
-interested in being close to clients and solving their problems. Is
-there a way I can contribute to sales?’ Every business wants everyone to
-sell.”</p>
-<hr />
-<h2 id="part-2-revenue-metrics-the-numbers-that-rule">Part 2: Revenue
-Metrics — The Numbers That Rule</h2>
-<h3 id="why-metrics-matter">Why Metrics Matter</h3>
-<p>In business, what gets measured gets managed. And revenue metrics are
-the most measured numbers of all.</p>
-<p>If you can speak the language of metrics, you’ll stand out. You’ll be
-able to demonstrate impact. You’ll understand how your work connects to
-the bottom line.</p>
-<h3 id="key-revenue-metrics">Key Revenue Metrics</h3>
-<p><strong>Revenue</strong> — Total money coming in. The top line. If
-this isn’t growing, the business is dying. This is the heartbeat of any
-company. No revenue = no business.</p>
-<p><strong>ARR (Annual Recurring Revenue)</strong> — Predictable revenue
-from subscriptions. Investors love this because it’s stable. This is why
-so many companies switched to subscription models: - Adobe: Killed
-perpetual licensing, now $55/month Creative Cloud - Microsoft: Shifted
-to Office 365 → Microsoft 365 - ChatGPT: $20/month Plus, $200/month
-Team</p>
-<p><strong>MRR (Monthly Recurring Revenue)</strong> — Same as ARR, but
-measured monthly. Used by SaaS companies to track momentum.</p>
-<p><strong>Profit</strong> — What’s left after costs. Revenue minus
-expenses. The “bottom line.” A business can have $10M in revenue and
-still go bankrupt if costs are $11M.</p>
-<p><strong>EBITDA</strong> — Earnings Before Interest, Taxes,
-Depreciation, and Amortization. A way to measure operational performance
-without accounting noise. Investors use this to compare companies
-fairly.</p>
-<p><strong>Gross Margin</strong> — Revenue minus cost of goods sold.
-Shows efficiency. Software companies often have 70-80% gross margins.
-Retail might be 25-30%.</p>
-<p><strong>CAC (Customer Acquisition Cost)</strong> — How much you spend
-to get one customer. Formula: Total marketing &amp; sales spend ÷ # of
-new customers acquired.</p>
-<p><strong>LTV (Lifetime Value)</strong> — How much a customer is worth
-over time. Formula: Average purchase × # of purchases × customer
-lifespan.</p>
-<p><strong>The Golden Rule:</strong> CAC should be less than LTV. If it
-costs $2,000 to acquire a customer who only spends $1,000, you have a
-broken business. The ideal ratio is 3:1 (LTV should be 3x CAC).</p>
-<p><strong>Net Promoter Score (NPS)</strong> — Measures customer
-loyalty. “How likely are you to recommend us?” Scores range from -100 to
-+100. Above 50 is excellent.</p>
-<p><strong>Churn</strong> — The percentage of customers who leave each
-period. If you lose 5% of customers/month, you’re bleeding out. Churn is
-a compounding killer.</p>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COVER
+═══════════════════════════════════════════════════════════════ -->
+<div class="cover">
+  <img src="cover-02-sales-dimension.png" alt="Workbook 2: The Sales Dimension" />
+</div>
+
+<div class="content">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 1: THE SALES MINDSET
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 1: The Sales Mindset</h1>
+
+<p>If you came from academia, government, or the sciences, "sales" probably carries some baggage. The pushy car salesman. The telemarketer who calls during dinner. The person in the ill-fitting suit making promises they can't keep.</p>
+
+<p>Discard all of that. The thing those images have in common is desperation, and desperation is what happens when a salesperson has nothing real to offer. When you have something valuable, sales becomes a different activity entirely: finding the person who needs what you have, and connecting those two things.</p>
+
+<p>Your instructor's thesis — and it runs through every session, every example, every story in this material — is this: <strong>sales is the most important skill in business, and it is the hardest one for people from the academic world to accept.</strong> The faster you internalize it, the better your career will go. Period.</p>
+
+<h2>Every Problem Is a People Problem</h2>
+
+<p>In academic and scientific environments, problems tend to be technical. The experiment failed. The model overfit. The data pipeline broke. Fix the thing, and you've solved the problem.</p>
+
+<p>In business, every problem eventually becomes a people problem. A project that isn't delivering? Someone isn't communicating well, or isn't bought in, or doesn't have what they need to succeed. A product that isn't selling? Someone isn't reaching the right audience, or isn't articulating the value, or hasn't established enough trust. A team that isn't executing? A manager hasn't aligned them on the goal.</p>
+
+<p>Sales, at its core, is the skill of solving people problems. That's why your instructor says it so plainly: the sales mindset will move you forward in a career faster than almost any technical skill. It doesn't replace technical expertise; it amplifies it. An expert who can communicate value, build relationships, and bring people along is an expert who gets to keep doing the work they care about.</p>
+
+<h2>The Zero-Sum Trap</h2>
+
+<p>There is a particular disease common in competitive academic environments, and it looks like this: every interaction is a status evaluation. If you are better, I am worse. If my paper is cited more, yours is cited less. One person wins; one person loses. Economists call this a zero-sum game.</p>
+
+<p>Sales is the opposite of this. In a real sale, both parties end up better off. The buyer gets something they needed. The seller gets paid. Value was created that didn't exist before the transaction. This is what economists call a positive-sum game: one plus one equals two instead of one plus one equaling zero.</p>
+
+<p>The sales mindset means training yourself to look for the positive-sum outcome in every interaction. If you treat the person across from you as someone who has something to offer — knowledge, a connection, a perspective you don't have — you will find that they respond in kind. And over time, that becomes a reputation. People seek out positive-sum players. They remember them. They call them first when an opportunity opens up.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> From the Instructor</div>
+  <p>There's a story I've told many times about burned bridges. Early in my career, I was close to some people in a teacher's union, people who held influential positions — including the president of the union for a district of 100,000 people. Through some political missteps, I lost those relationships. I didn't just lose friends. I lost a network that connected to political offices, school board decisions, grant committees. Multiple professional doors closed at once because I had let a handful of relationships deteriorate.</p>
+  <p>The lesson isn't complicated: you don't know where anyone is going. The person who seems irrelevant to your career today may be the one who opens a door for you in ten years. Keep every door open that you can. It costs almost nothing to be decent to people, and the compound interest on that decency is extraordinary.</p>
+</div>
+
+<h2>People Remember How You Made Them Feel</h2>
+
+<p>This is not original — your instructor credits it to Maya Angelou — but it bears repeating because it is directly applicable to building a sales-capable professional identity.</p>
+
+<p>In academia, people remember what you said. They remember your argument, your data, your conclusions. Citations exist because the specific content matters.</p>
+
+<p>In business, people remember how they felt in the room with you. Did they feel heard? Did they feel respected? Did they feel like their time was well spent? A technically mediocre meeting where people felt good about the conversation will often accomplish more than a technically excellent one where the presenter made people feel small or bored.</p>
+
+<p>The practical implication: control your face, especially in the first weeks of a new role. You don't know enough yet to have opinions about people. Don't wear your reactions visibly. The person who said something you thought was obvious might be one of the most important allies you'll ever have. Give them the benefit of a neutral expression and learn about them before you form judgments you can't take back.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> A Useful Reframe</div>
+  <p>Your instructor offers this: when someone drives badly near you, your first instinct might be frustration. Try the alternative assumption: maybe that person just got a call that a family member is in the hospital and they're driving faster than they should because they're scared. You don't know. You almost never know what is going on in someone's world. The sales mindset treats this uncertainty as a reason for generosity rather than judgment. Strong, stable, non-reactive people feel safe to be around. People want to work with them, confide in them, and recommend them.</p>
+</div>
+
+<h2>Sales as Leadership</h2>
+
+<p>The connection between sales and leadership is something academics often miss because they see leadership as a management function, a title, a position of formal authority. In business, leadership is also a sales function.</p>
+
+<p>When a CEO walks into a company meeting and lays out the next year's mission, that is a sales pitch. When a manager convinces a skeptical team to adopt a new process, that is a sale. When a project manager gets five departments to agree on a timeline, they have closed a deal. The product being sold is the idea, the vision, the direction.</p>
+
+<p>People who understand this get promoted. People who can get others to move, commit, and execute are worth more to any organization than people who can only do the work themselves. Doing the work yourself is table stakes. Getting ten people to do great work together is a skill organizations pay significant premiums for.</p>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 1</h3>
+  <ul>
+    <li>Sales is not manipulation; it is finding the person who needs what you have and connecting those two things.</li>
+    <li>Every business problem is ultimately a people problem. Sales is the skill of solving people problems.</li>
+    <li>Positive-sum games create value for both parties. Train yourself to look for that outcome in every interaction.</li>
+    <li>People remember how you made them feel. Manage your reactions, especially early in a new environment.</li>
+    <li>Leadership is a sales function. Getting people to move, commit, and execute is one of the most valued skills in business.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">✏️</span> Exercise 1: The Positive-Sum Inventory</div>
+  <p>Think of three professional relationships in your life that feel zero-sum to you — competitive, guarded, or transactional.</p>
+  <ol>
+    <li>For each one, write one thing that person knows or has done that you genuinely respect.</li>
+    <li>Write one thing you could offer them that would cost you nothing meaningful — a connection, a piece of information, a piece of recognition they haven't received.</li>
+    <li>Make one of those offers in the next two weeks. Track what changes.</li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 2: THE SALES ORGANIZATION
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 2: The Sales Organization</h1>
+
+<p>Before you can participate in a sales culture, you need to know who does what and why. Every company structures its revenue function slightly differently, but the roles below appear in recognizable form almost everywhere.</p>
+
 <figure>
-<img src="/assets/images/diagram-02-revenue-metrics.png"
-alt="Revenue Metrics Dashboard" />
-<figcaption aria-hidden="true">Revenue Metrics Dashboard</figcaption>
+  <img src="diagram-02-sales-org.png" alt="The Sales Organization Structure" />
 </figure>
-<h3 id="the-sales-funnel-metrics">The Sales Funnel Metrics</h3>
-<ul>
-<li><strong>Lead</strong> — Someone interested</li>
-<li><strong>MQL (Marketing Qualified Lead)</strong> — A lead marketing
-thinks is promising</li>
-<li><strong>SQL (Sales Qualified Lead)</strong> — A lead sales thinks is
-worth pursuing</li>
-<li><strong>Opportunity</strong> — A serious prospect</li>
-<li><strong>Closed Won</strong> — A new customer</li>
-</ul>
-<p>Conversion rates matter: If 100 leads become 10 opportunities become
-2 closes, your close rate is 2%. That’s normal.</p>
-<h3 id="connecting-your-work-to-revenue">Connecting Your Work to
-Revenue</h3>
-<p>Here’s the trick: <strong>Tie everything you do to
-revenue.</strong></p>
-<p>Your instructor’s example: “I built a tool that saves nurses 10 hours
-per week. At $50/hour, that’s $500/week per ward. Multiply by 50 wards —
-that’s $25,000/week in value. Now that’s something sales can pitch.”</p>
-<p>Ask yourself: - Does my work help the company make money? - Does my
-work help the company save money? - Can I quantify my impact in
-dollars?</p>
-<p>If yes, you’re contributing to revenue. If no, find a way to connect
-your work to either growth or cost savings.</p>
-<hr />
-<h2 id="part-3-the-sales-approach">Part 3: The Sales Approach</h2>
-<h3 id="who-owns-sales">Who Owns Sales?</h3>
-<ul>
-<li><strong>CRO (Chief Revenue Officer)</strong> — Leads all
-revenue-generating functions (sales + marketing)</li>
-<li><strong>VP of Sales</strong> — Manages the sales team</li>
-<li><strong>Individual Sales Reps</strong> — Directly close deals</li>
-</ul>
-<p>In small companies, the <strong>CEO is often the top
-salesperson</strong>. Your instructor describes: “The CEO of a startup
-literally jumps fences to get to client meetings. They do sales,
-operations, management — everything.”</p>
-<h3 id="the-sales-mindset">The Sales Mindset</h3>
-<p>Salespeople are measured on <strong>quota</strong> — a target number
-they’re expected to hit. Miss quota consistently, and they’re out. Hit
-quota + bonus, and they’re heroes.</p>
-<p>This creates a high-pressure environment. But it also creates
-clarity: everyone knows what success looks like.</p>
+
+<h2>The CEO Is the First Salesperson</h2>
+
+<p>This is the thing about small companies that surprises people who've only observed large ones: the CEO is almost always the top salesperson. Not symbolically. Literally.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> From the Instructor</div>
+  <p>I watched the CEO of my former company fly from our offices to Detroit to sit in a meeting at Quicken Loans. He didn't have to be there. His sales team was there. But Quicken was our largest customer, worth $15 million out of a $35 million revenue business. If that relationship went sideways, the math was brutal: nearly half the company's revenue, covering the salaries of a lot of people, gone. So the CEO was in every important room for that account. Not because anyone told him to be. Because he understood that the relationship was more important than any individual transaction, and only he could carry the weight of that commitment.</p>
+  <p>I've seen small-company CEOs jump fences — literally, physical fences — to not be late to a client meeting. That urgency is not dysfunction. It's the lived understanding that in a small business, every significant customer relationship is existential.</p>
+</div>
+
+<p>In larger organizations, the CEO may be insulated from day-to-day selling, but they're still responsible for the largest relationships and still show up for the biggest deals. The title changes; the accountability doesn't.</p>
+
+<h2>The CRO and Sales Management</h2>
+
+<p><strong>The CRO (Chief Revenue Officer)</strong> is usually the top salesperson in a company large enough to have one. They set the sales methodology: who to target, how to approach them, how to price, how to measure success. Marketing typically reports to or works closely with the CRO, because marketing's job is to fill the top of the funnel the sales team then converts.</p>
+
+<p>The CMO (Chief Marketing Officer) is worth noting separately: it has the shortest average tenure and the highest proportion of leaders who have no formal training in the field. Marketing attribution is genuinely hard, results are often delayed, and the role gets blamed when growth stalls regardless of cause. If you're considering a marketing-adjacent leadership role, understand that the accountability is real and the metrics are soft.</p>
+
+<p><strong>Sales managers</strong> own the execution. In large organizations they may be regional, covering geographies or industry verticals. Their job is part coach, part accountant: they help their reps work through deals, and they are responsible for forecasting how much revenue their team will bring in each quarter.</p>
+
+<h2>Hunters, Farmers, and the People Between</h2>
+
+<p>The most important distinction in any sales organization is between hunters and farmers, and understanding it will help you figure out where you fit.</p>
+
+<p><strong>Hunters</strong> find and close new business. They are wired for the chase. The best ones have a book of target accounts — the 25 companies they believe can become major customers — and they are methodical about moving through each one. Your instructor observed a hunter who was warm and easy-going in every social setting, but in an internal strategy meeting about an account, became one of the most focused, demanding people in the room. She knew exactly which accounts warranted her full intensity and deployed it accordingly. That precision is what separates elite hunters from average ones.</p>
+
+<p><strong>Farmers</strong> maintain and grow existing customer relationships. Your instructor's wife is in packaging sales, and her job is a textbook example of farming. She already has a relationship with a company that owns Clorox. Through years of consistent service and genuine curiosity about their business, she's in the conversation when new packaging needs come up, including a specialized sealing material used on every bottle of Clorox bleach. A new contract for that material, earned through relationship-building rather than cold outreach, is pure farming. She didn't go find a new customer. She made an existing one more valuable.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> The Risk/Reward Reality</div>
+  <p>Hunters and farmers both carry risk, but it manifests differently. Hunters often have hard quotas, and missing them has real consequences. Your instructor watched salespeople get hired and fired in six-week windows at a marketing firm he worked for. The ones who exceeded quota went to Maui on the company's dime. The ones who didn't were gone. That is a tighter wire than anything in operations, finance, or product. The upside is real — commissions on large deals are substantial — but so is the floor.</p>
+  <p>Farmers live with a different risk: the relationship itself. If a farmer allows a customer relationship to sour, the whole account can walk. One difficult interaction, one unresolved issue handled badly, one internal problem surfaced at the wrong moment — these can undo years of goodwill. The farmer has to manage not just the relationship but every person inside their own company who touches that relationship.</p>
+</div>
+
+<p><strong>Solutions experts</strong> (sometimes called solutions architects or technical sales) are the bridge between the hunter's promise and the delivery team's reality. They typically have a technical background — engineering, data science, product — and are brought into deals to answer the hard questions: can we actually do this? What would it take? How do we price something we've never sold before? They partner with hunters on complex deals where the customer's needs don't map cleanly to an existing product.</p>
+
+<p><strong>Account managers</strong> are the operational version of farmers. They manage the day-to-day relationship, coordinate internal resources to solve customer problems, and look for expansion opportunities within existing accounts. When a customer has a quality issue, the account manager is the one getting the quality engineering team on a call, managing the internal dynamics, and making sure the customer feels heard — even if the internal dynamics are difficult.</p>
+
+<p><strong>Lead generation</strong> specialists work the top of the funnel: identifying prospects, qualifying them, and passing the promising ones to hunters or account managers. They won't close the $10 million deal, but without their work, there's no pipeline to close from.</p>
+
+<h2>What Quantifiable Relationships Are Worth</h2>
+
+<p>One of the most important things to understand about a career in sales is that your relationships are a form of equity.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> From the Instructor: The Experian Example</div>
+  <p>Experian sells credit data to major mortgage companies. The account manager who owns the Rocket Mortgage relationship at Experian can credibly say that they manage $30 to $40 million in revenue. Not because they built it alone — but because they've maintained it, grown it, and protected it over time. When that person writes a resume, they don't write their job title. They write the size of the relationships they owned. HR departments at other companies see "$30M book of business" and they respond.</p>
+  <p>The company my instructor worked for was eventually sold for $160 million. The revenue at the time was approximately $35 million. The multiplier was about five times revenue. The account manager who owned the $15 million Quicken relationship could credibly say they were responsible for $75 million of that sale. That's real equity — not a stock certificate, but a demonstrable business contribution that the market will pay to acquire.</p>
+</div>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 2</h3>
+  <ul>
+    <li>In small companies, the CEO is the top salesperson — literally, not figuratively.</li>
+    <li>Hunters find and close new business; farmers grow and retain existing accounts. Most organizations need both, and they require different personalities.</li>
+    <li>Solutions experts bridge technical reality and sales promise. If you have a technical background, this is one of the highest-leverage roles in any company.</li>
+    <li>Your customer relationships are a quantifiable asset. Build them deliberately and track their size.</li>
+    <li>Sales has the highest upside and the lowest floor of any function. Go in with clear eyes about both.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">✏️</span> Exercise 2: Hunter, Farmer, or Expert?</div>
+  <p>Based on your personality and background, where do you most naturally fit in a sales organization?</p>
+  <ol>
+    <li>Write one paragraph describing your natural mode: Are you energized by new relationships and the pursuit of something that doesn't exist yet (hunter)? By deepening existing relationships and solving complex ongoing problems (farmer)? By translating technical complexity into something a non-expert can trust and act on (solutions expert)?</li>
+    <li>Name one company in your target industry where you can identify what each role looks like in practice. Find the LinkedIn profiles of two people in those roles.</li>
+    <li>Write one sentence that answers: "If I were in a client meeting tomorrow and had to add value, the specific thing I could offer is ___."</li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 3: THE SALES FUNNEL
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 3: The Sales Funnel</h1>
+
+<p>Every sale moves through stages. The exact names vary by company and industry, but the logic is universal: someone goes from not knowing you exist to giving you money, and that journey has predictable stops along the way.</p>
+
+<p>Understanding the funnel matters because every stage has its own goal, its own skills, and its own metrics. The mistake most non-sales professionals make is treating every stage the same way — which usually means treating everything like a presentation, when most of it is actually listening.</p>
+
 <figure>
-<img src="/assets/images/diagram-02-sales-funnel-v2.png" alt="Sales Funnel" />
-<figcaption aria-hidden="true">Sales Funnel</figcaption>
+  <img src="diagram-02-sales-funnel-v2.png" alt="The Sales Funnel" />
 </figure>
-<p>Here’s how it typically works: - <strong>Base salary</strong> —
-Guaranteed income - <strong>Commission</strong> — Percentage of revenue
-brought in - <strong>Bonus</strong> — Additional reward for hitting
-targets</p>
-<p>In some sales roles, 80% of compensation comes from commission.
-That’s why the best salespeople can earn 7 figures — and why
-underperformers get fired fast.</p>
-<p><strong>The tension:</strong> Sales often gets the glory (bonuses,
-trips to Maui, company-wide recognition). Operations does the heavy
-lifting. Don’t let that breed resentment — it’s just how business
-works.</p>
-<p>Your instructor puts it blunt: “If you’re not in sales, you will
-watch salespeople get rewarded in ways you’ll never get. That’s fine.
-Focus on your own metrics.”</p>
-<h3 id="sales-methodology">Sales Methodology</h3>
-<p>Different companies approach sales differently:</p>
-<ul>
-<li><strong>Transactional</strong> — Low price, high volume, quick close
-(e.g., selling t-shirts)</li>
-<li><strong>Enterprise</strong> — High price, long sales cycle, multiple
-stakeholders (e.g., selling software to hospitals)</li>
-<li><strong>Product-Led</strong> — Let the product sell itself (free
-trials, freemium)</li>
-<li><strong>Relationship-Based</strong> — Long-term trust, consultative
-selling</li>
-</ul>
-<p>Your approach depends on your industry, product, and customer.</p>
-<h3 id="sales-enablement">Sales Enablement</h3>
-<p>Even if you’re not in sales, you can contribute:</p>
-<ul>
-<li>Create presentations that help salespeople communicate value</li>
-<li>Build tools that automate repetitive tasks</li>
-<li>Write case studies and success stories</li>
-<li>Provide technical expertise during deals</li>
-</ul>
-<p>Your instructor calls this <strong>“sales enablement”</strong> — and
-it’s a career accelerant. Anyone who helps salespeople sell faster is
-valuable.</p>
-<hr />
-<h2 id="part-4-selling-yourself-the-interview">Part 4: Selling Yourself
-— The Interview</h2>
-<h3 id="the-pitch">The Pitch</h3>
-<p>When you walk into an interview, you are selling yourself. Not your
-credentials. <strong>You.</strong></p>
-<p>Your instructor’s advice: “Don’t lead with your background. Lead with
-what you can do for them.”</p>
-<p><strong>Bad pitch:</strong> “I have a PhD in machine learning and
-expertise in NLP and deep learning.”</p>
-<p><strong>Good pitch:</strong> “I build systems that find patterns in
-data — patterns that save companies money.”</p>
-<h3 id="the-follow-up">The Follow-Up</h3>
-<p>In sales, the follow-up is everything. Same in your career.</p>
-<p>Your instructor: “When someone is waiting on a task, let them know: -
-How long it’ll take - When you’ll follow up - If anything changes</p>
-<p>Good follow-ups make people respect you. They don’t think you’re
-running away.”</p>
-<h3 id="questions-that-impress">Questions That Impress</h3>
-<p>In an interview, ask about sales and metrics:</p>
-<ul>
-<li>“How do you define success for this role?”</li>
-<li>“What are the key metrics for the team?”</li>
-<li>“How does sales and marketing work together here?”</li>
-<li>“What’s your average sales cycle?”</li>
-</ul>
-<p>Asking these signals you think like a business person — not just a
-technician.</p>
-<hr />
-<h2 id="part-5-your-path-the-three-tracks">Part 5: Your Path — The Three
-Tracks</h2>
-<h3 id="track-a-undergraduate-early-career">Track A: Undergraduate /
-Early Career</h3>
-<p><strong>Your challenge:</strong> No sales experience. The concept
-feels foreign.</p>
-<p><strong>Your focus:</strong> - Learn the vocabulary - Understand the
-funnel - Find mentors in sales</p>
-<p><strong>Your assignment:</strong> 1. Identify a company you want to
-work for. Map out their sales funnel (how does a stranger become a
-customer?). 2. Practice your 30-second pitch: “I help [audience] do
-[value].” 3. Read one chapter of <em>How to Win Friends and Influence
-People</em>.</p>
-<h3 id="track-b-masters-mid-level-transition">Track B: Master’s /
-Mid-Level Transition</h3>
-<p><strong>Your challenge:</strong> You have expertise but haven’t
-connected it to revenue.</p>
-<p><strong>Your focus:</strong> - Quantify your impact - Learn the
-metrics - Position yourself as a revenue contributor</p>
-<p><strong>Your assignment:</strong> 1. For a project you’ve worked on,
-calculate its value in dollars (time saved × hourly rate, revenue
-generated, cost avoided). 2. Learn your target company’s revenue model.
-How do they make money? 3. Practice: Write a one-sentence answer to “How
-does your work contribute to revenue?”</p>
-<h3 id="track-c-phd-senior-professional-pivot">Track C: PhD / Senior
-Professional Pivot</h3>
-<p><strong>Your challenge:</strong> Deep expertise. Risk of
-over-qualifying or overthinking.</p>
-<p><strong>Your focus:</strong> - Simplify your message - Lead with
-value, not credentials - Be a translator, not a lecturer</p>
-<p><strong>Your assignment:</strong> 1. Write a 30-second pitch that
-skips your degree entirely. 2. Identify one business problem in your
-target industry that only you can solve. 3. Practice: “Here’s what I can
-do for you” vs. “Here’s my background.”</p>
-<hr />
-<h2 id="part-6-public-sector-transition">Part 6: Public Sector
-Transition</h2>
-<p>Coming from government or non-profit? Here’s how to translate:</p>
+
+<h2>Stage 1: Awareness</h2>
+
+<p>Before someone can buy from you, they need to know you exist. Awareness is created through marketing: advertising, content, conferences, referrals, press coverage, and word of mouth. In the digital context, it includes things like showing up in a Google search, appearing as a banner on a site someone reads, or being mentioned by someone they trust.</p>
+
+<p>The companies that win at awareness don't just tell people they exist; they give people a reason to remember them. When Google became a verb, that was awareness compounding into cultural penetration. Most businesses operate at a much smaller scale, but the principle is the same: be where your customers are, consistently, with something worth noticing.</p>
+
+<h2>Stage 2: Interest and Consideration</h2>
+
+<p>Once someone is aware of you, the next question is whether they care enough to engage. Interest is measured in click-through rates, time on page, form submissions, email sign-ups. Consideration begins when someone starts actively evaluating whether your offering fits their need: downloading a white paper, requesting a demo, getting on a call.</p>
+
+<p>For enterprise sales — business-to-business deals with long cycles and multiple stakeholders — this stage can take weeks or months. The salesperson's job here is to understand the buyer's actual problem as specifically as possible, and to assess whether the company can genuinely solve it. This is called qualification, and doing it honestly is one of the highest-leverage activities in any sales organization. Pursuing unqualified deals wastes everyone's time; real hunters learn to walk away from the wrong opportunities so they can sprint toward the right ones.</p>
+
+<h2>Stage 3: Intent</h2>
+
+<p>Intent is the moment a prospect signals they are likely to buy. They've asked for a formal proposal. They've introduced you to their procurement team. They've shared their internal budget timeline. The salesperson's job at this stage is to keep momentum moving forward while the solutions expert validates that the delivery team can actually fulfill what's being promised.</p>
+
+<h2>Stage 4: The Close</h2>
+
+<p>The close is where the signatures go on the dotted line. This is the hunter's domain. The skills required are negotiation, patience, timing, and the ability to address objections without capitulating on price. Closing a deal too cheaply — giving away margin to end the discomfort of negotiation — is a common failure mode for technically-oriented people who get pulled into deals. Know the floor, know the value, and hold it.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> On Commitment to Numbers</div>
+  <p>In a negotiation, salespeople often make the mistake of undercommitting to their forecast so they can exceed it and look good. Their manager does the reverse — presses for a higher number so the company can plan confidently. The gap between what the salesperson forecasts and what the company actually needs is one of the permanent tensions in sales culture. Your instructor's view: salespeople should commit to what they genuinely believe is achievable and then outperform it. Sandbagging the forecast corrodes trust with management faster than missing it.</p>
+</div>
+
+<h2>Stage 5: Retention and Expansion</h2>
+
+<p>The sale doesn't end at the close. For most businesses, the most profitable customer is the one you already have. Retention — keeping customers satisfied enough to renew — is cheaper than acquiring new ones by a wide margin. Expansion — selling additional products or services to existing customers — is cheaper still.</p>
+
+<p>This is farming territory. The best farmers build relationships deep enough that customers tell them about problems before they become crises, which gives the farmer the opportunity to solve them before a competitor hears about them.</p>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 3</h3>
+  <ul>
+    <li>Every stage of the funnel has a different goal and requires different skills. Applying the same approach to all stages is a common mistake.</li>
+    <li>Qualification is one of the highest-leverage activities in sales. The ability to say "this isn't the right fit" saves everyone time and protects the company's reputation.</li>
+    <li>Retention and expansion are cheaper and more profitable than acquisition. Most companies underinvest in them.</li>
+    <li>When you get pulled into stage 3 (technical presentation), your job is to build confidence, not demonstrate how much you know.</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 4: REVENUE METRICS
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 4: Revenue Metrics — The Numbers That Run the Business</h1>
+
+<p>You do not need to become a finance person. You need to be able to sit in a room where financial language is being used, understand what's happening, and know when the numbers being discussed are relevant to your work. That is a different and much more achievable bar.</p>
+
+<p>What follows is the core vocabulary. Learn it. When you hear these terms in a meeting, you should know instinctively whether the news is good or bad, whether the number is big or small for the context, and what question to ask if you don't understand the implication.</p>
+
+<figure>
+  <img src="diagram-02-revenue-metrics.png" alt="Key Revenue Metrics" />
+</figure>
+
+<h2>The Big Picture Numbers</h2>
+
 <table>
-<thead>
-<tr>
-<th>Public Sector</th>
-<th>Private Sector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Mission-driven</td>
-<td>Profit-driven (can also be mission-driven)</td>
-</tr>
-<tr>
-<td>Budget = allocation</td>
-<td>Revenue = growth</td>
-</tr>
-<tr>
-<td>Success = outputs</td>
-<td>Success = outcomes</td>
-</tr>
-<tr>
-<td>Change is slow</td>
-<td>Change is constant</td>
-</tr>
-</tbody>
+  <thead>
+    <tr><th>Term</th><th>What It Means</th><th>Why It Matters</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Revenue</strong></td>
+      <td>Total money coming in the door before costs</td>
+      <td>The top line. Every other metric is derived from this.</td>
+    </tr>
+    <tr>
+      <td><strong>Profit</strong></td>
+      <td>What's left after all costs are paid</td>
+      <td>Revenue is vanity. Profit is sanity. A company can have massive revenue and still go bankrupt.</td>
+    </tr>
+    <tr>
+      <td><strong>ARR</strong></td>
+      <td>Annual Recurring Revenue — revenue that repeats year over year (subscriptions, contracts)</td>
+      <td>Defines the company's floor. Government contracts are almost entirely ARR. Investors love ARR because it's predictable.</td>
+    </tr>
+    <tr>
+      <td><strong>CAGR</strong></td>
+      <td>Compound Annual Growth Rate — how fast the business is growing year over year</td>
+      <td>A company growing 25% per year is worth multiples more than one growing 5%. CAGR drives valuation.</td>
+    </tr>
+    <tr>
+      <td><strong>EBITDA</strong></td>
+      <td>Earnings Before Interest, Taxes, Depreciation and Amortization</td>
+      <td>A proxy for operational profitability that strips out financing decisions and accounting choices. Used to compare companies across industries.</td>
+    </tr>
+    <tr>
+      <td><strong>Margin</strong></td>
+      <td>Revenue minus costs, expressed as a percentage</td>
+      <td>High revenue with thin margin is a fragile business. High margin is a defensible one.</td>
+    </tr>
+  </tbody>
 </table>
-<h3 id="what-transfers">What Transfers</h3>
+
+<h2>The Customer-Level Numbers</h2>
+
+<table>
+  <thead>
+    <tr><th>Term</th><th>What It Means</th><th>Example</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>CAC</strong></td>
+      <td>Customer Acquisition Cost — how much it costs to win one new customer</td>
+      <td>A mortgage company might spend $300 in mailers to close one $250,000 loan. At a 1% fee, that's $2,500 revenue on $300 spent. The math works.</td>
+    </tr>
+    <tr>
+      <td><strong>LTV</strong></td>
+      <td>Lifetime Value — expected total revenue from a single customer over the full relationship</td>
+      <td>An insurance customer who stays 10 years is worth dramatically more than one who churns after six months. LTV shapes who you go after.</td>
+    </tr>
+    <tr>
+      <td><strong>LTV:CAC</strong></td>
+      <td>The ratio of lifetime value to acquisition cost</td>
+      <td>The fundamental test of whether your business model works. LTV should be 3× CAC or better. Below that, you're paying more to acquire customers than they're worth.</td>
+    </tr>
+    <tr>
+      <td><strong>Churn</strong></td>
+      <td>The rate at which customers stop buying</td>
+      <td>A 10% annual churn means you lose 10% of your customer base every year before growing. High churn makes growth extremely expensive.</td>
+    </tr>
+    <tr>
+      <td><strong>Conversion Rate</strong></td>
+      <td>The percentage of prospects who take the desired next action</td>
+      <td>Out of 1,000 people who visit a landing page, 30 sign up. That's a 3% conversion rate. Each stage of the funnel has its own conversion rate.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Metrics Specific to Your Business</h2>
+
+<p>Every business invents metrics for things that aren't captured by the standard vocabulary. Your instructor's former company used RPDMS: Revenue Per Marketing Dollar Spent. It was specific to their client relationships in financial marketing and told them something the standard metrics didn't.</p>
+
+<p>When you join a company, learn their proprietary metrics within the first 90 days. Ask your manager: "What's the one number that tells you whether we're having a good week?" The answer to that question will tell you more about how the business actually runs than any org chart or strategy document.</p>
+
+<h2>How Revenue Drives Valuation</h2>
+
+<p>Companies aren't valued by their revenue alone. They're valued by revenue multiplied by a market-determined factor that accounts for growth rate, margins, and predictability. Your instructor's company was sold for $160 million when it was generating approximately $35 million in revenue: roughly a 5x multiple.</p>
+
+<p>The practical implication for you: the account manager who owned a $15 million customer relationship didn't just generate revenue. They generated approximately $75 million of the company's eventual sale price. If you ever wonder why certain sales relationships are treated with extraordinary care, this is the math behind it.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">💡</span> On Forecasting</div>
+  <p>Forecasting is taken very seriously because it's how the business plans. If the sales team forecasts $8 million next quarter and delivers $5 million, that's not just a miss — it's a planning failure that ripples through hiring, procurement, and cash flow. Your instructor's observation: measurement outside of finance is often loose and context-dependent. But revenue measurement is tight. When the money shows up, everyone knows it. When it doesn't, everyone knows that too.</p>
+</div>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 4</h3>
+  <ul>
+    <li>ARR defines the floor. CAGR defines the trajectory. Together they drive valuation.</li>
+    <li>LTV:CAC is the most important ratio in any subscription or recurring-revenue business. Know it for your target industry.</li>
+    <li>Every company has proprietary metrics. Learn them in your first 90 days.</li>
+    <li>Revenue × multiplier = company value. Owning major customer relationships makes you a significant contributor to that equation.</li>
+    <li>Forecasting matters because it drives planning. A missed forecast isn't just a sales problem — it's a company-wide problem.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">✏️</span> Exercise 3: Read the Revenue</div>
+  <p>Pick one publicly traded company in your target industry.</p>
+  <ol>
+    <li>Find their most recent earnings report (search "[company] Q4 earnings press release"). Identify: total revenue, year-over-year growth rate, and any mention of ARR or recurring revenue.</li>
+    <li>Find one analyst comment on whether that quarter was good or bad, and what metric drove the judgment.</li>
+    <li>Calculate: if you were an account manager owning 10% of their revenue, what dollar value would you put on that relationship? What would a 5x multiple make it worth?</li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 5: THE SALES APPROACH
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 5: Building Your Sales Approach</h1>
+
+<p>By now you understand what sales is, who does it, how the funnel works, and what the numbers mean. What remains is the practical question: how do you build a sales-capable presence in the world, regardless of your job title?</p>
+
+<h2>Know the Mission, the Pitch, and the Value Proposition</h2>
+
+<p>Before you can sell anything — including yourself — you need to know three things about the organization you're part of:</p>
+
 <ul>
-<li>Stakeholder management</li>
-<li>Grant writing → sales pitching</li>
-<li>Relationship building</li>
-<li>Presentation skills</li>
+  <li><strong>The mission:</strong> why the company exists, stated in terms a stranger would understand</li>
+  <li><strong>The pitch:</strong> the two-sentence version of what the company sells and who it's for</li>
+  <li><strong>The value proposition:</strong> what specific problem the company solves better than the alternatives, and for which customer</li>
 </ul>
-<h3 id="what-you-need-to-learn">What You Need to Learn</h3>
+
+<p>Most people who work in a company cannot say all three clearly. The ones who can are the ones who get pulled into important conversations, invited to external meetings, and trusted with strategic responsibilities. Learning these three things within your first 30 days is one of the highest-return investments of your time.</p>
+
+<h2>You Can Sell Without Being in Sales</h2>
+
+<p>Your instructor's recommendation — and it's an unusual one — is to ask in your first interview whether there's a way to get close to the sales process, even if the role you're interviewing for has nothing to do with selling. Almost every business wants everyone to sell, and almost no one ever asks if they can help. The question alone distinguishes you.</p>
+
+<p>Here's what that looks like in practice:</p>
+
 <ul>
-<li>Results orientation</li>
-<li>Speed and iteration</li>
-<li>Revenue metrics</li>
-<li>Negotiation</li>
+  <li>Attend a client-facing presentation and take notes on what questions the customer asks. Feed those back to the product or marketing team.</li>
+  <li>Present at a conference or meetup in your domain. Visibility in a professional community is awareness creation, which is the top of the funnel.</li>
+  <li>Write a white paper, a blog post, or a case study. Content that demonstrates your company's expertise attracts inbound leads.</li>
+  <li>Start a professional community. Your instructor tells the story of a salesperson at Posit (the data science software company) who runs a weekly one-hour data science hangout, no sales pitch, no product placement. Just a professional conversation where data scientists talk to each other. That hangout has become her most valuable sales tool, because the people who attend associate her name and her company with their development.</li>
 </ul>
-<p>Your instructor’s advice: “You have valuable skills. The trick is
-translating them into a language business people understand.”</p>
+
+<h2>Conferences Are Not What You Think</h2>
+
+<p>Academic conferences are about presenting research to peers. Business conferences are about meeting people who might become customers, partners, or referral sources. The two experiences look similar from the outside — presentations, posters, networking events — but the purpose is fundamentally different.</p>
+
+<p>The more businesslike the conference, the more likely it is to generate commercial outcomes. Your instructor attended a medical informatics conference where academics presented to other academics about hospital systems. Almost no buying happened. His wife attends Pack Expo — a packaging industry trade show where automated filling equipment runs in full demonstration on the conference floor and companies actively negotiate contracts in the booths. The difference in commercial activity is not small.</p>
+
+<p>As you assess conferences to attend, ask: is this conference where buyers go, or where practitioners go? Both have value, but only one of them is a sales opportunity.</p>
+
+<h2>Credibility Alone Doesn't Sell</h2>
+
+<p>A publication record, a conference presentation, a list of credentials — none of these create sales by themselves. They create credibility, which is a prerequisite for sales but not the sale itself. The company your instructor works for has publications, conference presentations, and legitimate domain expertise. None of it generates inbound revenue without active marketing that points people toward the evidence.</p>
+
+<p>Credibility plus visibility creates sales. Credibility without visibility is a tree falling in an empty forest.</p>
+
+<h2>Partnerships and the Multi-Channel Approach</h2>
+
+<p>For most businesses, revenue doesn't come from one channel. It comes from several: direct sales, channel partners (other companies that sell your product to their customers), inbound leads from content and search, referrals from satisfied customers, and conference-generated relationships. Each channel requires different investment and produces different quality of lead.</p>
+
+<p>Understanding which channels produce the best customers — lowest CAC, highest LTV, fastest to close — is one of the most valuable strategic skills in any company. It tells the business where to concentrate its investment. If you can bring that analysis, you become valuable beyond whatever your nominal role is.</p>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 5</h3>
+  <ul>
+    <li>Know the mission, the pitch, and the value proposition within 30 days of starting any new role.</li>
+    <li>Ask to get close to the sales process even if your role isn't in sales. Almost every business wants this and almost no one asks.</li>
+    <li>Credibility without visibility doesn't produce revenue. You have to market the credibility.</li>
+    <li>Business conferences are sales environments, not academic ones. Approach them accordingly.</li>
+    <li>Multi-channel revenue is more resilient than single-channel. Understanding which channels work best makes you strategically valuable.</li>
+  </ul>
+</div>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">✏️</span> Exercise 4: Your Sales Channel Map</div>
+  <p>For a company in your target industry:</p>
+  <ol>
+    <li>Identify at least three channels through which they acquire customers (website, referrals, direct outreach, partnerships, conferences, advertising). Find evidence of each — a LinkedIn post, a press release, a conference listing, a case study.</li>
+    <li>For each channel, make your best estimate of whether it produces high or low LTV customers. Justify your reasoning.</li>
+    <li>Write one sentence about where you personally could contribute to one of those channels, given your background.</li>
+  </ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PART 6: PUBLIC SECTOR TRANSITION
+═══════════════════════════════════════════════════════════════ -->
+<h1>Part 6: The Sales Skills You Already Have</h1>
+
+<p>If you came from government, academia, or the non-profit sector, you've been selling your entire career. You've just been calling it something else.</p>
+
+<table>
+  <thead>
+    <tr><th>What You Called It</th><th>What Business Calls It</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Grant writing</td><td>Proposal development and value articulation</td></tr>
+    <tr><td>Thesis defense</td><td>Executive presentation under pressure</td></tr>
+    <tr><td>Conference presentation</td><td>Thought leadership and awareness creation</td></tr>
+    <tr><td>Getting a research partner to collaborate</td><td>Partnership development</td></tr>
+    <tr><td>Convincing a funding committee</td><td>Stakeholder management and close</td></tr>
+    <tr><td>Navigating a tenure review</td><td>Managing a multi-stakeholder qualification process</td></tr>
+    <tr><td>Getting IRB approval</td><td>Regulatory compliance and risk negotiation</td></tr>
+  </tbody>
+</table>
+
+<p>The skills are there. The translation is what's missing. Every one of the activities above required you to understand your audience, make a case for your work's value, address objections, and bring someone to a decision. That is a sales process.</p>
+
+<h2>What to Build From Here</h2>
+
+<ul>
+  <li><strong>Outcome language.</strong> Translate every project you've worked on into a business outcome sentence: "I did X, which produced Y, which meant Z for the organization." The deliverable doesn't count. The downstream impact does.</li>
+  <li><strong>Commercial awareness.</strong> Start reading about revenue — your target company's earnings reports, industry news, competitive dynamics. Being able to discuss a company's commercial situation is table stakes for a sales-adjacent role.</li>
+  <li><strong>Relationship intentionality.</strong> Academic networking is largely reactive. Business networking is proactive. Identify five people in your target industry and find a genuine reason to reach out: a question, a piece of their work you found valuable, a mutual connection. Start the relationship before you need it.</li>
+</ul>
+
+<blockquote>
+  <p>The skills you built in academia and government are real. The gap is in framing. You've been solving problems for years. The question is whether you can describe those solutions in a language that business people recognize as valuable.</p>
+</blockquote>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways — Part 6</h3>
+  <ul>
+    <li>Grant writing, thesis defense, conference presenting, and committee navigation are all sales processes in academic language.</li>
+    <li>The skill is there. The translation is missing. Build your outcome language first.</li>
+    <li>Start commercial reading immediately: earnings reports, industry newsletters, competitive news.</li>
+    <li>Proactive relationship-building is a business norm. Start before you need the relationship.</li>
+  </ul>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     BOOK RECOMMENDATIONS
+═══════════════════════════════════════════════════════════════ -->
+<h1>Book Recommendations</h1>
+
+<p>These are the books your instructor references directly in the course material, plus others that extend the same thinking. Each has something specific to offer people coming from outside the sales culture.</p>
+
+<h2>On the Sales Mindset</h2>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3XqSnXd" target="_blank">How to Win Friends and Influence People</a> — Dale Carnegie</h4>
+  <p>The reference that opens the course material for good reason. Not a manipulation manual — a framework for treating people as the beings they actually are: people who want to feel understood and valued. Short, dense with usable insight, and worth reading even if the title makes you suspicious. Your instructor's view: the faster you internalize this, the faster your professional relationships will improve.</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3Z8Q1NU" target="_blank">To Sell Is Human</a> — Daniel Pink</h4>
+  <p>The case that everyone is in sales, whether or not they carry the title. Pink reframes what sales actually is — not persuasion, but moving people — and backs it with research on what actually works. Particularly useful for people who have been telling themselves they're "not salespeople."</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3Mo8wGE" target="_blank">Networking for People Who Hate Networking</a> — Devora Zack</h4>
+  <p>Explicitly written for introverts and analytical thinkers who find networking exhausting. The premise: networking works differently for different personality types, and the extrovert model is not the only valid one. If the thought of working a room makes you anxious, this book gives you a framework that fits how you actually operate.</p>
+</div>
+
+<h2>On Negotiation and the Close</h2>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3XuNOeQ" target="_blank">Never Split the Difference</a> — Chris Voss</h4>
+  <p>The former FBI hostage negotiator explains how to negotiate under pressure. Voss's central insight — that negotiation is about understanding the other party's emotional reality, not splitting a mathematical difference — is directly applicable to sales, salary conversations, and any situation where two parties have different interests. One of the most practically useful negotiation books written in plain language.</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/4dOphHk" target="_blank">Negotiate Like a CEO</a> — Patrick Bet-David</h4>
+  <p>On the long-term thinking that governs how real deal-makers approach commitments. Small businesses and startups in particular make the mistake of agreeing to do too much for too little. This book is about understanding the value you're providing before you name a price — and holding to it.</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3ARB6h1" target="_blank">SPIN Selling</a> — Neil Rackham</h4>
+  <p>The research-backed methodology that defined consultative selling. Based on analysis of thousands of actual sales calls, Rackham shows that the techniques that work in small sales (enthusiasm, aggressive closing) actively harm performance in large, complex sales. The SPIN framework — Situation, Problem, Implication, Need-payoff — gives you a structured way to diagnose customer needs before proposing solutions. Required reading before any enterprise sales role.</p>
+</div>
+
+<h2>On Persuasion and Human Dynamics</h2>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3Xsi4H9" target="_blank">Influence: The Psychology of Persuasion</a> — Robert Cialdini</h4>
+  <p>The definitive book on what moves people to say yes. Cialdini's six principles — reciprocity, commitment, social proof, authority, liking, scarcity — appear in every marketing campaign, every sales script, and every negotiation ever conducted. Reading this book doesn't make you a manipulator; it makes you literate in the dynamics that are already shaping your decisions and others' perceptions of you.</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3Mt1wbD" target="_blank">The Art of Seduction</a> — Robert Greene</h4>
+  <p>Your instructor includes this with a specific note: not recommended as a manipulation toolkit, but as a study of how persuasion operates at a deeper level than logic. Greene documents the psychological mechanisms behind attraction and influence with historical examples spanning centuries. If you want to understand why some people seem to move rooms without apparent effort, this book has the taxonomy.</p>
+</div>
+
+<div class="book-rec">
+  <h4><a href="https://amzn.to/3Z1ArE3" target="_blank">The Challenger Sale</a> — Matthew Dixon &amp; Brent Adamson</h4>
+  <p>Based on a large study of sales performance, Dixon and Adamson found that the top performers weren't the relationship-builders or the hard closers — they were the salespeople who challenged customers' thinking. "Challengers" bring new perspectives to customers' problems, reframe how customers see their own situation, and push back constructively on customer assumptions. For analytically-minded people making the transition into sales, this profile is where you naturally fit.</p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     REFLECTION QUESTIONS
+═══════════════════════════════════════════════════════════════ -->
+<h1>Reflection Questions</h1>
+
+<p>Write your answers. Specificity is what makes these valuable, not polish.</p>
+
+<div class="reflection-box">
+  <p class="prompt">1. Where in your academic or professional life have you already sold something — an idea, a proposal, a project, a collaboration — without calling it sales? Describe it in business terms: what was the problem, who was the buyer, how did you make the case, and what was the outcome?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">2. Are you more naturally a hunter, a farmer, or a solutions expert? What is the evidence from your own history that points to that answer?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">3. Think of a professional relationship you've neglected or let go cold. What would it cost you to re-engage it genuinely — not to get something, but to offer something? What could you offer?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">4. What is your current LTV:CAC intuition about yourself as a hire? How much does it cost a company to recruit and onboard you, and how long would it take to generate clear return on that investment? What would make that ratio better?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">5. If you had to close one deal in the next 90 days — getting someone to say yes to something that matters to your career — what would that deal be, who is the buyer, and what is the one thing you'd need to understand about their situation before you make the ask?</p>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ACTION PLAN
+═══════════════════════════════════════════════════════════════ -->
+<h1>Your 30-Day Action Plan</h1>
+
+<div class="action-plan">
+  <h3>Commitments for the Next 30 Days</h3>
+
+  <p><strong>Week 1 — Vocabulary and Metrics</strong></p>
+  <div class="reflection-box">
+    <p class="prompt">Three revenue metrics I will learn this week (define, find a real-world example, understand the good/bad range for my target industry):</p>
+  </div>
+
+  <p><strong>Week 2 — Relationships</strong></p>
+  <div class="reflection-box">
+    <p class="prompt">Three professional relationships I will re-engage or start this week, with a specific thing I will offer each one before I ask for anything:</p>
+  </div>
+
+  <p><strong>Week 3 — Visibility</strong></p>
+  <div class="reflection-box">
+    <p class="prompt">One concrete action I will take to increase my professional visibility: a post, a presentation proposal, a meetup, a white paper outline, a conversation at a conference:</p>
+  </div>
+
+  <p><strong>Week 4 — The Pitch</strong></p>
+  <div class="reflection-box">
+    <p class="prompt">My two-sentence professional pitch — what I do, for whom, and what changes because of it — practiced until I can deliver it without thinking:</p>
+  </div>
+</div>
+
 <hr />
-<h2 id="workbook-exercises">Workbook Exercises</h2>
-<h3 id="exercise-1-map-the-funnel">Exercise 1: Map the Funnel</h3>
-<p>Choose a company (any company). Write out their sales funnel: - How
-do they find leads? - How do they qualify? - How do they close? - How do
-they retain?</p>
-<h3 id="exercise-2-calculate-your-value">Exercise 2: Calculate Your
-Value</h3>
-<p>For a project you’ve worked on, calculate its business value: - Time
-saved: ___ hours × $<strong><em>/hour = $</em></strong> - Revenue
-generated: $<strong><em> - Cost avoided: $</em></strong></p>
-<h3 id="exercise-3-the-30-second-pitch">Exercise 3: The 30-Second
-Pitch</h3>
-<p>Write and practice a pitch that: - Identifies your audience - States
-the problem you solve - Quantifies the impact</p>
-<h3 id="exercise-4-the-metric-interview">Exercise 4: The Metric
-Interview</h3>
-<p>In your next interview, ask: - “What’s the average deal size?” -
-“What’s the sales cycle length?” - “What’s the customer retention rate?”
-- “What’s your CAC vs LTV?”</p>
-<hr />
-<h3 id="exercise-5-the-shadow">Exercise 5: The Shadow</h3>
-<p>Find someone in sales at a company you’re interested in. Ask if you
-can shadow them for a day. Watch how they: - Qualify leads - Handle
-objections - Close deals - Follow up</p>
-<p>This is the best way to learn sales — by watching it in action.</p>
-<hr />
-<h2 id="book-recommendations">Book Recommendations</h2>
-<ol type="1">
-<li><p><strong>How to Win Friends and Influence People</strong> by Dale
-Carnegie — The foundational book on relationship building. Essential for
-anyone in business.</p></li>
-<li><p><strong>Networking for People Who Hate Networking</strong> by
-Devora Zack — Practical networking for introverts. Cut through the
-BS.</p></li>
-<li><p><strong>The Sales Acceleration Formula</strong> by Mark Roberge —
-Data-driven sales using technology. Great for understanding modern
-sales.</p></li>
-<li><p><strong>Fanatical Prospecting</strong> by Jeb Blount — The
-relentless pursuit of new leads. Essential for understanding the sales
-funnel.</p></li>
-<li><p><strong>The 22 Laws of Marketing</strong> by Al Ries &amp; Jack
-Trout — Classic marketing principles. Understand how brands
-work.</p></li>
-<li><p><strong>Predictable Revenue</strong> by Aaron Ross — How to build
-a repeatable sales process. The playbook for SaaS sales.</p></li>
-<li><p><strong>The One-Page Marketing Plan</strong> by Alan Dib —
-Simple, actionable marketing framework.</p></li>
-</ol>
-<hr />
-<h2 id="reflection-questions">Reflection Questions</h2>
-<ol type="1">
-<li><p>What’s your initial reaction to “sales”? Where does that come
-from?</p></li>
-<li><p>Which sales methodology (transactional, enterprise, product-led,
-relationship) fits your personality?</p></li>
-<li><p>How can you connect your current skills to revenue in your target
-role?</p></li>
-<li><p>What’s one metric you could track to demonstrate your
-impact?</p></li>
-</ol>
-<hr />
-<p><strong>Next Workbook:</strong> Value Proposition — How to
-communicate what you deliver.</p>
-<hr />
-<p><em>Class2Career © 2026 — Ignis Spindler</em></p>
+
+<p style="text-align:center; color: var(--medium-gray); font-size: 10pt; margin-top: 1in;">
+  <strong>Next:</strong> Workbook 3 — The Value Dimension: How Businesses Create, Deliver, and Capture Value
+</p>
+
+<p style="text-align:center; color: var(--medium-gray); font-size: 9pt;">
+  <em>Class2Career &copy; 2026 — Ignis Spindler, PhD</em>
+</p>
+
+</div>
 </body>
 </html>

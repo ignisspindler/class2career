@@ -1,403 +1,637 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>workbook-04-product-dimension</title>
-  <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  
-  <style>
-  /* ── Print overrides (injected, highest specificity) ── */
-  @page { size: letter; margin: 0.75in; }
-  @media print {
-    html, body { width: 8.5in !important; max-width: 8.5in !important; margin: 0 auto !important; padding: 0.75in !important; background: white !important; }
-    h1 { page-break-before: always !important; break-before: page !important; }
-    h2 { page-break-before: avoid !important; break-before: auto !important; }
-    figure, table { page-break-inside: avoid !important; break-inside: avoid !important; }
-    .cover, .cover-page { page-break-after: always !important; break-after: page !important; }
-    img { max-width: 100% !important; width: 100% !important; height: auto !important; page-break-inside: avoid !important; break-inside: avoid !important; display: block !important; }
-  }
-  </style>
-
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workbook 4: The Product Dimension</title>
   <link rel="stylesheet" href="class2career-pdf.css" />
 </head>
-<body><div class="cover"><img src="/assets/covers/cover-04-product-dimension.png" style="width:100%;max-width:100%;display:block;margin:0 auto;"></div><div class="content">
-<h1 id="workbook-4-the-product-dimension">Workbook 4: The Product
-Dimension</h1>
-<p><strong>Class2Career: Building What Matters</strong><br />
-<em>By Ignis Spindler</em></p>
-<hr />
-<h2 id="introduction-product-is-a-verb">Introduction: Product Is a
-Verb</h2>
-<p>When you hear “product,” you probably think of software, physical
-goods, or apps. But product is bigger than that.</p>
-<p><strong>Product is a mindset.</strong> It’s the discipline of
-identifying what people need and delivering it in the simplest, most
-valuable way.</p>
-<p>Your instructor calls this “the product lens” — a filter for
-understanding how someone else derives value from the thing you give
-them. Whether you’re building software, writing a report, or designing a
-process, you’re creating a product.</p>
-<p>In this workbook, you’ll learn: 1. <strong>What product really
-means</strong> — beyond the obvious 2. <strong>How to think like a
-product manager</strong> — even if you’re not one 3. <strong>The value
-proposition framework</strong> — why people buy 4. <strong>Agile
-methodology</strong> — building iteratively</p>
-<hr />
-<h2 id="part-1-understanding-product">Part 1: Understanding Product</h2>
-<h3 id="its-not-just-software">It’s Not Just Software</h3>
-<p>Your instructor: “Product is my favorite. It’s very qualitative. You
-have to think about the word product like it’s a verb.”</p>
-<p>Think about product in any business context:</p>
-<ul>
-<li><strong>A restaurant</strong> — the menu, the food, the
-experience</li>
-<li><strong>A consulting service</strong> — the expertise, the
-deliverables, the relationship</li>
-<li><strong>A report</strong> — the insights, the formatting, the
-recommendations</li>
-</ul>
-<p>Everything that gets delivered to someone else is a product.</p>
-<h3 id="the-product-mindset">The Product Mindset</h3>
-<p>Here’s the core insight: <strong>Product is about solving problems,
-not building features.</strong></p>
-<p>Your instructor shares: “One of the worst problems I experience
-working with academics is when they can’t give me constraints on what
-they need. They think they need everything. That means they don’t know
-what they’re looking for.”</p>
-<p>In business, scope matters. You need to narrow the problem space so
-others can collaborate with you efficiently. That’s why industry is
-efficient — people care about getting work done iteratively, quickly,
-failing fast, moving forward.</p>
-<h3 id="the-product-cycle">The Product Cycle</h3>
-<ol type="1">
-<li><strong>Identify a problem</strong> — What pain point exists?</li>
-<li><strong>Define the solution</strong> — What minimum viable thing
-solves it?</li>
-<li><strong>Build it</strong> — Start small, iterate fast</li>
-<li><strong>Launch</strong> — Get feedback</li>
-<li><strong>Iterate</strong> — Improve based on real usage</li>
-<li><strong>Scale</strong> — Do more of what works</li>
-</ol>
-<p>This cycle applies to everything from building software to writing a
-proposal.</p>
+<body>
+
+<div class="cover">
+  <img src="cover-04-product-dimension.png" alt="Workbook 4: The Product Dimension" />
+</div>
+
+<div class="content">
+
+<h1>Workbook 4: The Product Dimension</h1>
+<p><strong>Class2Career: The Business Communication Toolkit</strong><br>
+<em>By Ignis Spindler, PhD</em></p>
+
+<hr>
+
+<p>This is the favorite part. Out of all four dimensions of business covered in this series, product is the one that took the longest to understand, the most resistance to accept, and produces the most return once it clicks.</p>
+
+<p>The resistance is predictable. The vocabulary of product sounds like dressed-up common sense. Value proposition. User stories. Market fit. Minimum viable product. To someone coming from research, where language is precise and carefully earned, the looseness of product vocabulary feels like intellectual slippage. It can feel like people describing obvious things in unnecessarily complicated ways.</p>
+
+<p>That feeling is worth sitting with, because it is wrong.</p>
+
+<p>Product is not a vocabulary. It is a lens. It is a communication framework for getting the right work done with the right people in the right sequence. Once that lens is active, you start applying it to everything: your deliverables, your conversations with colleagues, the way you scope a project before you start it. It makes you more efficient, more trusted, and more effective in nearly every dimension of contribution.</p>
+
+<p>This workbook covers three interlinked ideas: what product is, how value propositions and market fit work, and how Agile is the system that keeps product development moving forward. By the end, you should be able to walk into any business conversation and understand the framework within which people are making product decisions, why they prioritize what they prioritize, and how your work fits into that flow.</p>
+
+<hr>
+
+<h1>Part 1: What Is Product?</h1>
+
+<h2>A Verb Wearing a Noun's Clothes</h2>
+
+<p>The word "product" in everyday English refers to a thing. In business, and particularly in software and technology companies, product refers to a discipline, a mindset, a process. It is closer to a verb than a noun. Thinking in product means thinking continuously about what value something delivers to the person using it, whether that something is a piece of software, a physical object, a service, or even a conversation.</p>
+
+<p>The essential mission of product, stated as simply as possible, is to define a value proposition to a market. What is the thing your company does that other people will pay for? And how does every decision your company makes connect back to making that thing better, clearer, or more accessible?</p>
+
+<p>Marc Andreessen predicted in 2011 that software would "eat the world." What he meant was that the rules-based nature of software makes it capable of solving almost any human system where rules exist. Building permits. Medical records. Restaurant orders. Tax filings. Anywhere society had built a paper process, software could replace it, and often make it faster, cheaper, and more reliable. Product thinking emerged from that realization. If software can do almost anything, the limiting question becomes: what should it do, for whom, and in what order?</p>
+
+<h2>The Product Is Not Always What You Think</h2>
+
+<p>Part of what makes product thinking useful is how it reframes familiar things. Consider these examples:</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">◆</span> Reframing What the Product Actually Is</div>
+  <table>
+    <thead>
+      <tr><th>Company</th><th>What It Seems to Sell</th><th>What the Product Actually Is</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Uber</strong></td><td>Rides</td><td>The app interface: real-time tracking, transparent pricing, driver assignment. The ride is delivered by independent contractors.</td></tr>
+      <tr><td><strong>USPS</strong></td><td>Mail delivery</td><td>Timely, predictable delivery. The reliability is the product. The package is the vehicle.</td></tr>
+      <tr><td><strong>Michelin-star restaurant</strong></td><td>Food</td><td>The chef, the experience, the ritual of the meal. Some guests go specifically for one person in the kitchen.</td></tr>
+      <tr><td><strong>Facebook</strong></td><td>A social network</td><td>The Like button, the Feed algorithm, the Share mechanic. Each of these is described internally as its own product.</td></tr>
+      <tr><td><strong>Amazon</strong></td><td>E-commerce</td><td>The "Buy with One Click" button was a product decision worth billions. Removing friction from purchase completion changed consumer behavior at scale.</td></tr>
+      <tr><td><strong>ServiceNow</strong></td><td>IT management software</td><td>An IT ticketing system. That was all it was. It is now a $400 billion company.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The Amazon One-Click story is worth pausing on. When the team proposed it, there was real internal risk to think through. What if customers hit the button by accident and flooded customer service with return requests? What if the error rate made the whole feature a net negative for operations? Thinking through how a product feature could blow back on the business is itself a product skill. Every benefit to the customer has downstream consequences on the company side, and someone has to think those through before launch.</p>
+
+<h2>Product Is a Personal Skill, Not Just a Job Title</h2>
+
+<p>One of the most useful things about the product lens is that you can apply it to your own work, not just to what the company builds for customers.</p>
+
+<p>Before starting any significant task for another person, the first question should be: do you know what form the output needs to take? If someone asks for an analysis and you build a beautiful set of charts when they wanted a spreadsheet, you have done excellent work that serves no purpose. If you do not know whether someone wants a graph or a table, and you start working anyway, you are going to waste time and potentially build something that creates more confusion than it resolves.</p>
+
+<p>People coming from academic backgrounds consistently struggle with this. In research, the unbiased stance is a virtue. You explore the data without preconceptions. The data reveals what it reveals. In business, that approach is expensive. The scope of what you could explore is infinite. You have to whittle the problem space down, confirm the shape of the deliverable before you build it, and deliver something small and concrete before expanding.</p>
+
+<p>Academics who ask for data sometimes ask for everything, because they want to stay open to what it might show. Every business collaborator they work with experiences this as an inability to be concrete about what they actually need. It creates waste for both sides. The product mindset fixes this: what specifically do you need, in what form, by when?</p>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">▶</span> Exercise 1: Reframe Your Work Through the Product Lens</div>
+  <p>Pick a deliverable you have produced in the last year — a report, a presentation, an analysis, a policy document, anything you handed to someone else. Now answer the product questions about it.</p>
+  <div class="track">
+    <div class="track-label">Track A — Academic Transitioners</div>
+    <p>Take a piece of your research (a paper, a dataset, a model) and reframe it as a product. Who is the user? What job are they trying to do when they reach for your work? What is the minimum version of this that delivers the core value? Write a one-paragraph product definition using: <em>"The product is [X]. The user is [Y]. The value delivered is [Z]."</em> Then write one sentence on what you would cut from the full version to make an MVP.</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track B — Public Sector Transitioners</div>
+    <p>Think of a program, report, or process you owned in a government or nonprofit role. Who consumed the output — policymakers, the public, internal teams? Reframe it as a product with a user, a value proposition, and a competitive alternative (what would people do without it?). Write two sentences on where the friction was in delivering it: what made it hard for the end user to get the value you intended? What would reducing that friction have looked like?</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track C — New Graduates</div>
+    <p>Choose a class project, internship deliverable, or side project. Apply the product lens: who was the intended user? Did you ever confirm with them what form the deliverable should take before you built it, or did you assume? Write a one-page debrief answering: what went well for the user, what did not, and what one change would have made the output more valuable to the person receiving it?</p>
+  </div>
+</div>
+
+<hr>
+
+<h1>Part 2: Market Fit and Value Proposition</h1>
+
+<h2>Does the Market Actually Want This?</h2>
+
 <figure>
-<img src="/assets/images/diagram-04-product-workflow.png"
-alt="Product Development Workflow" />
-<figcaption aria-hidden="true">Product Development Workflow</figcaption>
+  <img src="diagram-04-product-cycle.png" alt="The Product Cycle" />
 </figure>
-<hr />
-<h2 id="part-2-value-proposition">Part 2: Value Proposition</h2>
-<h3 id="what-is-a-value-proposition">What Is a Value Proposition?</h3>
-<p>A value proposition answers: <strong>Why should someone choose
-you?</strong></p>
-<p>Your instructor: “In product, you are looking for something to be the
-facilitator of value. You’re looking for a convincing amount of
-utility.”</p>
-<p>Value proposition and market fit are closely linked:</p>
-<ul>
-<li><strong>Market fit</strong> = demand exists for what you’re
-selling</li>
-<li><strong>Value proposition</strong> = why they should buy from you
-vs. someone else</li>
-</ul>
-<h3 id="how-to-find-market-fit">How to Find Market Fit</h3>
-<p>Your instructor recommends <em>The Mom Test</em> by Rob
-Fitzpatrick:</p>
-<blockquote>
-<p>The book teaches you to ask the right questions. Talk to potential
-customers. Ask what they actually do, not what they say they’d want.</p>
-</blockquote>
-<p><strong>Bad question:</strong> “Would you buy a recipe app?”
-<strong>Good question:</strong> “What apps do you actually use? How
-often do you cook?”</p>
-<p>The first question gets you a polite lie. The second gets you
-truth.</p>
-<h3 id="the-value-proposition-canvas">The Value Proposition Canvas</h3>
-<p>Answer these questions:</p>
-<ol type="1">
-<li><strong>Who is your customer?</strong></li>
-<li><strong>What problem do they have?</strong></li>
-<li><strong>What is their current solution?</strong></li>
-<li><strong>What’s the gap?</strong> (Where does the current solution
-fail?)</li>
-<li><strong>What’s your solution?</strong></li>
-<li><strong>Why is yours better?</strong></li>
-</ol>
-<p>If you can’t answer all six, you don’t have a value proposition.</p>
-<h3 id="competitive-advantage">Competitive Advantage</h3>
-<p>Your instructor: “What sets us apart from our competition is a big
-question everyone in business should be asking.”</p>
-<p>You should know: - Who is your #1 competitor? - Why should customers
-choose you instead? - What makes your solution unique?</p>
-<hr />
-<h2 id="part-3-the-product-lens-at-work">Part 3: The Product Lens at
-Work</h2>
-<h3 id="apply-it-to-your-job">Apply It to Your Job</h3>
-<p>You don’t need a “product manager” title to think like one.</p>
-<p>Your instructor: “I can adapt the mindset of what product taught me
-because it allows me to have more agency and control the shape of my
-deliverable.”</p>
-<p>Before you start any project, ask:</p>
-<ol type="1">
-<li><strong>What does the person actually want?</strong> (Not what they
-asked for)</li>
-<li><strong>What format do they need?</strong> (Spreadsheet? Graph?
-Report?)</li>
-<li><strong>What’s the minimum valuable deliverable?</strong></li>
-<li><strong>How will this be used?</strong></li>
-</ol>
-<p>Your instructor: “If I don’t know whether they want a graph or a
-spreadsheet, I won’t start. I’ll ask first. Because I’ll do different
-things to get myself there efficiently.”</p>
-<h3 id="the-mvp-approach">The MVP Approach</h3>
-<p>MVP = Minimum Viable Product</p>
-<p>The smallest thing you can build that still delivers value.</p>
-<p>Your instructor: “In data science, I don’t want to build a full model
-and realize three weeks later that I misunderstood the problem. I want
-to give them one number on Day 1. Then I can iterate.”</p>
-<h3 id="scope-control">Scope Control</h3>
-<p>In academia, you explore endlessly. In business, you narrow
-scope.</p>
-<p>Your instructor: “You have to whittle down a problem space so other
-people can collaborate with you better. That’s why industry is
-efficient.”</p>
-<p>Learn to say: “Here’s what I can deliver in the first iteration. Then
-we can expand.”</p>
-<hr />
-<h2 id="part-4-agile-methodology">Part 4: Agile Methodology</h2>
-<h3 id="what-is-agile">What Is Agile?</h3>
-<p>Agile is a framework for managing projects by delivering value
-incrementally.</p>
+
+<p>Market fit is the deceptively simple idea that there is real demand for what you are selling. Not hypothetical demand. Not demand expressed by polite people who want to be supportive. Actual demand, expressed by people exchanging money for the thing you offer.</p>
+
+<p>The Mom Test, introduced in a previous workbook, is precisely about this trap. A developer building a recipe app asks his mother if she would buy it. She says yes. She is supportive. She also has not downloaded a new app in three years, uses the same twelve recipes she has memorized, and stopped consulting recipe books entirely. Her endorsement is worthless as market research. The question was not designed to surface truth. It was designed to receive validation.</p>
+
+<p>What the developer should have asked: do you ever find yourself looking for a recipe you do not already know? When was the last time that happened? What did you do? The answer might have revealed that specialty recipe books for specific dietary needs was the actual niche with purchase intent. Or it might have revealed that his mother is simply not the right market. Either way, he would have learned something real.</p>
+
+<h2>Peter Thiel's Restaurant Test</h2>
+
+<p>Peter Thiel, the investor behind PayPal and Palantir, has a useful provocation about competition. When he starts a business, he wants to make sure nobody else is doing exactly what he is doing. If your belief is that competition is how business works, that the best product in a competitive market wins, then go invest in a restaurant. You will never lack competition in the restaurant business. And you will spend your entire career fighting for margin in a market where barriers to entry are low, customers are fickle, and differentiation is nearly impossible to sustain.</p>
+
+<p>A town of ten thousand people probably does not need a fourth ice cream shop. But it might genuinely lack a late-night diner, a specialty deli, or a restaurant that stays open past nine. The product question is never "can I build this?" It is "is there a market gap this fills that no one else is filling?"</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">◆</span> The Market as a Voting Machine</div>
+  <p>Someone recently described the market as more trustworthy than people. In a conversation or survey, people tell you what they think you want to hear, or what they think they want, or what sounds good in the moment. When they actually spend money, they tell you the truth. The market is the aggregate of all those honest votes. If people buy the thing, the market wants it.</p>
+</div>
+
+<h2>Markets That Do Not Exist Yet</h2>
+
+<p>Some products arrive before the market is ready. Some products create the market. The internet existed before there was a meaningful market for search. Someone had to build a search engine good enough that people recognized the value in it, before "searching the web" was a behavior anyone did deliberately. Energy drinks as a category did not have screaming demand that preceded Red Bull. The demand was latent. The product surfaced it.</p>
+
+<p>There is likely an emerging market today for European consumer products in America. The EU has banned thousands of chemicals from consumer goods that are still legal in the US. As awareness of that gap grows, a brand built around "made to European standards" could be genuinely differentiated in the American market. A few years ago, that awareness was not widespread enough to support the brand. Today it may be. Markets evolve, and reading where they are going before others do is a real competitive skill.</p>
+
+<h2>The Overloaded Market Problem</h2>
+
+<p>Not every market gap is an opportunity. There is a point at which a market is so saturated that entering it is a vanity project, not a business decision.</p>
+
+<p>Consider the food delivery space: DoorDash, Grubhub, Uber Eats, Instacart, Postmates, Seamless, GoPuff, ChowNow, Deliveroo, JustEat, Delivery.com. They probably survive because they have regional concentrations or subtle logistics differences. But the value proposition of the eleventh player is extremely difficult to articulate. The same problem exists in payments: Stripe, Square, Stax, PayPal, Clover, Payment Depot, Helcim, Gravity Payments, Merchant One, Elavon, QuickBooks Payments. At some point the market is not voting for more options. It is just confused.</p>
+
+<h2>Build vs. Buy</h2>
+
+<p>One of the core product decisions any company faces repeatedly is whether to build something internally or purchase an existing solution. There is no universal answer. Context determines everything.</p>
+
+<p>There was a researcher, a physicist building a specialized experiment, who needed a vacuum chamber. Rather than purchasing one, he built it from scratch. He sourced rubber seals, had custom steel machined to precision tolerances, assembled the whole thing by hand. He built it for less than the purchase price, and because it was bespoke, it was more precisely suited to his needs than any commercial unit would have been. The knowledge his team gained through building it had value beyond the device itself.</p>
+
+<p>SpaceX is the most dramatic example of this logic at scale. SpaceX builds almost everything in-house that other aerospace companies purchase from suppliers. The result is dramatically lower production costs and a level of design integration impossible to achieve across a distributed supply chain. Tesla has gone further, open-sourcing all of its patents, making its entire intellectual property available to any company that wants to use it. That confidence comes from knowing that the real competitive advantage is not the patents. It is the capability to build what the patents describe.</p>
+
+<p>For most business decisions, the question reduces to: does this align with what your business does best? Buy commodity infrastructure. Build what is core to your differentiation.</p>
+
+<hr>
+
+<h1>Part 3: Design Thinking and the Customer</h1>
+
+<h2>Qualitative Research Is Not Soft Science</h2>
+
+<p>Design thinking is qualitative research applied to product development. Empathize with the user. Define the problem. Ideate solutions. Build a prototype. Test it with real users. That sequence is a feedback loop, not a linear process. You return to earlier stages constantly as you learn new things.</p>
+
+<p>If you have a quantitative background and your instinct is to distrust qualitative methods, this is worth reconsidering. Qualitative research excels at surfacing something no survey can capture: how people actually use language to describe their problems. The words they choose, not the words you assume they use, matter enormously in product design.</p>
+
+<p>A healthcare software company was building an AI chatbot to understand queries typed by hospital staff. Internally, the team called the patient events they were tracking "alerts." The hospital staff, the actual end users, called them "designations." Same concept. Different words. Completely different semantic associations.</p>
+
+<p>If the chatbot was trained on one vocabulary and the users arrived with the other, the system would fail. Not because the technology was broken, but because the language was misaligned. The only way to discover that misalignment was to talk to users, ask them to describe their workflow in their own words, and listen carefully to the specific vocabulary they chose without leading them toward any particular term. Qualitative research, applied to clinical software, with real stakes.</p>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">▶</span> Design Thinking in Five Steps</div>
+  <ol>
+    <li><strong>Empathize:</strong> Talk to users in their environment. Watch them work. Do not assume you know their problems.</li>
+    <li><strong>Define:</strong> Synthesize what you learned into a clear problem statement. "Users need a way to X so that Y" is a useful format.</li>
+    <li><strong>Ideate:</strong> Generate as many solutions as possible before evaluating any of them. Volume before judgment.</li>
+    <li><strong>Prototype:</strong> Build the simplest version that allows someone to experience the core idea.</li>
+    <li><strong>Test:</strong> Put it in front of users. Watch what happens. Return to step one with what you learn.</li>
+  </ol>
+</div>
+
+<h2>User Personas</h2>
+
+<p>Before designing anything, you need to know who you are designing for. In software, this is formalized as a user persona: a description of a specific type of user, including their job, their goals, their frustrations, and the vocabulary they use when talking about their work.</p>
+
+<p>At the healthcare software company, there were at least four distinct user types: infection preventionists, pharmacists, their respective supervisors, and a clinical staff category. All four used the same software but did fundamentally different things with it. Designing a new feature for infection preventionists and then testing it with pharmacists, asking them how much they liked it, would produce misleading feedback and real irritation. Keeping user personas distinct, building for one at a time, and testing with the right users is one of the clearest ways to avoid building something that serves no one well in practice.</p>
+
+<h2>Roadmaps: Selling What You Have Not Yet Built</h2>
+
+<p>A product roadmap is a forward-looking document that tells customers and stakeholders what is coming next. It is one of the most powerful retention tools a product company has.</p>
+
+<p>When a customer says they would like a feature the product does not currently have, the answer should almost never be "we cannot do that." The better response is: "That is already in our roadmap for Q3." That response validates the customer's need, demonstrates that the company listens, and gives the customer a reason to stay rather than evaluate alternatives.</p>
+
+<p>The same idea works for physical products. A bulk compost and mulch supplier that asks every customer "what else might you buy from us?" is running a product roadmap conversation. Every existing customer is a lower-cost source of new revenue than a new customer, if you are willing to keep expanding what you offer them.</p>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">▶</span> Exercise 2: Run a Design Thinking Interview</div>
+  <p>Design thinking only works if you talk to actual users. This exercise requires you to have a real conversation — not a survey, not a guess — with one person who represents the kind of user or customer you want to serve.</p>
+  <div class="track">
+    <div class="track-label">Track A — Academic Transitioners</div>
+    <p>Identify a person in a business role whose job involves the kind of problem your research or expertise addresses. Schedule a 20-minute conversation. Do not pitch your background or explain your work. Instead, ask them to walk you through a recent situation where they needed information or analysis and did not have it. What did they actually do? What was the cost of not having it? What words did they use to describe the problem? After the conversation, write down three things they said that surprised you. This is your first user research.</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track B — Public Sector Transitioners</div>
+    <p>Think of a process you ran in the public sector that was supposed to serve a specific population (citizens, program participants, internal teams). Interview one person who was on the receiving end of that process. Ask them what actually happened when they engaged with it — not whether they were satisfied, but what they did, what confused them, what they wished had been different. Listen for where your design assumptions diverged from their lived experience. Write a one-page summary of the gap between what you designed and what the user experienced.</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track C — New Graduates</div>
+    <p>Identify a problem in your daily life or campus environment that affects more than just you — a friction point in a process, a tool that does not work the way it should, a service that is harder than it needs to be. Interview two other people who share this problem using The Mom Test principles: ask about what they actually do, not what they wish existed. Synthesize what you learned into a single problem statement and sketch the simplest possible solution. This is the design thinking loop in miniature.</p>
+  </div>
+</div>
+
+<hr>
+
+<h1>Part 4: The Product Lifecycle</h1>
+
+<h2>From Idea to Retirement</h2>
+
 <figure>
-<img src="/assets/images/diagram-04-product-cycle.png"
-alt="Product Development Cycle" />
-<figcaption aria-hidden="true">Product Development Cycle</figcaption>
+  <img src="diagram-04-product-workflow.png" alt="The Product Workflow" />
 </figure>
-<p>Your instructor: “Agile has become a language for task management.
-It’s the most common system out there. Accept it for what it is — useful
-training wheels.”</p>
-<h3 id="the-core-philosophy">The Core Philosophy</h3>
-<p><strong>Waterfall:</strong> Build everything → Launch everything →
-Get feedback <strong>Agile:</strong> Build piece → Get feedback → Adjust
-→ Build next piece</p>
-<p>Your instructor’s analogy: Building a car</p>
-<ul>
-<li><strong>Waterfall:</strong> Give them nothing for 3 months, then
-hand over a car</li>
-<li><strong>Agile:</strong> Day 1 = skateboard (they can get to work
-faster). Week 4 = bike. Month 2 = chassis. Month 3 = working car.</li>
-</ul>
-<p>The goal: Deliver value at every stage.</p>
-<h3 id="agile-terminology">Agile Terminology</h3>
-<ul>
-<li><strong>Epic</strong> — A large project broken into smaller pieces
-(e.g., “Build the car”)</li>
-<li><strong>Story</strong> — A small, deliverable piece of work (e.g.,
-“Install wheels”)</li>
-<li><strong>Spike</strong> — Research to understand complexity (no
-deliverable, just learning)</li>
-<li><strong>Bug</strong> — Something broken that needs fixing</li>
-<li><strong>Sprint</strong> — A time-boxed period (usually 1-2 weeks) to
-complete stories</li>
-<li><strong>Backlog</strong> — Prioritized list of work to be done</li>
-</ul>
-<h3 id="why-agile-works">Why Agile Works</h3>
-<ol type="1">
-<li><strong>Feedback early</strong> — Catch problems before they’ve
-compound</li>
-<li><strong>Adaptability</strong> — Change direction based on
-reality</li>
-<li><strong>Visibility</strong> — Everyone sees progress</li>
-<li><strong>Motivation</strong> — Regular wins keep teams engaged</li>
-</ol>
-<h3 id="your-role-in-agile">Your Role in Agile</h3>
-<p>Even if you’re not on an Agile team, you can apply the
-principles:</p>
-<ol type="1">
-<li><strong>Chunk your work</strong> — Break big projects into smaller
-deliverable pieces</li>
-<li><strong>Deliver early</strong> — Give something usable ASAP</li>
-<li><strong>Get feedback</strong> — Ask: “Is this what you need?”</li>
-<li><strong>Iterate</strong> — Improve based on input</li>
-</ol>
-<p>Your instructor: “If you see something happening inefficiently, make
-it better. Make it work, then make it better, then make it fast.”</p>
-<hr />
-<h2 id="part-5-building-your-product-skills">Part 5: Building Your
-Product Skills</h2>
-<h3 id="think-like-a-product-manager">Think Like a Product Manager</h3>
-<ol type="1">
-<li><strong>Start with the customer</strong> — Who are you solving
-for?</li>
-<li><strong>Define the problem</strong> — What’s the pain point?</li>
-<li><strong>Find the simplest solution</strong> — Don’t
-over-engineer</li>
-<li><strong>Test it</strong> — Get real feedback, not hypotheticals</li>
-<li><strong>Iterate</strong> — Improve continuously</li>
-</ol>
-<h3 id="ask-better-questions">Ask Better Questions</h3>
-<p>Your instructor: “Asking the right questions is a skill. There’s a
-whole industry built on it.”</p>
-<p>Before you build anything: - What does success look like? - What will
-they do with this? - What’s the simplest version that still helps?</p>
-<h3 id="document-your-work">Document Your Work</h3>
-<p>In product, documentation is value.</p>
-<p>Your instructor: “Documentation adds equity to a business. Without
-it, when the person who knew how to do the thing leaves, the knowledge
-leaves with them.”</p>
-<ul>
-<li>Write down processes</li>
-<li>Create templates</li>
-<li>Share learnings</li>
-</ul>
-<hr />
-<h2 id="part-6-your-path-the-three-tracks">Part 6: Your Path — The Three
-Tracks</h2>
-<h3 id="track-a-undergraduate-early-career">Track A: Undergraduate /
-Early Career</h3>
-<p><strong>Your challenge:</strong> You haven’t yet thought of yourself
-as a “product” creator.</p>
-<p><strong>Your focus:</strong> - Practice defining the “what” before
-the “how” - Learn to ask clarifying questions - Start small</p>
-<p><strong>Your assignment:</strong> 1. For one task this week, define
-the minimum deliverable before you start 2. Practice asking: “What will
-you do with this?” 3. Break one big project into 3 smaller pieces</p>
-<h3 id="track-b-masters-mid-level-transition">Track B: Master’s /
-Mid-Level Transition</h3>
-<p><strong>Your challenge:</strong> You have expertise but haven’t
-framed it as a product.</p>
-<p><strong>Your focus:</strong> - Apply the value proposition framework
-- Connect your work to customer outcomes - Learn Agile terminology</p>
-<p><strong>Your assignment:</strong> 1. Write a value proposition for
-your expertise 2. Identify your “customer” (who uses your work) 3.
-Practice: Deliver one small piece, get feedback, iterate</p>
-<h3 id="track-c-phd-senior-professional-pivot">Track C: PhD / Senior
-Professional Pivot</h3>
-<p><strong>Your challenge:</strong> Deep expertise. Risk of
-over-building.</p>
-<p><strong>Your focus:</strong> - Simplify your message - Lead with
-outcomes, not methods - Coach others on product thinking</p>
-<p><strong>Your assignment:</strong> 1. Explain your expertise as a
-product: “I solve [X] for [Y]” 2. Identify the MVP version of your next
-project 3. Teach someone else the product mindset</p>
-<hr />
-<h2 id="part-7-public-sector-transition">Part 7: Public Sector
-Transition</h2>
-<p>Coming from government or non-profit? Here’s how product
-translates:</p>
+
+<p>Every product follows a lifecycle, regardless of industry. Understanding where a product is in that lifecycle changes what decisions make sense.</p>
+
 <table>
-<thead>
-<tr>
-<th>Public Sector</th>
-<th>Private Sector</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Compliance-driven</td>
-<td>Outcome-driven</td>
-</tr>
-<tr>
-<td>Process-first</td>
-<td>Customer-first</td>
-</tr>
-<tr>
-<td>Stability</td>
-<td>Iteration</td>
-</tr>
-<tr>
-<td>Budget allocation</td>
-<td>Market validation</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>What Happens</th>
+      <th>Key Questions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Discovery</strong></td>
+      <td>Hypothesis testing, customer conversations, market research</td>
+      <td>Is there real demand? What do users actually need?</td>
+    </tr>
+    <tr>
+      <td><strong>Analysis</strong></td>
+      <td>Business case development, feasibility, resource planning</td>
+      <td>Can we build it? Should we? Will it generate revenue or reduce cost?</td>
+    </tr>
+    <tr>
+      <td><strong>Development</strong></td>
+      <td>Building the MVP, iterating based on feedback</td>
+      <td>What is the minimum we need to build to test if this works?</td>
+    </tr>
+    <tr>
+      <td><strong>Go to Market</strong></td>
+      <td>Broader launch, marketing, sales enablement, pricing</td>
+      <td>Who are we selling to? How do we reach them?</td>
+    </tr>
+    <tr>
+      <td><strong>Growth &amp; Maintenance</strong></td>
+      <td>Iterative improvements, bug fixes, expanding capabilities</td>
+      <td>What does the data say? What are users asking for next?</td>
+    </tr>
+    <tr>
+      <td><strong>Sunset</strong></td>
+      <td>End of life, migration to newer versions</td>
+      <td>Is it still worth maintaining? Can we migrate users to something better?</td>
+    </tr>
+  </tbody>
 </table>
-<h3 id="what-transfers">What Transfers</h3>
-<ul>
-<li>Problem identification</li>
-<li>Needs assessment</li>
-<li>Stakeholder communication</li>
-<li>Documentation</li>
-</ul>
-<h3 id="what-you-need-to-learn">What You Need to Learn</h3>
-<ul>
-<li>Speed and iteration</li>
-<li>Market validation</li>
-<li>MVP thinking</li>
-<li>Competitive analysis</li>
-</ul>
-<hr />
-<h2 id="workbook-exercises">Workbook Exercises</h2>
-<h3 id="exercise-1-the-value-proposition">Exercise 1: The Value
-Proposition</h3>
-<p>For a product or service you’re interested in: - Who is the customer?
-- What problem do they have? - What’s the solution? - Why is it better
-than alternatives?</p>
-<h3 id="exercise-2-the-mvp">Exercise 2: The MVP</h3>
-<p>Choose a project you’re working on: - What’s the minimum valuable
-version? - What’s one deliverable you could give in 1 day? - How would
-you get feedback?</p>
-<h3 id="exercise-3-the-agile-sprint">Exercise 3: The Agile Sprint</h3>
-<p>Design a mini-sprint: - Break a project into 5 stories - Estimate
-time for each - Define what “done” looks like</p>
-<h3 id="exercise-4-the-interview-question">Exercise 4: The Interview
-Question</h3>
-<p>In your next interview, ask: - “How does the company define product
-success?” - “What’s the product roadmap?” - “How does the team gather
-customer feedback?”</p>
-<hr />
-<h2 id="book-recommendations">Book Recommendations</h2>
-<ol type="1">
-<li><p><strong>The Mom Test</strong> by Rob Fitzpatrick — How to talk to
-customers and get honest feedback. Essential for product
-thinking.</p></li>
-<li><p><strong>22 Laws of Marketing</strong> by Al Ries &amp; Jack Trout
-— Classic marketing principles. Understand how positioning
-works.</p></li>
-<li><p><strong>The Lean Startup</strong> by Eric Ries —
-Build-measure-learn. The foundation of modern product
-development.</p></li>
-<li><p><strong>Inspired</strong> by Marty Cagan — How to create products
-customers love. The product manager’s bible.</p></li>
-<li><p><strong>Escaping the Build Trap</strong> by Melissa Perri — How
-to ensure you’re building the right things.</p></li>
-<li><p><strong>The Design of Everyday Things</strong> by Don Norman — UX
-fundamentals. How to make products usable and intuitive.</p></li>
-</ol>
-<hr />
-<h2 id="reflection-questions">Reflection Questions</h2>
-<ol type="1">
-<li><p>What does “product” mean to you now? Has your definition
-expanded?</p></li>
-<li><p>What’s one way you could apply the “product lens” to your current
-work?</p></li>
-<li><p>How do you currently handle feedback? How could you get it
-earlier?</p></li>
-<li><p>What’s one project you could break into an MVP approach?</p></li>
-</ol>
-<hr />
-<p><strong>Next Workbook:</strong> Personal Growth — Preparing for Your
-Career Journey.</p>
-<hr />
-<p><em>Class2Career © 2026 — Ignis Spindler</em></p>
+
+<h2>The Minimum Viable Product</h2>
+
+<p>The MVP is one of the most misunderstood concepts in product vocabulary. It does not mean a bad or incomplete product. It means the smallest version of the product that meaningfully tests whether the core hypothesis is true.</p>
+
+<p>If you believe people will pay for an app that books same-day dog grooming appointments, your MVP is not a fully designed app with ratings, profiles, insurance verification, and loyalty points. Your MVP might be a text message service. If people text a number, get a booking, show up for the appointment, and pay, you have tested the hypothesis. The app and the loyalty points are enhancements for after you know the core idea works.</p>
+
+<p>Most business ventures that fail do so because they built the full product before testing whether anyone wanted the core idea. The MVP is a mechanism for being wrong cheaply and quickly instead of expensively and late.</p>
+
+<h2>Sunsetting: The Product Decision Nobody Likes</h2>
+
+<p>Every product has a natural end of life. The company behind FLIR infrared cameras eventually removed the companion app from the iOS App Store. Cameras that cost $100 and worked perfectly suddenly could not connect to the software. The decision, from the company's perspective, was rational: the engineering cost of supporting old hardware was not worth the revenue from a customer base that was not buying new products. From the customer's perspective, it felt like abandonment.</p>
+
+<p>Sunsetting is a product decision. So is using it as a forcing function to push customers toward an upgrade. Both are legitimate. The difference is whether the transition is managed in a way that respects the customer relationship or erodes it. That distinction is a product question.</p>
+
+<h2>The Impact-Effort Matrix</h2>
+
+<p>When a backlog has ten competing priorities, the first tool product teams reach for is the impact-effort matrix. Draw two axes: impact (high to low, vertical) and effort (low to high, horizontal). Every potential project lands in one of four quadrants.</p>
+
+<div class="two-col">
+<div>
+  <h4>High Impact, Low Effort</h4>
+  <p>Do these immediately. A small investment produces a large return. They should always jump the queue.</p>
+
+  <h4>High Impact, High Effort</h4>
+  <p>Plan these carefully. These are the major initiatives. They deserve full resources and proper roadmap sequencing.</p>
+</div>
+<div>
+  <h4>Low Impact, Low Effort</h4>
+  <p>Do these when convenient. They clear technical debt without consuming much capacity.</p>
+
+  <h4>Low Impact, High Effort</h4>
+  <p>Avoid these. They consume resources and produce little return. Every backlog has them. Ruthless prioritization means being willing to kill them.</p>
+</div>
+</div>
+
+<hr>
+
+<h1>Part 5: Agile — Chunking the Work</h1>
+
+<h2>Why Agile Exists</h2>
+
+<p>Agile originated in the military, specifically in thinking about how information should flow on a submarine. The captain does not need to know how to read every screen on the sonar station. The sonar operator does not need to know the captain's navigation strategy. Each person in the chain needs to know what is necessary for their role, and information needs to move up and down the chain efficiently without forcing everyone to carry everything.</p>
+
+<p>The same logic applies to any large project. Chunking the work means identifying what cannot be done until something else is finished, what can be done in parallel, and how to deliver something of value at every stage rather than waiting until the entire project is complete.</p>
+
+<h2>The Car Analogy</h2>
+
+<p>The clearest illustration of Agile involves building a car for someone who needs to get to work five miles away.</p>
+
+<p>The obvious request is: build me a car. But what that person actually needs is to get to work faster. Those are not the same thing. A car will take three months. A skateboard can be handed over today. A bicycle can be built in two weeks. A motorized version of something can be ready in a month. Three months from now, the car is finished.</p>
+
+<p>At each stage, the person gets to work faster than the day before. They are receiving value throughout the process rather than waiting in limbo hoping the final product is what they wanted. And critically, the team building the car learns things along the way that make the final car better than it would have been if they had committed to the full design without ever showing the customer anything intermediate.</p>
+
+<p>The opposite of Agile is called Waterfall. In Waterfall, you receive nothing until the entire project is complete. The problem with Waterfall for complex, novel projects is that by the time the deliverable arrives, requirements may have changed, the customer's understanding of what they wanted may have evolved, and all the intermediate learning that would have improved the product along the way has been lost.</p>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">◆</span> The Physics Analogy</div>
+  <p>In nuclear physics experiments, measurements in the physical world have to match the Monte Carlo simulation. The simulation is what theory predicts. The physical experiment is what actually happens. If they do not agree, something is wrong with either the model or the measurement. You iterate, adjust, retest, until simulation and reality converge. Agile product development works the same way: you are constantly making the thing you are building converge with what the customer actually wants, through real feedback at every stage, not through a single reveal at the end.</p>
+</div>
+
+<h2>Epic, Story, Spike, Bug</h2>
+
+<p>Agile classifies units of work into four types:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Work Type</th>
+      <th>Description</th>
+      <th>Deliverable?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Epic</strong></td>
+      <td>A large initiative containing many stories. Building a new reporting module is an epic. Building the entire car is an epic.</td>
+      <td>Not directly — completed through stories</td>
+    </tr>
+    <tr>
+      <td><strong>Story</strong></td>
+      <td>A discrete unit of work that produces a tangible deliverable. Written from the user's perspective: "As a [user], I need [feature] so that [outcome]."</td>
+      <td>Yes, always. A story with no deliverable is not a story.</td>
+    </tr>
+    <tr>
+      <td><strong>Spike</strong></td>
+      <td>Research work. Investigating which approach to use before building. Time-boxed and does not produce a feature.</td>
+      <td>No — knowledge only. Rare: roughly one per ten stories.</td>
+    </tr>
+    <tr>
+      <td><strong>Bug</strong></td>
+      <td>Something broken that needs fixing. A defect is specifically a bug introduced by a recent deployment.</td>
+      <td>Yes, always. Bugs jump the queue.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h1>Part 6: The Agile Ritual — Scrum</h1>
+
+<h2>Sprints and the Backlog</h2>
+
+<figure>
+  <img src="diagram-04-agile-sprint.png" alt="The Agile Sprint Cycle" />
+</figure>
+
+<p>The unit of time in Agile is the sprint, typically one to two weeks. The sprint is the period within which a team commits to completing a set of stories from the backlog.</p>
+
+<p>The backlog is the full list of stories that have been written and prioritized but not yet completed. It is constantly growing (new requests come in), constantly being pruned (old requests become irrelevant), and constantly being reordered as priorities shift with the business.</p>
+
+<h2>Stand-Ups</h2>
+
+<p>Every day, the team gathers for fifteen minutes. Three questions: what did I work on yesterday, what am I working on today, and is anything blocking me? Fifteen minutes. Then everyone disperses and gets back to work.</p>
+
+<p>The stand-up sounds trivial. It is not. Daily stand-ups are where blockers get surfaced before they become crises. A developer realizes the feature they are building depends on something a colleague just finished and can have a five-minute sidebar rather than discovering the dependency two days later. For any team doing collaborative work, a daily fifteen-minute stand-up is almost always worth the cost.</p>
+
+<h2>Refinement</h2>
+
+<p>Before a story can be worked on, it needs to be refined. The person who wrote the story sits down with the engineers who will build it and works through exactly what is being asked for.</p>
+
+<p>A story that says "build a graph that shows X versus Y" still needs answers to: what should the axes be labeled? What type of graph? What is the data source? What happens when there is no data? What should the user be able to interact with? Without these specifics, the story is a guess. With them, the engineer knows exactly what done looks like. Refinement is where misaligned expectations get resolved before they become wasted work.</p>
+
+<h2>Pointing</h2>
+
+<p>Before engineers begin a sprint, they estimate the complexity of each story using a Fibonacci-based pointing system: 1, 2, 3, 5, 8, 13. The Fibonacci sequence is used deliberately: the gaps between higher numbers reflect the genuine uncertainty that comes with more complex work.</p>
+
+<p>A one-point story takes a few hours. A three-point story takes most of a day. A five-point story might take two days. When a story reaches eight or thirteen points, the team usually concludes it should be broken into two stories.</p>
+
+<p>Every engineer on the team holds up their estimate simultaneously. If one says one point and another says five, they do not average. They discuss. Why does one person see this as simple and another sees it as complex? That conversation often reveals hidden dependencies or misunderstandings that would have caused problems later. Pointing is shared understanding as much as it is estimation.</p>
+
+<p>The number of points a team completes per sprint is called velocity. Tracking velocity over time tells you whether the team is getting faster, slower, or consistent, and gives you a basis for forecasting how much runway a given backlog represents.</p>
+
+<h2>Retrospectives</h2>
+
+<p>At the end of each sprint, the team holds a retrospective. Three questions: what went well, what did not, what should we change next sprint? The format sounds simple. The discipline is doing it consistently and actually changing things based on what surfaces.</p>
+
+<p>Retrospectives should happen far more often than they do in most organizations. Any team that finishes something significant and immediately moves on without reflecting on what worked is giving up a learning opportunity that costs nothing to take.</p>
+
+<h2>What Agile Does Well — and What It Does Badly</h2>
+
+<div class="two-col">
+<div>
+  <h4>Agile Is Good At</h4>
+  <ul>
+    <li>Iterative improvement on an existing product</li>
+    <li>Transparency across the team about who is doing what</li>
+    <li>Frequent delivery of value</li>
+    <li>Surfacing bugs and blockers early</li>
+    <li>Making work measurable through velocity</li>
+  </ul>
+</div>
+<div>
+  <h4>Agile Struggles With</h4>
+  <ul>
+    <li>Creating something entirely new with no prior art</li>
+    <li>Cross-functional coordination between teams on different cadences</li>
+    <li>Documentation, which Agile culture tends to deprioritize</li>
+    <li>Context switching between projects</li>
+    <li>Long-horizon research with inherently uncertain deliverables</li>
+  </ul>
+</div>
+</div>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">◆</span> The Google Latency Story</div>
+  <p>At a certain point in Google's growth, product performance had degraded enough that leadership made a remarkable call: for approximately two months, all feature development stopped. Every engineering team shifted entirely to speed and latency. The whole business redirected toward one goal. This was only possible because of rigorous measurement (they knew exactly how slow things had become) and because leadership was willing to pause revenue-generating work to fix an infrastructure problem. Most businesses will never make that call. The ones that do tend to have better products afterward.</p>
+</div>
+
+<div class="callout callout-exercise">
+  <div class="callout-title"><span class="callout-icon">▶</span> Exercise 3: Chunk a Real Project Into Agile Stories</div>
+  <p>Take a project you are currently working on, or one you plan to start soon. Practice the Agile discipline of chunking it into stories — discrete units of work that each produce a tangible deliverable.</p>
+  <div class="track">
+    <div class="track-label">Track A — Academic Transitioners</div>
+    <p>Choose a research or analysis project you are planning. Instead of treating it as one deliverable at the end, break it into at least five stories using the format: <em>"As a [recipient of this work], I need [specific output] so that [specific decision or action]."</em> Assign each story one, two, or three points based on complexity. Then identify which story you would deliver first to show progress before the full project is complete. Run a one-week personal sprint on your top two stories and hold a two-minute retrospective with yourself at the end: what went well, what did not, what would you change?</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track B — Public Sector Transitioners</div>
+    <p>Think of a policy initiative, program rollout, or operational improvement project from your public sector experience. Reconstruct it as Agile stories after the fact: what were the discrete deliverables? Which ones could have been shipped to stakeholders earlier to get feedback before the final product was complete? Identify at least one point where a Waterfall assumption (we will show them everything when it is done) created a problem that earlier delivery would have prevented. Write a brief comparison of how the project actually ran versus how it would have run under Agile principles.</p>
+  </div>
+  <div class="track">
+    <div class="track-label">Track C — New Graduates</div>
+    <p>Choose any personal goal for the next month — a job search milestone, a skill you want to build, a project you want to complete. Set up a free Jira or Asana account and create one epic for the goal. Write at least four stories under it, each with a concrete deliverable. Point each story. Commit to a one-week sprint and hold a stand-up with yourself each morning (two minutes: what did I do yesterday, what am I doing today, is anything blocking me?). At the end of the week, hold a retrospective and update your backlog. This is the Agile ritual, applied to your own career.</p>
+  </div>
+</div>
+
+<hr>
+
+<h1>Part 7: Prioritization</h1>
+
+<h2>The Hardest Word in Product</h2>
+
+<p>Product, Agile, and prioritization form a trio. They depend on each other. Agile is the mechanism for executing work. Prioritization determines which work gets executed. Product is the communication framework that makes both possible.</p>
+
+<p>Prioritization sounds simple: do the most important things first. In practice, it is where most organizations struggle. The backlog grows. Every stakeholder has a priority. Sales wants the feature they promised a client. Engineering wants to pay down technical debt. Marketing wants the redesign. Leadership wants the new dashboard. All of these requests have real justifications. None is obviously wrong. Prioritization means saying not yet to some of them.</p>
+
+<p>There are always beautiful visions of projects that would genuinely improve things sitting in some backlog somewhere, flagged as low priority because they are not immediately affecting revenue. Some of them are quietly brilliant. Most will never get built. The things that get done are the things that most immediately impact the business's ability to survive and grow. Long-term, slow-to-impact projects get deprioritized. They almost always do. The academic sensibility, that important work should be pursued on its own terms, is one of the genuine cultural losses in the transition from research to industry.</p>
+
+<h2>Bugs Always Jump the Queue</h2>
+
+<p>There is one exception to the prioritization hierarchy: bugs. When something is broken and users are affected, it goes to the top. No story, no epic, no strategic initiative takes precedence over a bug that is breaking the product for real users. The cost of a bug that sits unfixed while the team works on new features is not just the bug. It is the compounding erosion of the relationship with every user who encounters it.</p>
+
+<h2>Who Decides Priority</h2>
+
+<p>Engineers do not decide what to work on. Users, through their representatives (product managers and customer service), define what is needed. Leadership defines what the business needs. Product synthesizes those two inputs and translates them into a prioritized backlog. Engineers do the pointing that determines complexity. Then engineers execute.</p>
+
+<p>The division of responsibility is intentional. If engineers chose their own work, they would optimize for technical interest and elegance. If users chose directly, they would prioritize their own needs over business strategy. Product holds all of those perspectives in tension and produces a sequence of work that is simultaneously technically sound, strategically coherent, and genuinely valuable to the people using the product.</p>
+
+<hr>
+
+<h1>Part 8: Academic Skills Translated</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Academic Background</th>
+      <th>Product Equivalent</th>
+      <th>How to Frame It</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Experimental design and hypothesis testing</td>
+      <td>MVP development and A/B testing</td>
+      <td>"I designed experiments to test specific hypotheses with real users before scaling."</td>
+    </tr>
+    <tr>
+      <td>Qualitative interview methods</td>
+      <td>User research and design thinking</td>
+      <td>"I conducted structured interviews to surface user needs without leading the respondent."</td>
+    </tr>
+    <tr>
+      <td>Grant writing and project scoping</td>
+      <td>Product roadmapping and business case development</td>
+      <td>"I defined project scope, resources, and success criteria before beginning work."</td>
+    </tr>
+    <tr>
+      <td>Literature review and competitive analysis</td>
+      <td>Competitive landscape research</td>
+      <td>"I assessed existing solutions to identify gaps my work could fill."</td>
+    </tr>
+    <tr>
+      <td>Peer review and revision cycles</td>
+      <td>Refinement meetings and sprint retrospectives</td>
+      <td>"I built structured feedback loops into every project cycle."</td>
+    </tr>
+    <tr>
+      <td>Conference presentations and papers</td>
+      <td>Product demos and go-to-market messaging</td>
+      <td>"I communicated complex technical work to non-specialist audiences."</td>
+    </tr>
+    <tr>
+      <td>Lab or research team management</td>
+      <td>Agile team leadership, backlog management</td>
+      <td>"I coordinated cross-functional teams toward shared deliverables on a defined timeline."</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h1>Recommended Reading</h1>
+
+<div class="book-rec">
+  <h4>Inspired: How to Create Tech Products Customers Love — Marty Cagan</h4>
+  <p>The most comprehensive single book on product management. Cagan covers everything from defining a product vision to building and running product teams. This is the closest thing the product discipline has to a canonical text.</p>
+  <p><a href="https://amzn.to/3XuVmNQ">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>The Goal — Eliyahu Goldratt</h4>
+  <p>A novel set in a manufacturing plant that is the foundational text for understanding bottlenecks and throughput. Everything about Agile's obsession with flow and constraint elimination traces back to this book. Reads like fiction. Teaches like a textbook.</p>
+  <p><a href="https://amzn.to/3Z8VbNU">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>The Phoenix Project — Gene Kim, Kevin Behr, George Spafford</h4>
+  <p>The Goal applied to information technology. A novel about an IT department in crisis that illustrates every principle of Agile, DevOps, and flow-based work management. The narrative format makes abstract concepts concrete in a way most textbooks cannot.</p>
+  <p><a href="https://amzn.to/3Mo9tGE">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>Value Proposition Design — Alexander Osterwalder</h4>
+  <p>A visual, structured approach to defining what your product does, who it serves, and why they should choose it. Useful for anyone who needs to articulate the value of something they are building for a client, a stakeholder, or a potential customer.</p>
+  <p><a href="https://amzn.to/3ARVa1N">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>The 22 Immutable Laws of Marketing — Al Ries and Jack Trout</h4>
+  <p>A small, dense book containing more insight per page about why certain businesses dominate their markets than almost anything written about strategy. The law of leadership, the law of the category, the law of perception — each applies directly to product positioning.</p>
+  <p><a href="https://amzn.to/3XuN3eQ">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>Cracking the PM Interview — Gayle Laakmann McDowell</h4>
+  <p>Practical preparation for anyone targeting a product management role. The frameworks for product design, estimation, and strategy questions translate well to any role that intersects with product work, not just PM positions.</p>
+  <p><a href="https://amzn.to/3ARB9h1">View on Amazon →</a></p>
+</div>
+
+<div class="book-rec">
+  <h4>The Design Thinking Toolbox — Michael Lewrick, Patrick Link, Larry Leifer</h4>
+  <p>A comprehensive, visual guide to applying design thinking methods in practice. Covers empathy mapping, journey mapping, prototyping, and testing with enough depth to be actionable in any role that involves solving problems for other people.</p>
+  <p><a href="https://amzn.to/3Xsi8Z9">View on Amazon →</a></p>
+</div>
+
+<hr>
+
+<h1>Reflection Questions</h1>
+
+<div class="reflection-box">
+  <p class="prompt">1. Apply the product lens to your most recent research or professional project. What was the user experience of receiving your deliverable? What friction existed? If you were optimizing for the person receiving it, what would you change about how you delivered it?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">2. Think about a service or product you use regularly that frustrates you. Apply design thinking: what is the problem it fails to solve? What would the MVP of a better solution look like? What would Waterfall versus Agile development of that solution have looked like?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">3. Identify one "high impact, low effort" change you could make to your professional work right now. What prevents you from doing it immediately? Is it technical, organizational, or a matter of priority?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">4. Describe a project you worked on that suffered from Waterfall dynamics: the deliverable arrived late, was not quite what people expected, and there was no way to course-correct along the way. What would an Agile version of that project have looked like?</p>
+</div>
+
+<div class="reflection-box">
+  <p class="prompt">5. Try to write one of your academic or professional accomplishments as an Agile user story: "As a [specific user], I needed [specific capability] so that [specific outcome], and I delivered [what you built] which [measurable result]." How does reframing it in the user's voice change how you describe your work?</p>
+</div>
+
+<hr>
+
+<h1>30-Day Action Plan</h1>
+
+<div class="action-plan">
+  <h3>Your Product Thinking Sprint</h3>
+
+  <h4>Week 1: Learn the Language</h4>
+  <ul>
+    <li>Visit agilemanifesto.org and read the twelve principles. Write two sentences on which principles most closely match how you already work and which feel most foreign.</li>
+    <li>Find a company you admire and identify their core product — not what they sell, but what they actually deliver. Write a one-paragraph product definition: "The product is [X]. The user is [Y]. The value delivered is [Z]."</li>
+    <li>Set up a free Jira or Asana account. Create an epic, write three user stories under it, and assign points to each. Practice the vocabulary with something real from your own work or life.</li>
+    <li>Read the first two chapters of <em>Inspired</em> by Marty Cagan.</li>
+  </ul>
+
+  <h4>Week 2: Apply Design Thinking</h4>
+  <ul>
+    <li>Identify one process in your current or target role that another person depends on you to complete. Interview that person using The Mom Test principles: ask about what they actually do with your output, not what they think they want. Listen for the words they use.</li>
+    <li>Draw the impact-effort matrix for three to five things in your current workload. Be honest about what belongs in the "low impact, high effort" quadrant. Is there anything you can stop doing?</li>
+    <li>Write one user story for a deliverable you are currently building or planning. Share it with the intended recipient and ask: "Does this accurately describe what you need?" Note what changes.</li>
+    <li>Find one example of a product that created its market rather than serving an existing one. Write a paragraph on how you know market fit was achieved.</li>
+  </ul>
+
+  <h4>Week 3: Run a Sprint</h4>
+  <ul>
+    <li>Choose a project or significant task and run a one-week Agile sprint on yourself. Identify the epic, write stories, point them, execute, and hold a brief retrospective at the end. Write down what you learned.</li>
+    <li>Identify the bug (something broken or consistently problematic) in a process you own. Prioritize fixing it above everything else for one day. Note what it actually took to resolve it.</li>
+    <li>Practice the daily stand-up format on a shared project: what did I do yesterday, what am I doing today, what is blocking me? Keep it to five minutes.</li>
+    <li>Write down one project vision you have that feels permanently deprioritized. Identify the specific business metric it would improve, frame it in that language, and present it to someone who controls resources.</li>
+  </ul>
+
+  <h4>Week 4: Translate and Position</h4>
+  <ul>
+    <li>Using the translation table in Part 8, rewrite two items from your CV or portfolio in user-story format. Which version is more compelling to a business audience?</li>
+    <li>Build a one-page "product roadmap" for your own career: what is the MVP of your transition into business, what is the next enhancement, and what is the long-term vision?</li>
+    <li>Write a 30-second elevator pitch for your professional value proposition. It should answer: who you are, what you do, and what outcome you reliably deliver. Practice until you can say it without notes.</li>
+    <li>Research a company you want to work for and identify their core product. Write one page on how the role you are targeting contributes to their product's value proposition. This is your interview preparation.</li>
+  </ul>
+</div>
+
+<div class="key-takeaways">
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li>Product is a lens, not a job title. Once you see it, you apply it to your deliverables, your meetings, and your conversations with colleagues.</li>
+    <li>Market fit is validated by purchase, not endorsement. The market votes with money. Interviews tell you what people say they want. Purchase tells you what they actually want.</li>
+    <li>Design thinking starts with the user's vocabulary. The words people use to describe their problems matter as much as the problems themselves.</li>
+    <li>Agile delivers value throughout the process. The skateboard, the bike, and the go-kart all have value. You do not have to wait for the car.</li>
+    <li>Waterfall fails because requirements drift and learning is deferred. Agile struggles at creating things entirely new. Know which situation you are in before choosing an approach.</li>
+    <li>Bugs always jump the queue. A broken product erodes trust faster than any other event.</li>
+    <li>Prioritization means saying not yet to things that matter. The businesses that do it well build better products with the same resources.</li>
+  </ul>
+</div>
+
+</div>
 </body>
 </html>

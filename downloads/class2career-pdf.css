@@ -54,12 +54,11 @@ figure {
 /* ─── Print: constrained, paginated ────────────────────────────────────── */
 @media print {
   html, body {
-    width: 8.5in;
-    max-width: 8.5in;
+    width: 100%;
+    max-width: 100%;
     margin: 0 !important;
-    padding: 0.75in !important;
+    padding: 0 !important;
     background: white !important;
-    color: black !important;
     font-size: 11pt !important;
   }
 
@@ -73,23 +72,41 @@ figure {
   h1 {
     page-break-before: always;
     break-before: page;
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-top: 0 !important;
   }
 
   h2 {
     page-break-before: avoid;
-    break-before: auto;
-    margin-top: 0.5in;
+    break-before: avoid;
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-top: 0.25in;
   }
 
   h3, h4 {
     page-break-after: avoid;
-    break-after: auto;
+    break-after: avoid;
   }
 
-  /* Don't break inside figures/tables */
-  figure, table {
+  /* Don't break inside figures/tables/callouts */
+  figure, table, .callout {
     page-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  /* Keep table from being pushed away from its callout heading */
+  .callout table {
+    page-break-before: avoid;
+    break-before: avoid;
+    margin: 0.125in 0 !important;
+  }
+
+  /* Tighten callout spacing in print so heading + table fit on the same page */
+  .callout {
+    margin: 0.125in 0 !important;
+    padding: 0.2in 0.375in !important;
   }
 
   /* Cover page — don't put content after it on same page */
@@ -118,6 +135,20 @@ figure {
   .callout, .track, .book-rec, .key-takeaways {
     background: #f5f5f5 !important;
     border: 1px solid #ddd !important;
+  }
+
+  /* Force dark text on light print backgrounds */
+  .book-rec, .book-rec p {
+    color: var(--dark-gray) !important;
+  }
+  .book-rec h4 {
+    color: var(--deep-navy) !important;
+  }
+  .key-takeaways, .key-takeaways p, .key-takeaways li {
+    color: var(--dark-gray) !important;
+  }
+  .key-takeaways h3 {
+    color: var(--deep-navy) !important;
   }
 }
 
@@ -213,8 +244,8 @@ h1 {
   font-weight: 700;
   font-size: 24pt;
   color: var(--deep-navy);
-  margin-top: 1in;
-  margin-bottom: 0.5in;
+  margin-top: 0.25in;
+  margin-bottom: 0.375in;
 }
 
 h2 {
