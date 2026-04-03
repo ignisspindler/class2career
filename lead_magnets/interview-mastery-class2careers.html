@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Mastery Guide | Class2Careers</title>
+  <link rel="stylesheet" href="../downloads/class2career-pdf.css">
+  <style>
+    body {
+      max-width: 7in;
+      padding: 0.5in;
+    }
+
+    /* ── Cover ─────────────────────────────────────────────────────── */
+    .cover {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    .cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ── Phase headers ─────────────────────────────────────────────── */
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 0.2in;
+      margin: 0.375in 0 0.2in 0;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    .phase-number {
+      width: 46px;
+      height: 46px;
+      background: var(--deep-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 16pt;
+      color: var(--gold);
+      flex-shrink: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .phase-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 18pt;
+      color: var(--deep-navy);
+      line-height: 1.1;
+    }
+
+    .phase-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5pt;
+      color: var(--slate);
+      font-weight: 400;
+    }
+
+    /* ── Intro box ─────────────────────────────────────────────────── */
+    .intro-box {
+      background: rgba(201, 162, 39, 0.08);
+      border-left: 4px solid var(--gold);
+      padding: 0.25in 0.375in;
+      margin-bottom: 0.25in;
+    }
+
+    .intro-box p {
+      margin-bottom: 0.1in;
+      text-align: left;
+    }
+
+    .intro-box p:last-child { margin-bottom: 0; }
+
+    /* ── Checklist ─────────────────────────────────────────────────── */
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0.2in;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.2in;
+      margin-bottom: 0.15in;
+      line-height: 1.5;
+    }
+
+    .checklist li::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--gold);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ── Red/Green flag lists ──────────────────────────────────────── */
+    .flag-list {
+      list-style: none;
+      margin-left: 0;
+      margin-bottom: 0.2in;
+    }
+
+    .flag-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.175in;
+      margin-bottom: 0.125in;
+      line-height: 1.5;
+    }
+
+    .flag-red::before {
+      content: '✕';
+      color: #DC2626;
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+
+    .flag-green::before {
+      content: '✓';
+      color: var(--emerald);
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+
+    /* ── Insight boxes ─────────────────────────────────────────────── */
+    .insight {
+      background: var(--deep-navy);
+      color: var(--white);
+      padding: 0.25in 0.375in;
+      margin: 0.25in 0;
+      border-radius: 6px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .insight-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 7.5pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.1in;
+    }
+
+    .insight p {
+      font-size: 10.5pt;
+      line-height: 1.6;
+      color: var(--white);
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    /* ── Story steps ───────────────────────────────────────────────── */
+    .story-step {
+      display: flex;
+      gap: 0.2in;
+      margin-bottom: 0.2in;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .story-step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 11pt;
+      color: var(--deep-navy);
+      flex-shrink: 0;
+      margin-top: 2px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .story-step-content h4 {
+      margin-top: 0;
+      margin-bottom: 0.05in;
+      color: var(--deep-navy);
+    }
+
+    .story-step-content p {
+      margin-bottom: 0;
+      font-size: 10pt;
+      text-align: left;
+    }
+
+    /* ── Two-col flags ─────────────────────────────────────────────── */
+    .two-col-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.2in;
+      margin: 0.25in 0;
+    }
+
+    .col-card {
+      padding: 0.2in;
+      border-radius: 4px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .col-card-red {
+      background: rgba(220, 38, 38, 0.06);
+      border: 1px solid rgba(220, 38, 38, 0.25);
+    }
+
+    .col-card-green {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .col-card h4 {
+      margin-top: 0;
+      font-size: 10.5pt;
+      margin-bottom: 0.1in;
+    }
+
+    .col-card-red h4  { color: #DC2626; }
+    .col-card-green h4 { color: #059669; }
+
+    /* ── Section divider ───────────────────────────────────────────── */
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+      margin: 0.4in 0;
+    }
+
+    /* ── Metric grid ───────────────────────────────────────────────── */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.15in;
+      margin: 0.25in 0;
+    }
+
+    .metric-card {
+      background: var(--off-white);
+      border: 1px solid var(--light-gray);
+      border-top: 3px solid var(--gold);
+      padding: 0.2in;
+      border-radius: 4px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .metric-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: var(--deep-navy);
+      margin-bottom: 0.05in;
+    }
+
+    .metric-def {
+      font-size: 8.5pt;
+      color: var(--slate);
+      margin-bottom: 0.05in;
+      line-height: 1.4;
+    }
+
+    .metric-question {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: var(--rich-navy);
+      border-top: 1px solid var(--light-gray);
+      padding-top: 0.05in;
+      margin-top: 0.05in;
+      line-height: 1.4;
+    }
+
+    /* ── Negotiation steps ─────────────────────────────────────────── */
+    .neg-step {
+      background: var(--off-white);
+      border-left: 4px solid var(--deep-navy);
+      padding: 0.2in 0.3in;
+      margin-bottom: 0.15in;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .neg-step-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 10pt;
+      color: var(--deep-navy);
+      margin-bottom: 0.05in;
+    }
+
+    .neg-step p {
+      margin-bottom: 0;
+      font-size: 10pt;
+      text-align: left;
+    }
+
+    /* ── Cox example box ───────────────────────────────────────────── */
+    .company-example {
+      border: 2px solid var(--gold);
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 0.25in 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .company-example-header {
+      background: var(--deep-navy);
+      color: var(--white);
+      padding: 0.15in 0.3in;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .company-example-header .co-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 7.5pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.05in;
+    }
+
+    .company-example-header h3 {
+      color: var(--white);
+      font-size: 13pt;
+      margin: 0;
+    }
+
+    .company-example-body {
+      padding: 0.2in 0.3in;
+    }
+
+    .company-example-body h4 {
+      margin-top: 0.15in;
+      margin-bottom: 0.05in;
+      color: var(--deep-navy);
+    }
+
+    .company-example-body h4:first-child { margin-top: 0; }
+
+    .answer-block {
+      background: rgba(201, 162, 39, 0.07);
+      border-left: 3px solid var(--gold);
+      padding: 0.125in 0.2in;
+      margin: 0.1in 0;
+      font-size: 10pt;
+    }
+
+    .answer-block .aq {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 9pt;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.05in;
+    }
+
+    .answer-block p {
+      margin-bottom: 0;
+      text-align: left;
+      font-size: 10pt;
+    }
+
+    /* ── CTA box ───────────────────────────────────────────────────── */
+    .cta-box {
+      background: var(--deep-navy);
+      color: var(--white);
+      padding: 0.5in;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 0.5in;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .cta-box h2 {
+      color: var(--gold);
+      border: none;
+      padding-left: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .cta-box p {
+      color: var(--soft-gold);
+      text-align: center;
+      font-size: 11pt;
+      max-width: 4in;
+      margin: 0 auto 0.25in auto;
+    }
+
+    .cta-url {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13pt;
+      color: var(--gold);
+      text-decoration: none;
+      border: 2px solid var(--gold);
+      padding: 0.1in 0.3in;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* ── Typography overrides ──────────────────────────────────────── */
+    h1 {
+      font-size: 22pt;
+      margin-top: 0.2in;
+      margin-bottom: 0.2in;
+    }
+
+    h2 {
+      margin-top: 0.375in;
+      margin-bottom: 0.2in;
+    }
+
+    h3 {
+      margin-top: 0.25in;
+      margin-bottom: 0.125in;
+    }
+
+    h4 {
+      margin-top: 0.2in;
+      margin-bottom: 0.075in;
+    }
+
+    p { margin-bottom: 0.175in; }
+
+    /* ── Print ─────────────────────────────────────────────────────── */
+    @media print {
+      body {
+        font-size: 10.5pt !important;
+      }
+
+      h1 {
+        page-break-before: always;
+        break-before: page;
+        page-break-after: avoid;
+        break-after: avoid;
+        margin-top: 0 !important;
+      }
+
+      .cover {
+        page-break-after: always;
+        break-after: page;
+      }
+
+      .two-col-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── COVER ─────────────────────────────────────────────────────────── -->
+<div class="cover">
+  <img src="../assets/covers/cover-img-class2careers.png" alt="Interview Mastery Guide — Class2Careers">
+</div>
+
+<!-- ── INTRODUCTION ──────────────────────────────────────────────────── -->
+<h1>How to Use This Guide</h1>
+
+<div class="intro-box">
+  <p>Built for graduates entering the workforce. You have the skills. This guide teaches you how to present them in a way that gets you hired and gets you paid.</p>
+  <p>Your GPA will not close a job offer. The way you frame your experience will. Work through each phase before your next interview.</p>
+</div>
+
+<p>The candidates who get offers arrive knowing how the business makes money, where it is growing, and what problems the hiring manager needs solved. That level of preparation is rarer than it should be, and it shows immediately.</p>
+
+<h3>Business Model Checklist</h3>
+
+<ul class="checklist">
+  <li>Identify the company's primary revenue stream: subscription, transactional, project-based, or licensing</li>
+  <li>Find the company's last two annual or quarterly reports; note any language around growth priorities or headwinds</li>
+  <li>Read the CEO's or founder's last three LinkedIn posts or press interviews for strategic framing</li>
+  <li>Identify the company's key competitors and how it positions itself against them</li>
+  <li>Search for recent news about the company: funding, layoffs, new products, market expansion</li>
+  <li>Find two or three recent customer reviews on G2, Glassdoor, or Trustpilot to understand customer pain points</li>
+  <li>Identify the role's place in the revenue cycle. Does this team generate revenue, protect margin, or reduce cost?</li>
+</ul>
+
+<h3>Know the Six Business Metrics</h3>
+
+<p>Interviewers who hire for business roles expect candidates to speak fluently about these numbers. Know their definitions and prepare one question about each metric as it applies to the company you are interviewing with.</p>
+
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-name">Revenue</div>
+    <div class="metric-def">Total income before any costs. Top-line health indicator.</div>
+    <div class="metric-question">"Is the business growing revenue or optimizing margin right now?"</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-name">Gross Margin</div>
+    <div class="metric-def">Revenue minus cost of goods sold. How efficient is the core product?</div>
+    <div class="metric-question">"What is driving margin pressure in this market segment?"</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-name">Churn Rate</div>
+    <div class="metric-def">Percentage of customers lost in a period. Retention health signal.</div>
+    <div class="metric-question">"What are the top two reasons customers leave?"</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-name">LTV</div>
+    <div class="metric-def">Lifetime value of a customer. How much revenue does one customer generate?</div>
+    <div class="metric-question">"What behaviors predict high-LTV customers?"</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-name">CAC</div>
+    <div class="metric-def">Customer acquisition cost. What does it cost to land a new customer?</div>
+    <div class="metric-question">"Which acquisition channel has the best CAC-to-LTV ratio?"</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-name">NPS</div>
+    <div class="metric-def">Net Promoter Score. Likelihood customers recommend the product.</div>
+    <div class="metric-question">"What does the NPS trend tell you about product-market fit?"</div>
+  </div>
+</div>
+
+<div class="insight">
+  <div class="insight-label">The Research Advantage</div>
+  <p>When you can reference a company's specific metrics or recent strategic moves in your answers, you signal that you think about problems the way business leaders do, not the way job seekers do. This one shift separates candidates from peers who studied the same job description.</p>
+</div>
+
+<h3>Role Research Checklist</h3>
+
+<ul class="checklist">
+  <li>Rewrite the job description in your own words. What problem is this hire actually solving?</li>
+  <li>Identify whether this is a hunter role (new business, outbound), a farmer role (account management, retention), or a solutions expert role (technical, consulting). Each requires a different interview posture.</li>
+  <li>Map the reporting structure: who does this role report to, and who does the manager report to?</li>
+  <li>Find LinkedIn profiles of people who previously held this role. Where did they go next?</li>
+  <li>Identify the top three KPIs this role will be measured on in the first 90 days</li>
+  <li>Research the hiring manager's background. What did they do before this company?</li>
+</ul>
+
+<div class="section-divider"></div>
+
+<!-- ── REAL COMPANY EXAMPLE ───────────────────────────────────────────── -->
+
+<h1>Example: Interviewing at Cox Communications</h1>
+
+<p>Cox Communications is one of the largest private broadband and media companies in the United States, serving roughly 6.5 million residential and business customers across 18 states. Unlike publicly traded telecoms, Cox does not publish quarterly earnings, but enough is known from industry reporting, FCC filings, and trade press to prepare a strong dossier. Here is what thorough research looks like in practice.</p>
+
+<div class="company-example">
+  <div class="company-example-header">
+    <div class="co-tag">Company Research Dossier</div>
+    <h3>Cox Communications</h3>
+  </div>
+  <div class="company-example-body">
+
+    <h4>Business Model</h4>
+    <p style="margin-bottom:0.1in; text-align:left;">Cox earns revenue primarily through recurring subscriptions: residential broadband (its highest-margin product), video/TV bundles (declining), voice services, and Cox Business (SMB and enterprise connectivity). Broadband now accounts for the majority of revenue. The company has been aggressively investing in fiber-to-the-home (FTTH) infrastructure to defend against AT&T Fiber and new entrants like Ziply and T-Mobile Home Internet.</p>
+
+    <h4>Competitive Position</h4>
+    <p style="margin-bottom:0.1in; text-align:left;">Cox competes primarily against AT&T (fiber), Lumen/CenturyLink (legacy DSL transitioning to fiber), wireless-based home internet from T-Mobile and Verizon, and in some markets, Google Fiber. Its key advantage is existing coaxial infrastructure and high brand recognition in its service footprint. Its key vulnerability is that fiber competitors can offer symmetrical gigabit speeds at comparable prices.</p>
+
+    <h4>Strategic Priorities (based on public reporting)</h4>
+    <p style="margin-bottom:0.1in; text-align:left;">Cox has publicly committed to expanding its fiber footprint, growing Cox Business (enterprise and government contracts), and improving customer experience to reduce churn. The company has invested in mobile (Cox Mobile) as a bundling tool to lock in broadband customers.</p>
+
+  </div>
+</div>
+
+<h3>The Answers You Should Have Ready</h3>
+
+<p>Walk into a Cox Communications interview with specific, informed answers to these six categories. Vague answers in any of these areas mark you as a candidate who did not do the work.</p>
+
+<div class="answer-block">
+  <div class="aq">Q: "What do you know about our business?"</div>
+  <p>Cox is primarily a broadband business now. Video revenue is declining as cord-cutting accelerates, so the strategic focus has shifted to protecting and growing broadband subscribers while building out fiber to compete with AT&T Fiber and fixed wireless alternatives from T-Mobile. Cox Business is the growth segment on the enterprise side. The company is also using Cox Mobile as a defensive bundle to reduce broadband churn rather than as a standalone revenue driver.</p>
+</div>
+
+<div class="answer-block">
+  <div class="aq">Q: "Why do you want to work here specifically?"</div>
+  <p>The fiber buildout is a multi-year infrastructure investment that creates real business problems to solve, not incremental work. I am interested in being part of a company making that kind of bet on its infrastructure while simultaneously defending a large installed base. The scale of the Cox Business segment and the complexity of selling connectivity to enterprise customers is the kind of environment where the skills I have developed in [prior field] translate directly.</p>
+</div>
+
+<div class="answer-block">
+  <div class="aq">Q: "What challenges do you think Cox faces right now?"</div>
+  <p>Three main ones. First, fiber overbuild: AT&T Fiber has been taking share in markets where both companies operate, and the overlap is growing. Second, the video business continues to shrink as streaming replaces linear TV, which means Cox has to find ways to protect the broadband relationship even when the bundle value declines. Third, customer experience: the cable industry has historically had low NPS scores, and improving service quality is not just a brand issue, it is a churn reduction lever.</p>
+</div>
+
+<div class="answer-block">
+  <div class="aq">Q: "What metrics matter most in this role?"</div>
+  <p>For a sales or account role: ARPU (average revenue per user), churn rate, net new subscriber adds, and bundle attachment rate. For an operations or product role: time-to-install, first-call resolution, customer satisfaction scores, and network reliability uptime. For a Cox Business role: contract value, enterprise penetration in the service footprint, and renewal rate on multi-year service agreements.</p>
+</div>
+
+<div class="answer-block">
+  <div class="aq">Q: "What experience do you have that is directly relevant?"</div>
+  <p>Frame your answer around the business outcome, not your background. Instead of: "I managed a research program at a university." Try: "I managed a program serving 200 stakeholders with a $2.4M annual budget and a fixed deliverable calendar. The discipline required to keep that on track in a complex environment maps directly to managing multi-site accounts or coordinating across service delivery teams."</p>
+</div>
+
+<div class="answer-block">
+  <div class="aq">Q: "Where do you see this industry in five years?"</div>
+  <p>The connectivity layer becomes more commoditized, which means the companies that win will differentiate on service reliability, bundling (broadband plus mobile plus smart home), and business customer relationships. Cox has the geographic concentration and infrastructure to compete if they can maintain their fiber buildout pace and reduce the churn that happens when AT&T enters a market. The company that figures out how to serve the SMB segment at scale wins disproportionately, because those customers have higher LTV and lower price sensitivity than residential.</p>
+</div>
+
+<h3>What This Preparation Signals</h3>
+
+<div class="insight">
+  <div class="insight-label">The Point of This Exercise</div>
+  <p>You do not need to be right about every prediction. You need to demonstrate that you have thought about the business as a business, not as a place that happens to have an open role. Most candidates who interview at Cox, or any company of this scale, can describe the job. Very few can describe the company's position in its market and what it is trying to do about it. That is the gap this preparation closes.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ── PHASE 2: CRAFT YOUR BUSINESS STORY ────────────────────────────── -->
+<div class="phase-header">
+  <div class="phase-number">2</div>
+  <div>
+    <div class="phase-label">Craft Your Business Story</div>
+    <div class="phase-sub">Translate your history into value language</div>
+  </div>
+</div>
+
+<p>Your background contains real business value regardless of whether it comes from academia, government, or a prior industry. The problem is not the experience. The problem is how it is packaged. Interviewers cannot see the value in your story until you translate it for them.</p>
+
+<h3>The Translation Framework</h3>
+
+<p>Every story you tell in an interview should move through these four elements:</p>
+
+<div class="story-step">
+  <div class="story-step-num">1</div>
+  <div class="story-step-content">
+    <h4>Situation: the business context</h4>
+    <p>Describe the environment in terms the interviewer recognizes: budget, stakeholders, competing priorities, timeline pressure, organizational constraints. Do not assume they understand what a grant cycle, a dissertation committee, or a procurement process means for decision-making. Translate it.</p>
+  </div>
+</div>
+
+<div class="story-step">
+  <div class="story-step-num">2</div>
+  <div class="story-step-content">
+    <h4>Problem: the measurable gap</h4>
+    <p>Frame the problem in business terms: revenue at risk, cost overrun, churn rate, efficiency loss, missed deadline. Quantify when possible. "We were losing 30% of participants before program completion" lands harder than "engagement was declining."</p>
+  </div>
+</div>
+
+<div class="story-step">
+  <div class="story-step-num">3</div>
+  <div class="story-step-content">
+    <h4>Action: what you specifically did</h4>
+    <p>Use "I" not "we." Interviewers are evaluating you, not your team. Be specific about your decision-making, your communication choices, and the tradeoffs you navigated. This is not the place for modesty.</p>
+  </div>
+</div>
+
+<div class="story-step">
+  <div class="story-step-num">4</div>
+  <div class="story-step-content">
+    <h4>Result: the quantified outcome</h4>
+    <p>Every result should include a number when possible: time saved, dollars generated, percentage improvement, headcount influenced, error rate reduced. If you cannot recall an exact number, estimate and say so. "Approximately" and "roughly" are honest and still powerful.</p>
+  </div>
+</div>
+
+<h3>The Pivot Statement for Career Changers</h3>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">↗</span> Pivot Before They Wonder</div>
+  <p>When your background is not a direct match, do not wait for the interviewer to wonder if you can do the job. Open your answer with one sentence that orients your story toward relevance before they can mentally file you under "not quite right."</p>
+  <p style="margin-bottom:0"><strong>Formula:</strong> "My background is in [prior field], and what that gave me is [specific transferable capability], which is exactly what I applied when I [story that proves it]."</p>
+</div>
+
+<h3>Value Quantification: The Catheter Principle</h3>
+
+<p>In medical device sales, a $20,000 catheter is sold by showing the hospital administrator that one avoided readmission saves $40,000 in Medicare penalties. The $20,000 price disappears against that math. The same logic applies to your story in an interview.</p>
+
+<p>Before your interview, identify one story from your experience where your work had a measurable downstream impact, even if that impact was two or three steps removed from your direct output. Practice walking through the chain: what you did, what that enabled, what that delivered financially or operationally for the organization.</p>
+
+<div class="section-divider"></div>
+
+<!-- ── PHASE 3: DURING THE INTERVIEW ─────────────────────────────────── -->
+<div class="phase-header">
+  <div class="phase-number">3</div>
+  <div>
+    <div class="phase-label">During the Interview</div>
+    <div class="phase-sub">Behavioral questions, presence, and the close</div>
+  </div>
+</div>
+
+<h3>Behavioral Question Preparation</h3>
+
+<p>Prepare two strong examples for each of the following categories. Strong means specific, quantified, and clearly showing your individual decision-making.</p>
+
+<ul class="checklist">
+  <li><strong>Influence without authority:</strong> a time you moved stakeholders toward a decision without having formal power over them</li>
+  <li><strong>Failure and recovery:</strong> a genuine mistake, what it cost, and precisely what you changed in response</li>
+  <li><strong>Competing priorities:</strong> how you managed a situation where two important things conflicted and you had to choose</li>
+  <li><strong>Data-driven decision:</strong> a time you used analysis or evidence to change the direction of a project or recommendation</li>
+  <li><strong>Difficult conversation:</strong> a time you delivered feedback or bad news to someone with more authority than you</li>
+  <li><strong>Cross-functional collaboration:</strong> a project that required working across organizational silos</li>
+  <li><strong>Speed over perfection:</strong> a time you shipped or decided with incomplete information</li>
+  <li><strong>Long-term relationship building:</strong> how you developed trust with a key stakeholder or client over time</li>
+</ul>
+
+<h3>Questions That Signal Business Thinking</h3>
+
+<p>The questions you ask say as much about your readiness as the answers you give. These demonstrate that you think like someone already in the role:</p>
+
+<ul class="checklist">
+  <li>"What does success look like for this role at 90 days, and at the end of the first year?"</li>
+  <li>"What is the biggest challenge the person in this role will face in the first six months?"</li>
+  <li>"How does this team's work connect to the company's top-line revenue goals this year?"</li>
+  <li>"What have you seen the best performers in this role do that average performers miss?"</li>
+  <li>"What caused the last person in this role to leave, and what did you learn from that?"</li>
+  <li>"Where do you see this team in two years, and how does this hire accelerate that?"</li>
+</ul>
+
+<h3>The $1,000 Meeting Close</h3>
+
+<div class="insight">
+  <div class="insight-label">Closing Framework</div>
+  <p>Think of a 45-minute interview as a $1,000 meeting. The salary equivalent of the time the company is investing in you. Treat the final five minutes like a sales close, not a wind-down. Before you leave, name the value you saw in the conversation and confirm mutual interest: "Based on what you have shared today, I am very interested in this role. Is there anything you heard from me today that gives you pause? I would rather address it now than leave it open." Most candidates never ask this. The ones who do almost always advance.</p>
+</div>
+
+<h3>Communication During the Interview</h3>
+
+<ul class="checklist">
+  <li>Pause before answering difficult questions. Three seconds of silence signals confidence, not uncertainty.</li>
+  <li>Mirror the pace and register of the interviewer. If they are formal, stay formal. If they are casual, match it.</li>
+  <li>When you do not know something, say so plainly and offer a related framework you would use to figure it out</li>
+  <li>Avoid hedging language: "I think," "maybe," "sort of." Speak in declarative statements.</li>
+  <li>Reference something the interviewer said earlier in your answer. It signals you are listening, not just performing.</li>
+  <li>End each answer at approximately 90 seconds unless the interviewer clearly wants more depth</li>
+</ul>
+
+<div class="section-divider"></div>
+
+<!-- ── PHASE 4: EVALUATING CULTURE ────────────────────────────────────── -->
+<div class="phase-header">
+  <div class="phase-number">4</div>
+  <div>
+    <div class="phase-label">Evaluating Culture</div>
+    <div class="phase-sub">You are interviewing them as much as they are interviewing you</div>
+  </div>
+</div>
+
+<p>A bad culture fit costs months of your career and significant mental energy. The signals are almost always present in the interview. Most candidates are too focused on selling themselves to notice.</p>
+
+<div class="two-col-table">
+  <div class="col-card col-card-red">
+    <h4>Red Flags</h4>
+    <ul class="flag-list">
+      <li class="flag-red">Vague answers about what success looks like in the first 90 days</li>
+      <li class="flag-red">"We are a family here" often signals that boundaries will be ignored</li>
+      <li class="flag-red">Negative language about the last person in the role</li>
+      <li class="flag-red">Inability to explain how this team connects to company revenue</li>
+      <li class="flag-red">Interviewer is consistently late, distracted, or dismissive</li>
+      <li class="flag-red">The role has been open for more than four months</li>
+      <li class="flag-red">Inconsistent answers from different interviewers about the role's scope</li>
+      <li class="flag-red">No clear path to advancement or skill development</li>
+      <li class="flag-red">Promises that cannot be documented: "trust me on the bonus"</li>
+      <li class="flag-red">High urgency to close you quickly before you can think it through</li>
+    </ul>
+  </div>
+  <div class="col-card col-card-green">
+    <h4>Green Flags</h4>
+    <ul class="flag-list">
+      <li class="flag-green">Interviewer can name the top three things they want you to accomplish in 90 days</li>
+      <li class="flag-green">They speak openly about challenges, not just opportunities</li>
+      <li class="flag-green">Multiple people in the process are consistent in their description of the role</li>
+      <li class="flag-green">They encourage you to take time to make your decision</li>
+      <li class="flag-green">Your direct manager can describe their management philosophy clearly</li>
+      <li class="flag-green">There is a clear performance review structure and promotion criteria</li>
+      <li class="flag-green">They ask smart, specific questions rather than generic "tell me about yourself" prompts</li>
+      <li class="flag-green">People you speak with have been there three or more years</li>
+      <li class="flag-green">The team can explain how their work connects to overall company goals</li>
+      <li class="flag-green">Compensation structure is explained clearly and documented in writing</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Risk Calibration Questions</h3>
+
+<p>Before accepting any offer, get honest answers to these questions, ideally from someone other than the hiring manager:</p>
+
+<ul class="checklist">
+  <li>"What percentage of people who start in roles like this are still here in two years?"</li>
+  <li>"What does this company do when a market downturn forces difficult budget decisions? Does this function typically get protected or cut?"</li>
+  <li>"How has leadership responded to the last significant mistake someone on this team made?"</li>
+  <li>"What is the one thing you wish you had known before joining?"</li>
+</ul>
+
+<div class="callout callout-tip">
+  <div class="callout-title"><span class="callout-icon">↗</span> Find a Back Channel</div>
+  <p>Before signing an offer, find one person at the company who is not in your hiring chain and have a direct conversation. LinkedIn makes this possible. Most people will give you honest signal in five minutes that no interview process ever surfaces.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ── PHASE 5: NEGOTIATION AND FIRST 90 DAYS ─────────────────────────── -->
+<div class="phase-header">
+  <div class="phase-number">5</div>
+  <div>
+    <div class="phase-label">Negotiation and First 90 Days</div>
+    <div class="phase-sub">Secure the right deal, then deliver immediately</div>
+  </div>
+</div>
+
+<p>Negotiation is not confrontation. It is a signal that you understand your market value and expect the relationship to be a fair exchange. Companies respect candidates who negotiate calmly, and often distrust those who accept the first number without question.</p>
+
+<h3>The Negotiation Sequence</h3>
+
+<div class="neg-step">
+  <div class="neg-step-title">Step 1 — Get the offer in writing before responding</div>
+  <p>"I am very excited about this. Can you send the offer letter so I can review the full package?" This gives you time and stops the conversation from becoming a live negotiation you are not ready for.</p>
+</div>
+
+<div class="neg-step">
+  <div class="neg-step-title">Step 2 — Research market rate with three sources</div>
+  <p>Use Levels.fyi, Glassdoor, and LinkedIn Salary for the specific role, company size, and geography. Know the 25th, 50th, and 75th percentile. Target the 75th or above if you are strong on the key requirements.</p>
+</div>
+
+<div class="neg-step">
+  <div class="neg-step-title">Step 3 — Name your number first, at the high end of your range</div>
+  <p>"Based on my research and the scope of this role, I was expecting something closer to [X]. Is there flexibility there?" Do not give a range. Ranges get anchored at the bottom. Give a number. Silence after is not hostility; it is thinking.</p>
+</div>
+
+<div class="neg-step">
+  <div class="neg-step-title">Step 4 — Negotiate the full package, not just base salary</div>
+  <p>If base is fixed, negotiate: signing bonus, remote flexibility, vacation days, professional development budget, equity vesting schedule, or performance review timing. Each has real financial value that base salary comparison misses.</p>
+</div>
+
+<div class="neg-step">
+  <div class="neg-step-title">Step 5 — Confirm the close verbally and then in writing</div>
+  <p>"I want to be clear that I am fully committed to this role and this team. With [negotiated term] confirmed, I am ready to sign." This eliminates ambiguity and makes the hiring manager an advocate for your terms with their leadership.</p>
+</div>
+
+<h3>First 90 Days: The Credibility Sprint</h3>
+
+<p>The first 90 days determine how long it takes to operate with full influence. Most new hires spend this period orienting. High performers spend it delivering.</p>
+
+<ul class="checklist">
+  <li><strong>Days 1–30:</strong> Listen more than you speak. Map the informal power structure — who do people actually go to for decisions, regardless of title?</li>
+  <li><strong>Days 1–30:</strong> Identify the one thing that, if you fixed it, would immediately make your manager's life easier. Fix it.</li>
+  <li><strong>Days 30–60:</strong> Produce one visible output that did not exist before you arrived: a process document, an analysis, a proposal. Put your name on it.</li>
+  <li><strong>Days 30–60:</strong> Have a direct conversation with your manager about what they wish they could get done but have not had bandwidth for. Volunteer for one of those items.</li>
+  <li><strong>Days 60–90:</strong> Identify a business metric in your team's scope that you can move. Propose how. This is the moment most people begin. Make it your halfway point.</li>
+  <li><strong>Day 90:</strong> Request a formal check-in with your manager. Come with evidence of what you have accomplished, what you have learned, and what you want to prioritize next. Do not wait to be evaluated. Evaluate yourself first.</li>
+</ul>
+
+<div class="section-divider"></div>
+
+<!-- ── QUICK REFERENCE ─────────────────────────────────────────────────── -->
+<h1>Quick Reference Card</h1>
+
+<p>Review this page the morning of your interview.</p>
+
+<div class="callout callout-exercise">
+  <div class="callout-title">Morning-of Final Check</div>
+  <ul class="checklist">
+    <li>Review the company's last six months of news (Google News, LinkedIn)</li>
+    <li>Re-read the job description and identify the top three pain points the role solves</li>
+    <li>Practice your pivot statement out loud, not in your head</li>
+    <li>Confirm you have two STAR stories ready for: influence without authority, failure, and competing priorities</li>
+    <li>Write down three questions you will ask, ordered by priority</li>
+    <li>Know your number: the base salary you will name, not a range</li>
+  </ul>
+</div>
+
+<h3>Academic-to-Business Translation Cheat Sheet</h3>
+
+<table>
+  <tr>
+    <th>Your Background Phrase</th>
+    <th>Business Translation</th>
+  </tr>
+  <tr>
+    <td>Grant-funded research</td>
+    <td>Revenue-generating project with budget ownership and external stakeholder management</td>
+  </tr>
+  <tr>
+    <td>Published findings</td>
+    <td>Deliverable produced on a fixed deadline for a defined external audience</td>
+  </tr>
+  <tr>
+    <td>Teaching 200 students</td>
+    <td>Large-group communication and program design for measurable learning outcomes</td>
+  </tr>
+  <tr>
+    <td>Dissertation committee</td>
+    <td>Executive stakeholder group with competing priorities, managed toward a single decision</td>
+  </tr>
+  <tr>
+    <td>Conference presentation</td>
+    <td>High-stakes communication to expert audiences; persuasion under scrutiny</td>
+  </tr>
+  <tr>
+    <td>Program assessment</td>
+    <td>KPI measurement and iterative improvement cycle</td>
+  </tr>
+  <tr>
+    <td>Peer review</td>
+    <td>Quality assurance process for high-stakes external deliverables</td>
+  </tr>
+  <tr>
+    <td>Literature synthesis</td>
+    <td>Competitive landscape and market research analysis</td>
+  </tr>
+</table>
+
+<!-- ── FINAL CTA ───────────────────────────────────────────────────────── -->
+<div class="cta-box">
+  <h2>Ready to Turn Your Degree Into an Offer?</h2>
+  <p>The full Class2Careers toolkit covers every step: understanding how businesses work, communicating your value, and negotiating the salary you deserve.</p>
+  <a class="cta-url" href="https://class2careers.com">class2careers.com</a>
+</div>
+
+</body>
+</html>
