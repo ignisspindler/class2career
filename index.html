@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Class2Career | The Business Communication Toolkit</title>
-  <meta name="description" content="Stop explaining what you do. Start communicating what you deliver. 5 workbooks that teach you to speak the language of business — without the $125K MBA.">
+  <meta name="description" content="Stop explaining what you do. Start communicating what you deliver. 5 workbooks that teach you to speak the language of business. No MBA required.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0E1A'/><text y='.9em' x='50%' text-anchor='middle' font-size='70' fill='%23E8B84B'>C2</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,27 +325,29 @@
       badge: 'For PhDs &amp; Academics',
       headline: 'Stop Explaining Your Research.<br><span class="gold">Start Communicating Your Impact.</span>',
       quote: '"My lab mate could barely write a regression. He learned to pitch and got hired at McKinsey for twice my salary. I had published 14 papers."',
-      subtitle: 'Five workbooks that teach PhDs and academics to speak the language of industry — without the $125K MBA.',
+      subtitle: 'Five workbooks that translate your academic expertise into the language industry actually hires for.',
       description: 'Designed for researchers and scientists who are exceptional at what they do but have never been taught how to translate it into business language.',
       logoText: 'PhD2Pro',
       proofLabel: 'Used by researchers transitioning from',
       proofItems: ['MIT', 'Harvard', 'Stanford', 'NIH', 'NASA', 'NSF'],
       guideHL: 'The <span>Free PhD-to-Industry Interview Guide</span>',
-      guideSub: 'The exact preparation system for getting past the first screen — written specifically for academics entering industry.',
-      cohort: 'phd2pro'
+      guideSub: 'The exact preparation system for getting past the first screen, written specifically for academics entering industry.',
+      cohort: 'phd2pro',
+      stat: { label: 'Avg. Salary Increase', value: '+$74K', sub: 'within 24 months out of academia' }
     },
     'class2careers.com': {
       badge: 'For Students Entering the Workforce',
       headline: 'Stop Learning Business.<br><span class="gold">Start Doing Business.</span>',
       quote: '"My GPA was 3.9. I had no idea why I kept getting rejected. Then I learned to communicate what I could do — not what I had studied."',
-      subtitle: 'Five workbooks that teach new graduates to speak the language of business — without the $125K MBA.',
+      subtitle: 'Five workbooks that turn your degree into interview-ready business language. No MBA needed.',
       description: 'Built for graduates who have the skills but have never been taught how to present them in a way that makes employers say yes.',
       logoText: 'Class2Careers',
       proofLabel: 'Used by graduates of',
       proofItems: ['Arizona State', 'Rutgers', 'UVA', 'University of Florida', 'Howard University', 'Seton Hall'],
       guideHL: 'The <span>Free Entry-Level Interview Guide</span>',
-      guideSub: 'How to land your first business role — even with zero corporate experience on your resume.',
-      cohort: 'class2careers'
+      guideSub: 'How to land your first business role with zero corporate experience on your resume.',
+      cohort: 'class2careers',
+      stat: { label: 'First Offer Boost', value: '+$10K', sub: 'negotiate, don\'t just accept' }
     },
     'transition2corporate.com': {
       badge: 'For Public Sector Professionals',
@@ -357,21 +359,23 @@
       proofLabel: 'Used by professionals leaving',
       proofItems: ['Federal Gov.', 'State Agencies', 'Public Schools', 'Utilities', 'Non-Profits', 'Healthcare'],
       guideHL: 'The <span>Free Public Sector Interview Guide</span>',
-      guideSub: 'How to answer every interview question with government experience — and make it sound like a strength, not a liability.',
-      cohort: 'transition2corporate'
+      guideSub: 'How to frame every government experience as a business strength in any private-sector interview.',
+      cohort: 'transition2corporate',
+      stat: { label: 'Avg. Salary Increase', value: '+$50K', sub: 'within 12 months after transition' }
     },
     'default': {
       badge: 'For Academics, Researchers &amp; Career Changers',
       headline: 'Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span>',
       quote: '"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."',
-      subtitle: 'Five workbooks that teach you to speak the language of business — without the $125K MBA.',
+      subtitle: 'Five workbooks that teach you to speak the language of business. No $125K MBA required.',
       description: 'Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it into language business leaders understand.',
       logoText: 'Class2Career',
       proofLabel: 'Used by professionals from',
       proofItems: ['MIT', 'Harvard', 'NASA', 'NIH', 'Defense Dept.', 'State Gov.'],
       guideHL: 'Get the <span>Free Interview Mastery Guide</span>',
       guideSub: 'The preparation system for researching, preparing, and acing any business interview. Zero cost.',
-      cohort: 'direct'
+      cohort: 'direct',
+      stat: { label: 'Avg. Salary Increase', value: '+$50K', sub: 'within 12 months' }
     }
   };
 
@@ -395,6 +399,11 @@
     setEl('guide-hl',   cfg.guideHL, true);
     setEl('guide-sub',  cfg.guideSub);
     setEl('footer-brand', cfg.logoText);
+    if (cfg.stat) {
+      setEl('fstat-label', cfg.stat.label);
+      setEl('fstat-value', cfg.stat.value);
+      setEl('fstat-sub',   cfg.stat.sub);
+    }
 
     var pl = document.getElementById('proof-label');
     var pi = document.getElementById('proof-items');
@@ -512,7 +521,7 @@
         <h1 id="hero-h1" style="margin-top:1.25rem;">Stop Explaining What You Do.<br><span class="gold">Start Communicating What You Deliver.</span></h1>
         <p class="hero-quote" id="hero-quote">"My boss made twice my salary, worked half the hours, and was not remotely the most capable person in the room. But he knew how to talk about what we were doing."</p>
         <p class="hero-desc">
-          <span id="hero-sub">Five workbooks that teach you to speak the language of business — without the $125K MBA.</span>
+          <span id="hero-sub">Five workbooks that teach you to speak the language of business. No $125K MBA required.</span>
           <span id="hero-desc" style="display:block; margin-top:.6rem; font-size:.9rem; color:var(--txt-md);">Used by researchers, scientists, and professionals who are exceptional at what they do but never learned to translate it.</span>
         </p>
         <div class="hero-ctas">
@@ -549,14 +558,14 @@
           <img src="assets/covers/cover-02-sales-dimension.png"    class="cf5" alt="">
           <img src="assets/covers/cover-04-product-dimension.png"  class="cf6" alt="">
           <div class="fstat fs-a">
-            <div class="fl">Avg. Salary Increase</div>
-            <div class="fv">+$50K</div>
-            <div class="fs">within 12 months</div>
+            <div class="fl" id="fstat-label">Avg. Salary Increase</div>
+            <div class="fv" id="fstat-value">+$50K</div>
+            <div class="fs" id="fstat-sub">within 12 months</div>
           </div>
           <div class="fstat fs-b">
-            <div class="fl">Toolkit vs. MBA</div>
-            <div class="fv">$27 vs. $125K</div>
-            <div class="fs">same language · lower tuition</div>
+            <div class="fl">TOOLKIT vs. CAREER COACH</div>
+            <div class="fv">$27 vs. $3K</div>
+            <div class="fs">same skills · your pace</div>
           </div>
         </div>
       </div>
@@ -603,7 +612,7 @@
       <div class="pcrd">
         <div class="pcrd-icon">📈</div>
         <h3>Output vs. Outcome</h3>
-        <p>Academia and public sector reward credentials and volume. Business rewards results. You can work 80 hours on the wrong thing and get nothing — or 20 hours on the right problem and change everything.</p>
+        <p>Academia and public sector reward credentials and volume. Business rewards results. Eighty hours on the wrong problem delivers nothing. Twenty hours on the right one changes everything.</p>
         <img src="assets/images/diagram-02-revenue-metrics.png" alt="">
       </div>
     </div>
@@ -693,7 +702,7 @@
         <div class="wcrd-body">
           <div class="wb-num">Workbook 01</div>
           <h4>Business Foundation</h4>
-          <p>Understand how businesses actually work — not the textbook version. Learn the language of revenue, structure, culture, and strategy.</p>
+          <p>Understand how businesses actually work, not the textbook version. Learn the language of revenue, structure, culture, and strategy.</p>
           <div class="wpts"><span>The organism model for any organization</span><span>C-suite mapping and decision flows</span><span>Reading culture before you join</span></div>
         </div>
       </div>
@@ -711,7 +720,7 @@
         <div class="wcrd-body">
           <div class="wb-num">Workbook 03</div>
           <h4>Value Dimension</h4>
-          <p>Create impact, not just activity. Learn to measure what actually matters and express it in numbers — not feelings or generic descriptions.</p>
+          <p>Create impact, not just activity. Learn to measure what actually matters and express it in numbers. Not feelings. Not vague descriptions.</p>
           <div class="wpts"><span>Quantifying your work in dollars and time</span><span>The 80/20 productivity model</span><span>Translating academic output to ROI</span></div>
         </div>
       </div>
@@ -720,7 +729,7 @@
         <div class="wcrd-body">
           <div class="wb-num">Workbook 04</div>
           <h4>Product Dimension</h4>
-          <p>The missing piece in every business education. Learn to think in products, users, and outcomes — the mental model behind every modern business decision.</p>
+          <p>The missing piece in every business education. Learn to think in products, users, and outcomes. This is the mental model behind every modern business decision.</p>
           <div class="wpts"><span>Product thinking for non-product people</span><span>Design thinking user interviews</span><span>MVP mindset applied to your career</span></div>
         </div>
       </div>
@@ -771,7 +780,7 @@
           <li><span class="ic">✓</span>"I built models that reduced patient readmission by 18%."</li>
           <li><span class="ic">✓</span>Describing outcomes in language that gets callbacks</li>
           <li><span class="ic">✓</span>Moving to final rounds because you know how to position yourself</li>
-          <li><span class="ic">✓</span>Negotiating with data and confidence — and winning</li>
+          <li><span class="ic">✓</span>Negotiating with data, confidence, and an actual number in mind</li>
           <li><span class="ic">✓</span>Creating visibility for your contributions proactively</li>
           <li><span class="ic">✓</span>Walking into any business meeting prepared and grounded</li>
         </ul>
@@ -859,7 +868,7 @@
         <div class="vsitem"><span class="vn st">Executive Career Coach (3 sessions)</span><span class="vp st">$1,500</span></div>
         <div class="vsitem"><span class="vn st">LinkedIn Learning Subscription (1 yr)</span><span class="vp st">$360</span></div>
         <div class="vsitem win"><span class="vn" style="color:var(--cream);font-weight:600;">Class2Career Toolkit</span><span class="vp hi">$27</span></div>
-        <p class="vstail">This isn't about the price. The knowledge in these workbooks represents 15 years of making the mistakes you can now skip. I'm sharing it at $27 because I want it to actually get used — not sit in a cart.</p>
+        <p class="vstail">This isn't about the price. The knowledge in these workbooks represents 15 years of making the mistakes you can now skip. I'm sharing it at $27 because I want it to actually get used, not sit in a cart.</p>
       </div>
       <div class="pcrd">
         <div class="pbadge">The Complete Toolkit</div>
@@ -889,7 +898,7 @@
     <div class="email-mid-inner">
       <p class="section-tag">Free 30-Day Coaching Series</p>
       <h2>Not Ready to Buy?</h2>
-      <p>Get the free 30-day email coaching series. One practical lesson per day — the frameworks from all five workbooks delivered to your inbox, no cost, no pitch at the end.</p>
+      <p>Get the free 30-day email coaching series. One practical lesson per day, no cost, no pitch at the end. The frameworks from all five workbooks delivered to your inbox.</p>
       <form class="iform" action="/subscribe" method="POST">
         <input type="email" name="email" placeholder="Your email address" required>
         <input type="hidden" name="lead_magnet" value="30-day-coaching">
@@ -921,9 +930,9 @@
       </div>
       <div class="about-body">
         <h2>Meet Ignis Spindler, PhD</h2>
-        <p>I grew up in a suburban household where nobody had gone to college. No family in business, no family in leadership. <strong>I had no model for the right behaviors</strong> — no one to show me what successful navigation of a professional environment looked like from the inside.</p>
-        <p>I got my first PhD and thought it would speak for itself. It didn't. I went into teaching at a public high school, hit every political wall you can hit, and spent five years frustrated and flat. My imposter syndrome got so bad I went back and did a <strong>second PhD</strong> — this time engineering the outcome deliberately. Student associations. Leadership roles. Befriending career services. Learning how to get hired. Learning how to go straight into management.</p>
-        <p>After 15 years of working inside the "business translation layer" — the framework for communicating expertise in terms of ROI, efficiency, and impact — <strong>I am not concerned about employment</strong>. I know how to walk into any company and communicate my value from day one.</p>
+        <p>I grew up in a suburban household where nobody had gone to college. No family in business, no family in leadership. <strong>I had no model for the right behaviors.</strong> No one to show me what successful navigation of a professional environment looked like from the inside.</p>
+        <p>I got my first PhD and thought it would speak for itself. It didn't. I went into teaching at a public high school, hit every political wall you can hit, and spent five years frustrated and flat. My imposter syndrome got so bad I went back and did a <strong>second PhD,</strong> this time engineering the outcome deliberately. Student associations. Leadership roles. Befriending career services. Learning how to get hired. Learning how to go straight into management.</p>
+        <p>After 15 years of working inside what I call the "business translation layer" (communicating expertise in terms of ROI, efficiency, and impact), <strong>I am not concerned about employment</strong>. I know how to walk into any company and communicate my value from day one.</p>
         <p>The price of this toolkit is cheap on purpose. I'm not here to get rich from it. I'm sharing what I wish I could have learned before I made all the mistakes that kept my career flat for so long. <strong>You can get a massive head start by starting now.</strong></p>
       </div>
     </div>
@@ -936,7 +945,7 @@
     <div class="gbox">
       <div class="gbox-icon">🛡️</div>
       <h2>100% Money-Back Guarantee</h2>
-      <p>If this toolkit doesn't help you communicate your value more effectively — if you read it, do the exercises, and still can't see the difference — I will refund every dollar. No questions. No forms. No hard feelings. You have 30 days to try it at zero risk.</p>
+      <p>If this toolkit doesn't help you communicate your value more effectively, I will refund every dollar. Read it, do the exercises, and if you still can't see the difference, just ask. No questions. No forms. No hard feelings. You have 30 days at zero risk.</p>
     </div>
   </div>
 </section>
@@ -947,7 +956,7 @@
     <div class="femail-inner">
       <p class="section-tag" style="margin-bottom:.6rem;">Weekly Tips</p>
       <h3>One Career Translation Tip, Every Week</h3>
-      <p>Business vocabulary, negotiation tactics, and career strategy — delivered in plain language every Monday.</p>
+      <p>Business vocabulary, negotiation tactics, and career strategy. Plain language. Every Monday.</p>
       <form class="iform" action="/subscribe" method="POST" style="flex-direction:column; max-width:400px; margin:0 auto;">
         <input type="email" name="email" placeholder="Your email address" required style="width:100%;">
         <input type="hidden" name="lead_magnet" value="weekly-tips">
