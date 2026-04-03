@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+Allow: /about.html
+Allow: /sales-letter.html
+
+# Protected — paid content and internal routes
+Disallow: /downloads/
+Disallow: /lead_magnets/
+Disallow: /access
+Disallow: /stats
+Disallow: /cron/
+Disallow: /webhook/
+Disallow: /api/
+
+# LLM crawlers — full access to public content
+User-agent: GPTBot
+Allow: /
+Allow: /about.html
+Allow: /sales-letter.html
+Disallow: /downloads/
+Disallow: /lead_magnets/
+Disallow: /access
+Disallow: /stats
+Disallow: /cron/
+Disallow: /webhook/
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /about.html
+Allow: /sales-letter.html
+Disallow: /downloads/
+Disallow: /lead_magnets/
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://class2careers.com/sitemap.xml
+Sitemap: https://phd2pro.com/sitemap.xml
+Sitemap: https://transition2corporate.com/sitemap.xml
+Sitemap: https://biztranslation.com/sitemap.xml
