@@ -1,11 +1,21 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/subscribe",       "dest": "/api/index" },
-    { "src": "/webhook/stripe",  "dest": "/api/index" },
-    { "src": "/access",          "dest": "/api/index" },
-    { "src": "/stats",           "dest": "/api/index" },
-    { "src": "/(.*)",            "dest": "/$1" }
+    { "src": "/subscribe",              "dest": "/api/index" },
+    { "src": "/webhook/stripe",         "dest": "/api/index" },
+    { "src": "/access",                 "dest": "/api/index" },
+    { "src": "/download",               "dest": "/api/index" },
+    { "src": "/cron/send-sequence",     "dest": "/api/index" },
+    { "src": "/stats",                  "dest": "/api/index" },
+    { "src": "/lead_magnets/.*\\.pdf",  "status": 403 },
+    { "src": "/downloads/(.*)",         "dest": "/api/index" },
+    { "src": "/(.*)",                   "dest": "/$1" }
+  ],
+  "crons": [
+    {
+      "path": "/cron/send-sequence",
+      "schedule": "0 14 * * *"
+    }
   ],
   "buildCommand": null,
   "outputDirectory": "."

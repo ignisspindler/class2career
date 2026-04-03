@@ -376,7 +376,7 @@
       proofItems: ['MIT', 'Harvard', 'NASA', 'NIH', 'Defense Dept.', 'State Gov.'],
       guideHL: 'Get the <span>Free Interview Mastery Guide</span>',
       guideSub: 'The preparation system for researching, preparing, and acing any business interview. Zero cost.',
-      cohort: 'direct',
+      cohort: 'biztranslation',
       stat: { label: 'Avg. Salary Increase', value: '+$50K', sub: 'within 12 months' }
     }
   };
@@ -448,15 +448,42 @@
       });
     });
 
-    /* Track form submissions */
-    document.querySelectorAll('form').forEach(function(form){
-      form.addEventListener('submit', function(){
-        var t = JSON.parse(localStorage.getItem('c2c_tracker')||'{}');
+    /* Subscribe forms — AJAX submit with success/error state */
+    document.querySelectorAll('form[action="/subscribe"]').forEach(function(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        /* Analytics */
+        var t  = JSON.parse(localStorage.getItem('c2c_tracker')||'{}');
         var lm = form.querySelector('[name="lead_magnet"]');
         t.email_captured = Date.now();
         t.lead_magnet = lm ? lm.value : 'general';
         localStorage.setItem('c2c_tracker', JSON.stringify(t));
         if (typeof gtag !== 'undefined') gtag('event','lead_capture',{event_category:'conversion',event_label:(lm?lm.value:'general')+'/'+cfg.cohort});
+
+        /* Submit */
+        var btn      = form.querySelector('button[type="submit"]');
+        var origText = btn.textContent;
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        fetch('/subscribe', { method:'POST', body: new FormData(form) })
+          .then(function(r){ return r.json(); })
+          .then(function(json){
+            if (json.success) {
+              var msg = document.createElement('p');
+              msg.style.cssText = 'color:#E8B84B;font-weight:600;font-size:.95rem;padding:.4rem 0;';
+              msg.textContent = 'Check your inbox. Your guide is on the way.';
+              form.replaceWith(msg);
+            } else {
+              btn.textContent = origText;
+              btn.disabled = false;
+            }
+          })
+          .catch(function(){
+            btn.textContent = origText;
+            btn.disabled = false;
+          });
       });
     });
 
